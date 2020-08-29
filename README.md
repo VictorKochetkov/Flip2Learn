@@ -7,6 +7,8 @@ App working on Android and iOS. Writen on Xamarin.Forms.
 
 Let's developing this app together, you are welcome to contribute this project! 😍 
 
+<img src="https://github.com/VictorKochetkov/Flip2Learn/blob/master/wiki/flip2learn-gameplay.gif?raw=true" alt="Flip2Learn on Google PLay">
+
 # Download
 
 Available on App Store. Coming soon on Google Play
