@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FB81565-9AD3-4CF3-977E-FBD02F0F5797}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Flip2Learn.Forms.Droid</RootNamespace>
+    <AssemblyName>Flip2Learn.Forms.Android</AssemblyName>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Realm">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+    <PackageReference Include="XF.Material">
+      <Version>1.6.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\*.png" />
+    <AndroidResource Include="Resources\drawable\*.svg" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_abkhazia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_afghanistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_aland_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_albania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_algeria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_american_samoa.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_andorra.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_angola.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_anguilla.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_antigua_and_barbuda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_argentina.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_armenia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_australia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_austria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_azad_kashmir.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_azerbaijan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_azores.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bahamas.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bahrain.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bangladesh.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_barbados.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_belarus.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_belgium.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_belize.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_benin.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bermuda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bhutan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_abkhazia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_afghanistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_aland_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_albania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_algeria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_american_samoa.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_andorra.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_angola.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_anguilla.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_antigua_and_barbuda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_argentina.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_armenia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_australia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_austria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_azad_kashmir.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_azerbaijan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_azores.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bahamas.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bahrain.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bangladesh.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_barbados.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_belarus.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_belgium.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_belize.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_benin.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bermuda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bhutan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bolivia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bosnia_and_herzegovina.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_botswana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bougainville.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_brazil.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_british_virgin_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_brunei.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_bulgaria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_burkina_faso.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_burundi.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_cambodia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_cameroon.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_canada.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_canary_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_cape_verde.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_central_african_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_chad.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_chile.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_china.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_colombia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_comoros.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_congo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_cook_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_costa_rica.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_croatia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_cuba.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_curacao.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_cyprus.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_czech_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_democratic_republic_of_the_congo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_denmark.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_djibouti.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_dominica.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_dominican_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_east_timor.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_ecuador.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_egypt.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_el_salvador.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_equatorial_guinea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_eritrea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_estonia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_ethiopia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_falkland_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_faroe_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_federated_states_of_micronesia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_fiji.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_finland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_france.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_french_guiana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_french_polynesia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_gabon.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_galapagos.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_gambia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_georgia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_germany.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_ghana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_gibraltar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_greece.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_greenland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_grenada.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_guadeloupe.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_guam.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_guatemala.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_guernsey.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_guinea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_guinea_bissau.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_guyana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_haiti.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_honduras.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_hong_kong.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_hungary.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_iceland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_india.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_indonesia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_iran.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_iraq.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_ireland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_israel.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_italy.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_ivory_coast.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_jamaica.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_japan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_jersey.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_jordan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_kazakhstan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_kenya.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_kerguelen_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_kiribati.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_kosovo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_kuwait.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_kyrgyzstan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_laos.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_latvia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_lebanon.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_lesotho.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_liberia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_libya.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_liechtenstein.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_lithuania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_luxembourg.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_macedonia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_madagascar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_madeira.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_malawi.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_malaysia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_maldives.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_mali.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_malta.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_marshall_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_martinique.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_mauritania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_mauritius.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_mayotte.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_mexico.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_moldova.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_monaco.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_mongolia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_montenegro.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_montserrat.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_morocco.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_mozambique.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_myanmar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_namibia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_nauru.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_nepal.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_netherlands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_new_caledonia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_new_zealand.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_nicaragua.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_niger.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_nigeria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_niue.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_northern_cyprus.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_northern_mariana_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_north_korea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_norway.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_oman.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_pakistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_palau.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_palestine.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_panama.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_papua_new_guinea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_paraguay.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_peru.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_philippines.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_pitcairn_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_poland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_portugal.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_puerto_rico.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_qatar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_reunion.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_rocciy1_crimea_disputed.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_romania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_russia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_rwanda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_sahrawi_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_saint_kitts_and_nevis.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_saint_lucia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_saint_martin.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_saint_vincent_and_the_grenadines.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_samoa.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_san_marino.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_sao_tome_and_principe.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_saudi_arabia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_senegal.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_serbia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_seychelles.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_sierra_leone.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_singapore.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_slovakia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_slovenia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_solomon_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_somalia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_somaliland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_south_africa.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_south_georgia_and_the_south_sandwich_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_south_korea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_south_ossetia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_south_sudan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_spain.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_sri_lanka.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_sudan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_suriname.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_svalbard.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_swaziland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_sweden.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_switzerland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_syria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_taiwan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_tajikistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_tanzania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_thailand.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_togo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_tokelau.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_tonga.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_trinidad_and_tobago.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_tunisia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_turkey.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_turkmenistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_turks_and_caicos_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_tuvalu.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_uganda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_ukraina1_crimea_disputed.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_ukraine.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_united_arab_emirates.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_united_kingdom.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_united_states_of_america.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_united_states_virgin_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_uruguay.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_uzbekistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_vanuatu.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_vatican_city.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_venezuela.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_vietnam.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_wallis_and_futuna.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_yemen.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_zambia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_big_zimbabwe.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bolivia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bosnia_and_herzegovina.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_botswana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bougainville.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_brazil.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_british_virgin_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_brunei.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_bulgaria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_burkina_faso.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_burundi.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_cambodia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_cameroon.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_canada.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_canary_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_cape_verde.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_central_african_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_chad.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_chile.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_china.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_colombia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_comoros.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_congo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_cook_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_costa_rica.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_croatia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_cuba.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_curacao.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_cyprus.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_czech_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_democratic_republic_of_the_congo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_denmark.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_djibouti.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_dominica.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_dominican_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_east_timor.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_ecuador.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_egypt.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_el_salvador.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_equatorial_guinea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_eritrea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_estonia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_ethiopia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_falkland_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_faroe_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_federated_states_of_micronesia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_fiji.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_finland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_france.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_francuzckay_gviana1.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_french_guiana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_french_polynesia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_gabon.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_galapagos.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_gambia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_georgia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_germany.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_ghana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_gibraltar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_greece.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_greenland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_grenada.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_guadeloupe.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_guam.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_guatemala.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_guernsey.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_guinea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_guinea_bissau.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_guyana.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_haiti.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_honduras.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_hong_kong.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_hungary.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_iceland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_india.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_indonesia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_iran.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_iraq.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_ireland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_israel.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_italy.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_ivory_coast.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_jamaica.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_japan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_jersey.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_jordan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_kazakhstan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_kenya.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_kerguelen_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_kiribati.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_kosovo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_kuwait.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_kyrgyzstan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_laos.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_latvia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_lebanon.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_lesotho.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_liberia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_libya.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_liechtenstein.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_lithuania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_luxembourg.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_macedonia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_madagascar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_madeira.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_malawi.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_malaysia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_maldives.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_mali.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_malta.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_marshall_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_martinique.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_mauritania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_mauritius.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_mayotte.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_mexico.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_moldova.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_monaco.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_mongolia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_montenegro.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_montserrat.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_morocco.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_mozambique.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_myanmar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_namibia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_nauru.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_nepal.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_netherlands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_new_caledonia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_new_zealand.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_nicaragua.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_niger.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_nigeria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_niue.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_northern_cyprus.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_northern_mariana_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_north_korea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_norway.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_oman.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_pakistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_palau.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_palestine.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_panama.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_papua_new_guinea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_paraguay.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_peru.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_philippines.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_pitcairn_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_poland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_portugal.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_puerto_rico.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_qatar.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_reunion.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_rocciy1_crimea_disputed.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_romania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_russia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_rwanda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_sahrawi_republic.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_saint_kitts_and_nevis.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_saint_lucia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_saint_martin.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_saint_vincent_and_the_grenadines.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_samoa.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_san_marino.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_sao_tome_and_principe.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_saudi_arabia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_senegal.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_serbia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_seychelles.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_sierra_leone.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_singapore.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_slovakia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_slovenia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_solomon_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_somalia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_somaliland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_south_africa.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_south_georgia_and_the_south_sandwich_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_south_korea.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_south_ossetia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_south_sudan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_spain.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_sri_lanka.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_sudan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_suriname.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_svalbard.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_swaziland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_sweden.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_switzerland.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_syria.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_taiwan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_tajikistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_tanzania.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_thailand.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_togo.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_tokelau.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_tonga.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_trinidad_and_tobago.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_tunisia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_turkey.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_turkmenistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_turks_and_caicos_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_tuvalu.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_uganda.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_ukraine.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_united_arab_emirates.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_united_kingdom.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_united_states_of_america.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_united_states_virgin_islands.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_uruguay.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_uzbekistan.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_vanuatu.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_vatican_city.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_venezuela.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_vietnam.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_wallis_and_futuna.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_yemen.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_zambia.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flags_zimbabwe.png" />
+    <AndroidResource Include="Resources\drawable-anydpi\*.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\*.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\*.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\*.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\*.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\*.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Flip2Learn.Forms\Flip2Learn.Forms.csproj">
+      <Project>{643200E4-7A8D-47C9-BF13-F6A469671033}</Project>
+      <Name>Flip2Learn.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Flip2Learn.Shared\Flip2Learn.Shared.csproj">
+      <Project>{B053E46A-07EB-40F8-8381-B3E22098D772}</Project>
+      <Name>Flip2Learn.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

@@ -1,0 +1,5084 @@
+[
+  {
+    "name": {
+      "en": "Egypt",
+      "ru": "Египет",
+      "ru_genetive": "Египта"
+    },
+    "capital": {
+      "en": "Cairo",
+      "ru": "Каир",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1001450.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "EG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "China",
+      "ru": "Китай",
+      "ru_genetive": "Китая"
+    },
+    "capital": {
+      "en": "Peking",
+      "ru": "Пекин",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 9598077.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "CN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Japan",
+      "ru": "Япония",
+      "ru_genetive": "Японии"
+    },
+    "capital": {
+      "en": "Tokyo",
+      "ru": "Токио",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 377835.0,
+    "polity": 1,
+    "complexity": 0,
+    "iso": "JP",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Belarus",
+      "ru": "Беларусь",
+      "ru_genetive": "Беларуси"
+    },
+    "capital": {
+      "en": "Minsk",
+      "ru": "Минск",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 207600.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "BY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "United Kingdom",
+      "ru": "Великобритания",
+      "ru_genetive": "Великобритании"
+    },
+    "capital": {
+      "en": "London",
+      "ru": "Лондон",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 244820.0,
+    "polity": 1,
+    "complexity": 0,
+    "iso": "GB",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Germany",
+      "ru": "Германия",
+      "ru_genetive": "Германии"
+    },
+    "capital": {
+      "en": "Berlin",
+      "ru": "Берлин",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 357021.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "DE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Greece",
+      "ru": "Греция",
+      "ru_genetive": "Греции"
+    },
+    "capital": {
+      "en": "Athens",
+      "ru": "Афины",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 131940.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "GR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Spain",
+      "ru": "Испания",
+      "ru_genetive": "Испании"
+    },
+    "capital": {
+      "en": "Madrid",
+      "ru": "Мадрид",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 497304.0,
+    "polity": 1,
+    "complexity": 0,
+    "iso": "ES",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Italy",
+      "ru": "Италия",
+      "ru_genetive": "Италии"
+    },
+    "capital": {
+      "en": "Rome",
+      "ru": "Рим",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 301340.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "IT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Norway",
+      "ru": "Норвегия",
+      "ru_genetive": "Норвегии"
+    },
+    "capital": {
+      "en": "Oslo",
+      "ru": "Осло",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 324220.0,
+    "polity": 1,
+    "complexity": 0,
+    "iso": "NO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Netherlands",
+      "ru": "Нидерланды",
+      "ru_genetive": "Нидерландов"
+    },
+    "capital": {
+      "en": "Amsterdam",
+      "ru": "Амстердам",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 41526.0,
+    "polity": 1,
+    "complexity": 0,
+    "iso": "NL",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Russia",
+      "ru": "Россия",
+      "ru_genetive": "России"
+    },
+    "capital": {
+      "en": "Moscow",
+      "ru": "Москва",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 17125407.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "RU",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Ukraine",
+      "ru": "Украина",
+      "ru_genetive": "Украины"
+    },
+    "capital": {
+      "en": "Kiev",
+      "ru": "Киев",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 576604.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "UA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "France",
+      "ru": "Франция",
+      "ru_genetive": "Франции"
+    },
+    "capital": {
+      "en": "Paris",
+      "ru": "Париж",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 547030.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "FR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Finland",
+      "ru": "Финляндия",
+      "ru_genetive": "Финляндии"
+    },
+    "capital": {
+      "en": "Helsinki",
+      "ru": "Хельсинки",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 337030.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "FI",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Canada",
+      "ru": "Канада",
+      "ru_genetive": "Канады"
+    },
+    "capital": {
+      "en": "Ottawa",
+      "ru": "Оттава",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 9976140.0,
+    "polity": 1,
+    "complexity": 0,
+    "iso": "CA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "United States of America",
+      "ru": "Соединенные Штаты Америки",
+      "ru_genetive": "Соединенных Штатов Америки"
+    },
+    "capital": {
+      "en": "Washington",
+      "ru": "Вашингтон",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 9518900.0,
+    "polity": 0,
+    "complexity": 0,
+    "iso": "US",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Australia",
+      "ru": "Австралия",
+      "ru_genetive": "Австралии"
+    },
+    "capital": {
+      "en": "Canberra",
+      "ru": "Канберра",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 7686850.0,
+    "polity": 1,
+    "complexity": 0,
+    "iso": "AU",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Kazakhstan",
+      "ru": "Казахстан",
+      "ru_genetive": "Казахстана"
+    },
+    "capital": {
+      "en": "Astana (Nur-Sultan)",
+      "ru": "Астана (Нур-Султан)",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 2724902.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "KZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Vietnam",
+      "ru": "Вьетнам",
+      "ru_genetive": "Вьетнама"
+    },
+    "capital": {
+      "en": "Hanoi",
+      "ru": "Ханой",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 329560.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "VN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Georgia",
+      "ru": "Грузия",
+      "ru_genetive": "Грузии"
+    },
+    "capital": {
+      "en": "Tbilisi",
+      "ru": "Тбилиси",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 57200.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "GE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Iran",
+      "ru": "Иран",
+      "ru_genetive": "Ирана"
+    },
+    "capital": {
+      "en": "Tehran",
+      "ru": "Тегеран",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 1648000.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "IR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "India",
+      "ru": "Индия",
+      "ru_genetive": "Индии"
+    },
+    "capital": {
+      "en": "New Delhi",
+      "ru": "Нью-Дели",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 3287590.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "IN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Iraq",
+      "ru": "Ирак",
+      "ru_genetive": "Ирака"
+    },
+    "capital": {
+      "en": "Baghdad",
+      "ru": "Багдад",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 437072.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "IQ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Mongolia",
+      "ru": "Монголия",
+      "ru_genetive": "Монголии"
+    },
+    "capital": {
+      "en": "Ulan Bator",
+      "ru": "Улан-Батор",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 1564116.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "MN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Thailand",
+      "ru": "Таиланд",
+      "ru_genetive": "Таиланда"
+    },
+    "capital": {
+      "en": "Bangkok",
+      "ru": "Бангкок",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 514000.0,
+    "polity": 1,
+    "complexity": 1,
+    "iso": "TH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Austria",
+      "ru": "Австрия",
+      "ru_genetive": "Австрии"
+    },
+    "capital": {
+      "en": "Vienna",
+      "ru": "Вена",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 83871.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "AT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Belgium",
+      "ru": "Бельгия",
+      "ru_genetive": "Бельгии"
+    },
+    "capital": {
+      "en": "Brussels",
+      "ru": "Брюссель",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 32545.0,
+    "polity": 1,
+    "complexity": 1,
+    "iso": "BE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bulgaria",
+      "ru": "Болгария",
+      "ru_genetive": "Болгарии"
+    },
+    "capital": {
+      "en": "Sofia",
+      "ru": "София",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 110910.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "BG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Vatican City",
+      "ru": "Ватикан",
+      "ru_genetive": "Ватикана"
+    },
+    "capital": {
+      "en": "Vatican City",
+      "ru": "Ватикан",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 0.44,
+    "polity": 2,
+    "complexity": 1,
+    "iso": "VA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Denmark",
+      "ru": "Дания",
+      "ru_genetive": "Дании"
+    },
+    "capital": {
+      "en": "Copenhagen",
+      "ru": "Копенгаген",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 43094.0,
+    "polity": 1,
+    "complexity": 1,
+    "iso": "DK",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Iceland",
+      "ru": "Исландия",
+      "ru_genetive": "Исландии"
+    },
+    "capital": {
+      "en": "Reykjavik",
+      "ru": "Рейкьявик",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 103000.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "IS",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Ireland",
+      "ru": "Ирландия",
+      "ru_genetive": "Ирландии"
+    },
+    "capital": {
+      "en": "Dublin",
+      "ru": "Дублин",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 70273.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "IE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Latvia",
+      "ru": "Латвия",
+      "ru_genetive": "Латвии"
+    },
+    "capital": {
+      "en": "Riga",
+      "ru": "Рига",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 64589.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "LV",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Monaco",
+      "ru": "Монако",
+      "ru_genetive": "Монако"
+    },
+    "capital": {
+      "en": "Monaco",
+      "ru": "Монако",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 2.02,
+    "polity": 1,
+    "complexity": 1,
+    "iso": "MC",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Portugal",
+      "ru": "Португалия",
+      "ru_genetive": "Португалии"
+    },
+    "capital": {
+      "en": "Lisbon",
+      "ru": "Лиссабон",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 92082.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "PT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Poland",
+      "ru": "Польша",
+      "ru_genetive": "Польши"
+    },
+    "capital": {
+      "en": "Warsaw",
+      "ru": "Варшава",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 312685.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "PL",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Serbia",
+      "ru": "Сербия",
+      "ru_genetive": "Сербии"
+    },
+    "capital": {
+      "en": "Belgrade",
+      "ru": "Белград",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 77473.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "RS",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Czech Republic",
+      "ru": "Чехия",
+      "ru_genetive": "Чехии"
+    },
+    "capital": {
+      "en": "Prague",
+      "ru": "Прага",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 78866.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "CZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Sweden",
+      "ru": "Швеция",
+      "ru_genetive": "Швеции"
+    },
+    "capital": {
+      "en": "Stockholm",
+      "ru": "Стокгольм",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 449964.0,
+    "polity": 1,
+    "complexity": 1,
+    "iso": "SE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Switzerland",
+      "ru": "Швейцария",
+      "ru_genetive": "Швейцарии"
+    },
+    "capital": {
+      "en": "Berne",
+      "ru": "Берн",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 41290.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "CH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Estonia",
+      "ru": "Эстония",
+      "ru_genetive": "Эстонии"
+    },
+    "capital": {
+      "en": "Tallinn",
+      "ru": "Таллин",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 45226.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "EE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Montenegro",
+      "ru": "Черногория",
+      "ru_genetive": "Черногории"
+    },
+    "capital": {
+      "en": "Podgorica",
+      "ru": "Подгорица",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 14026.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "ME",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Mexico",
+      "ru": "Мексика",
+      "ru_genetive": "Мексики"
+    },
+    "capital": {
+      "en": "Mexico City",
+      "ru": "Мехико",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 1972550.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "MX",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Brazil",
+      "ru": "Бразилия",
+      "ru_genetive": "Бразилии"
+    },
+    "capital": {
+      "en": "Brazilia",
+      "ru": "Бразилиа",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 8511965.0,
+    "polity": 0,
+    "complexity": 1,
+    "iso": "BR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Greenland",
+      "ru": "Гренландия",
+      "ru_genetive": "Гренландии"
+    },
+    "capital": {
+      "en": "Nuuk",
+      "ru": "Нуук",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 2166086.0,
+    "polity": 3,
+    "complexity": 1,
+    "iso": "GL",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Denmark",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Algeria",
+      "ru": "Алжир",
+      "ru_genetive": "Алжира"
+    },
+    "capital": {
+      "en": "Algeria",
+      "ru": "Алжир",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 2381740.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "DZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Libya",
+      "ru": "Ливия",
+      "ru_genetive": "Ливии"
+    },
+    "capital": {
+      "en": "Tripoli",
+      "ru": "Триполи",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1759540.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "LY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Madagascar",
+      "ru": "Мадагаскар",
+      "ru_genetive": "Мадагаскара"
+    },
+    "capital": {
+      "en": "Antananarivo",
+      "ru": "Антананариву",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 587040.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "MG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Tunisia",
+      "ru": "Тунис",
+      "ru_genetive": "Туниса"
+    },
+    "capital": {
+      "en": "Tunisia",
+      "ru": "Тунис",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 163610.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "TN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Cyprus",
+      "ru": "Республика Кипр",
+      "ru_genetive": "Республики Кипр"
+    },
+    "capital": {
+      "en": "Nicosia",
+      "ru": "Никосия",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 6000.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "CY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Northern Cyprus",
+      "ru": "Северный Кипр",
+      "ru_genetive": "Северного Кипра"
+    },
+    "capital": {
+      "en": "North Nicosia",
+      "ru": "Никосия (северная часть)",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 3300.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "CY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Armenia",
+      "ru": "Армения",
+      "ru_genetive": "Армении"
+    },
+    "capital": {
+      "en": "Yerevan",
+      "ru": "Ереван",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 29743.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "AM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Azerbaijan",
+      "ru": "Азербайджан",
+      "ru_genetive": "Азербайджана"
+    },
+    "capital": {
+      "en": "Baku",
+      "ru": "Баку",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 75100.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "AZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Indonesia",
+      "ru": "Индонезия",
+      "ru_genetive": "Индонезии"
+    },
+    "capital": {
+      "en": "Jakarta",
+      "ru": "Джакарта",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 1904556.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "ID",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Israel",
+      "ru": "Израиль",
+      "ru_genetive": "Израиля"
+    },
+    "capital": {
+      "en": "Jerusalem",
+      "ru": "Иерусалим",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 22072.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "IL",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "South Korea",
+      "ru": "Южная Корея",
+      "ru_genetive": "Южной Кореи"
+    },
+    "capital": {
+      "en": "Seoul",
+      "ru": "Сеул",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 98480.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "KR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "North Korea",
+      "ru": "КНДР",
+      "ru_genetive": "КНДР"
+    },
+    "capital": {
+      "en": "Pyongyang",
+      "ru": "Пхеньян",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 120540.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "KP",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Qatar",
+      "ru": "Катар",
+      "ru_genetive": "Катара"
+    },
+    "capital": {
+      "en": "Doha",
+      "ru": "Доха",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 11437.0,
+    "polity": 2,
+    "complexity": 2,
+    "iso": "QA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "United Arab Emirates",
+      "ru": "Объединённые Арабские Эмираты",
+      "ru_genetive": "Объединённых Арабских Эмиратов"
+    },
+    "capital": {
+      "en": "Abu Dhabi",
+      "ru": "Абу-Даби",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 82880.0,
+    "polity": 1,
+    "complexity": 2,
+    "iso": "AE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Singapore",
+      "ru": "Сингапур",
+      "ru_genetive": "Сингапура"
+    },
+    "capital": {
+      "en": "Singapore",
+      "ru": "Сингапур",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 778.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "SG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Syria",
+      "ru": "Сирия",
+      "ru_genetive": "Сирии"
+    },
+    "capital": {
+      "en": "Damascus",
+      "ru": "Дамаск",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 185180.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "SY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Tajikistan",
+      "ru": "Таджикистан",
+      "ru_genetive": "Таджикистана"
+    },
+    "capital": {
+      "en": "Dushanbe",
+      "ru": "Душанбе",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 143100.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "TJ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Uzbekistan",
+      "ru": "Узбекистан",
+      "ru_genetive": "Узбекистана"
+    },
+    "capital": {
+      "en": "Tashkent",
+      "ru": "Ташкент",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 447400.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "UZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Andorra",
+      "ru": "Андорра",
+      "ru_genetive": "Андорры"
+    },
+    "capital": {
+      "en": "Andorra la Vella",
+      "ru": "Андорра-ла-Велья",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 468.0,
+    "polity": 1,
+    "complexity": 2,
+    "iso": "AD",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Hungary",
+      "ru": "Венгрия",
+      "ru_genetive": "Венгрии"
+    },
+    "capital": {
+      "en": "Budapest",
+      "ru": "Будапешт",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 93030.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "HU",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Luxembourg",
+      "ru": "Люксембург",
+      "ru_genetive": "Люксембурга"
+    },
+    "capital": {
+      "en": "Luxembourg",
+      "ru": "Люксембург",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 2586.0,
+    "polity": 1,
+    "complexity": 2,
+    "iso": "LU",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Liechtenstein",
+      "ru": "Лихтенштейн",
+      "ru_genetive": "Лихтенштейна"
+    },
+    "capital": {
+      "en": "Vaduz",
+      "ru": "Вадуц",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 160.0,
+    "polity": 1,
+    "complexity": 2,
+    "iso": "LI",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Malta",
+      "ru": "Мальта",
+      "ru_genetive": "Мальты"
+    },
+    "capital": {
+      "en": "Valletta",
+      "ru": "Валлетта",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 316.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "MT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Romania",
+      "ru": "Румыния",
+      "ru_genetive": "Румынии"
+    },
+    "capital": {
+      "en": "Bucharest",
+      "ru": "Бухарест",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 237500.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "RO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "San Marino",
+      "ru": "Сан-Марино",
+      "ru_genetive": "Сан-Марино"
+    },
+    "capital": {
+      "en": "San Marino",
+      "ru": "Сан-Марино",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 61.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "SM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Slovakia",
+      "ru": "Словакия",
+      "ru_genetive": "Словакии"
+    },
+    "capital": {
+      "en": "Bratislava",
+      "ru": "Братислава",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 48845.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "SK",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Lithuania",
+      "ru": "Литва",
+      "ru_genetive": "Литвы"
+    },
+    "capital": {
+      "en": "Vilnius",
+      "ru": "Вильнюс",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 65200.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "LT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Moldova",
+      "ru": "Молдавия",
+      "ru_genetive": "Молдавии"
+    },
+    "capital": {
+      "en": "Kishinev",
+      "ru": "Кишинёв",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 29680.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "MD",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Croatia",
+      "ru": "Хорватия",
+      "ru_genetive": "Хорватии"
+    },
+    "capital": {
+      "en": "Zagreb",
+      "ru": "Загреб",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 56542.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "HR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Cuba",
+      "ru": "Куба",
+      "ru_genetive": "Кубы"
+    },
+    "capital": {
+      "en": "Havana",
+      "ru": "Гавана",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 110860.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "CU",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Panama",
+      "ru": "Панама",
+      "ru_genetive": "Панамы"
+    },
+    "capital": {
+      "en": "Panama",
+      "ru": "Панама",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 78200.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "PA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Jamaica",
+      "ru": "Ямайка",
+      "ru_genetive": "Ямайки"
+    },
+    "capital": {
+      "en": "Kingston",
+      "ru": "Кингстон",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 10990.0,
+    "polity": 1,
+    "complexity": 2,
+    "iso": "JM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "New Zealand",
+      "ru": "Новая Зеландия",
+      "ru_genetive": "Новой Зеландии"
+    },
+    "capital": {
+      "en": "Wellington",
+      "ru": "Веллингтон",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 268680.0,
+    "polity": 1,
+    "complexity": 2,
+    "iso": "NZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Argentina",
+      "ru": "Аргентина",
+      "ru_genetive": "Аргентины"
+    },
+    "capital": {
+      "en": "Buenos Aires",
+      "ru": "Буэнос-Айрес",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 2766890.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "AR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Venezuela",
+      "ru": "Венесуэла",
+      "ru_genetive": "Венесуэлы"
+    },
+    "capital": {
+      "en": "Caracas",
+      "ru": "Каракас",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 912050.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "VE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Chile",
+      "ru": "Чили",
+      "ru_genetive": "Чили"
+    },
+    "capital": {
+      "en": "Santiago",
+      "ru": "Сантьяго",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 756950.0,
+    "polity": 0,
+    "complexity": 2,
+    "iso": "CL",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Hong Kong",
+      "ru": "Гонгонг",
+      "ru_genetive": "Гонгонга"
+    },
+    "capital": {
+      "en": "Hong Kong",
+      "ru": "Гонгонг",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 1104.0,
+    "polity": 3,
+    "complexity": 2,
+    "iso": "HK",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "China",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Gibraltar",
+      "ru": "Гибралтар",
+      "ru_genetive": "Гибралтара"
+    },
+    "capital": {
+      "en": "Gibraltar",
+      "ru": "Гибралтар",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 6.5,
+    "polity": 3,
+    "complexity": 2,
+    "iso": "GI",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bermuda",
+      "ru": "Бермудские острова",
+      "ru_genetive": "Бермудских островов"
+    },
+    "capital": {
+      "en": "Hamilton",
+      "ru": "Гамильтон",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 53.0,
+    "polity": 3,
+    "complexity": 2,
+    "iso": "BM",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Ivory Coast",
+      "ru": "Кот-д'Ивуар",
+      "ru_genetive": "Кот-д'Ивуара"
+    },
+    "capital": {
+      "en": "Yamoussoukro",
+      "ru": "Ямусукро",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 322460.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "CI",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Abkhazia",
+      "ru": "Абхазия",
+      "ru_genetive": "Абхазии"
+    },
+    "capital": {
+      "en": "Sukhum",
+      "ru": "Сухум",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 8600.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Afghanistan",
+      "ru": "Афганистан",
+      "ru_genetive": "Афганистана"
+    },
+    "capital": {
+      "en": "Kabul",
+      "ru": "Кабул",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 647500.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "AF",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Jordan",
+      "ru": "Иордания",
+      "ru_genetive": "Иордании"
+    },
+    "capital": {
+      "en": "Amman",
+      "ru": "Амман",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 92300.0,
+    "polity": 1,
+    "complexity": 3,
+    "iso": "JO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Cambodia",
+      "ru": "Камбоджа",
+      "ru_genetive": "Камбоджи"
+    },
+    "capital": {
+      "en": "Phnom Penh",
+      "ru": "Пномпень",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 181040.0,
+    "polity": 1,
+    "complexity": 3,
+    "iso": "KH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Kuwait",
+      "ru": "Кувейт",
+      "ru_genetive": "Кувейта"
+    },
+    "capital": {
+      "en": "Kuwait",
+      "ru": "Эль-Кувейт",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 17820.0,
+    "polity": 1,
+    "complexity": 3,
+    "iso": "KW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Pakistan",
+      "ru": "Пакистан",
+      "ru_genetive": "Пакистана"
+    },
+    "capital": {
+      "en": "Islamabad",
+      "ru": "Исламабад",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 803940.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "PK",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Saudi Arabia",
+      "ru": "Саудовская Аравия",
+      "ru_genetive": "Саудовской Аравии"
+    },
+    "capital": {
+      "en": "Riyadh",
+      "ru": "Эр-Рияд",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 2149610.0,
+    "polity": 2,
+    "complexity": 3,
+    "iso": "SA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Turkey",
+      "ru": "Турция",
+      "ru_genetive": "Турции"
+    },
+    "capital": {
+      "en": "Ankara",
+      "ru": "Анкара",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 780580.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "TR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Turkmenistan",
+      "ru": "Туркмения",
+      "ru_genetive": "Туркмении"
+    },
+    "capital": {
+      "en": "Ashgabat",
+      "ru": "Ашхабад",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 491200.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "TM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "South Ossetia",
+      "ru": "Южная Осетия",
+      "ru_genetive": "Южной Осетии"
+    },
+    "capital": {
+      "en": "Tskhinvali",
+      "ru": "Цхинвал",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 3900.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Albania",
+      "ru": "Албания",
+      "ru_genetive": "Албании"
+    },
+    "capital": {
+      "en": "Tirana",
+      "ru": "Тирана",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 28748.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "AL",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bosnia and Herzegovina",
+      "ru": "Босния и Герцеговина",
+      "ru_genetive": "Боснии и Герцеговины"
+    },
+    "capital": {
+      "en": "Sarajevo",
+      "ru": "Сараево",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 51129.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "BA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Macedonia",
+      "ru": "Македония",
+      "ru_genetive": "Македонии"
+    },
+    "capital": {
+      "en": "Skopje",
+      "ru": "Скопье",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 25333.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "MK",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Slovenia",
+      "ru": "Словения",
+      "ru_genetive": "Словении"
+    },
+    "capital": {
+      "en": "Ljubljana",
+      "ru": "Любляна",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 20253.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "SI",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Guatemala",
+      "ru": "Гватемала",
+      "ru_genetive": "Гватемалы"
+    },
+    "capital": {
+      "en": "Guatemala",
+      "ru": "Гватемала",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 108890.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "GT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Papua New Guinea",
+      "ru": "Папуа — Новая Гвинея",
+      "ru_genetive": "Папуа — Новой Гвинеи"
+    },
+    "capital": {
+      "en": "Port Moresby",
+      "ru": "Порт-Морсби",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 462840.0,
+    "polity": 1,
+    "complexity": 3,
+    "iso": "PG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Fiji",
+      "ru": "Фиджи",
+      "ru_genetive": "Фиджи"
+    },
+    "capital": {
+      "en": "Suva",
+      "ru": "Сува",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 18270.0,
+    "polity": 0,
+    "complexity": 3,
+    "iso": "FJ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Canary Islands",
+      "ru": "Канарские острова",
+      "ru_genetive": "Канарских островов"
+    },
+    "capital": {
+      "en": "Santa Cruz de Tenerife",
+      "ru": "Санта-Крус-де-Тенерифe",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 7447.0,
+    "polity": 3,
+    "complexity": 3,
+    "iso": "",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Spain",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Nigeria",
+      "ru": "Нигерия",
+      "ru_genetive": "Нигерии"
+    },
+    "capital": {
+      "en": "Abuja",
+      "ru": "Абуджа",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 923768.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "NG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Ethiopia",
+      "ru": "Эфиопия",
+      "ru_genetive": "Эфиопии"
+    },
+    "capital": {
+      "en": "Addis Ababa",
+      "ru": "Аддис-Абеба",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1127127.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "ET",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Ghana",
+      "ru": "Гана",
+      "ru_genetive": "Ганы"
+    },
+    "capital": {
+      "en": "Accra",
+      "ru": "Аккра",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 238540.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "GH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Eritrea",
+      "ru": "Эритрея",
+      "ru_genetive": "Эритреи"
+    },
+    "capital": {
+      "en": "Asmara",
+      "ru": "Асмэра",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 121320.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "ER",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Mali",
+      "ru": "Мали",
+      "ru_genetive": "Мали"
+    },
+    "capital": {
+      "en": "Bamako",
+      "ru": "Бамако",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1240000.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "ML",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Central African Republic",
+      "ru": "Центральноафриканская Республика",
+      "ru_genetive": "Центральноафриканской Республики"
+    },
+    "capital": {
+      "en": "Bangui",
+      "ru": "Банги",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 622984.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "CF",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Gambia",
+      "ru": "Гамбия",
+      "ru_genetive": "Гамбии"
+    },
+    "capital": {
+      "en": "Banjul",
+      "ru": "Банжул",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 11300.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "GM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Guinea-Bissau",
+      "ru": "Гвинея-Бисау",
+      "ru_genetive": "Гвинеи-Бисау"
+    },
+    "capital": {
+      "en": "Bissau",
+      "ru": "Бисау",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 36120.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "GW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Congo",
+      "ru": "Конго",
+      "ru_genetive": "Конго"
+    },
+    "capital": {
+      "en": "Brazzaville",
+      "ru": "Браззавиль",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 342000.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "CG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Burundi",
+      "ru": "Бурунди",
+      "ru_genetive": "Бурунди"
+    },
+    "capital": {
+      "en": "Bujumbura",
+      "ru": "Бужумбура",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 27830.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "BI",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Seychelles",
+      "ru": "Сейшельские острова",
+      "ru_genetive": "Сейшельских островов"
+    },
+    "capital": {
+      "en": "Victoria",
+      "ru": "Виктория",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 455.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SC",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Namibia",
+      "ru": "Намибия",
+      "ru_genetive": "Намибии"
+    },
+    "capital": {
+      "en": "Windhoek",
+      "ru": "Виндхук",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 825418.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "NA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Botswana",
+      "ru": "Ботсвана",
+      "ru_genetive": "Ботсваны"
+    },
+    "capital": {
+      "en": "Gaborone",
+      "ru": "Габороне",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 581730.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "BW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Senegal",
+      "ru": "Сенегал",
+      "ru_genetive": "Сенегала"
+    },
+    "capital": {
+      "en": "Dakar",
+      "ru": "Дакар",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 196190.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Djibouti",
+      "ru": "Джибути",
+      "ru_genetive": "Джибути"
+    },
+    "capital": {
+      "en": "Djibouti",
+      "ru": "Джибути",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 22000.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "DJ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "South Sudan",
+      "ru": "Южный Судан",
+      "ru_genetive": "Южного Судана"
+    },
+    "capital": {
+      "en": "Juba",
+      "ru": "Джуба",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 619745.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SS",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Tanzania",
+      "ru": "Танзания",
+      "ru_genetive": "Танзании"
+    },
+    "capital": {
+      "en": "Dodoma",
+      "ru": "Додома",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 948087.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Uganda",
+      "ru": "Уганда",
+      "ru_genetive": "Уганды"
+    },
+    "capital": {
+      "en": "Kampala",
+      "ru": "Кампала",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 236040.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "UG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Rwanda",
+      "ru": "Руанда",
+      "ru_genetive": "Руанды"
+    },
+    "capital": {
+      "en": "Kigali",
+      "ru": "Кигали",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 26338.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "RW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Democratic Republic of the Congo",
+      "ru": "Демократическая Республика Конго",
+      "ru_genetive": "Демократической Республики Конго"
+    },
+    "capital": {
+      "en": "Kinshasa",
+      "ru": "Киншаса",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 2345410.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "CD",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Guinea",
+      "ru": "Гвинея",
+      "ru_genetive": "Гвинеи"
+    },
+    "capital": {
+      "en": "Conakry",
+      "ru": "Конакри",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 245857.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "GN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Gabon",
+      "ru": "Габон",
+      "ru_genetive": "Габона"
+    },
+    "capital": {
+      "en": "Libreville",
+      "ru": "Либревиль",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 267667.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "GA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Malawi",
+      "ru": "Малави",
+      "ru_genetive": "Малави"
+    },
+    "capital": {
+      "en": "Lilongwe",
+      "ru": "Лилонгве",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 118480.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "MW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Togo",
+      "ru": "Того",
+      "ru_genetive": "Того"
+    },
+    "capital": {
+      "en": "Lome",
+      "ru": "Ломе",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 56785.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "TG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Angola",
+      "ru": "Ангола",
+      "ru_genetive": "Анголы"
+    },
+    "capital": {
+      "en": "Luanda",
+      "ru": "Луанда",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1246700.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "AO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Zambia",
+      "ru": "Замбия",
+      "ru_genetive": "Замбии"
+    },
+    "capital": {
+      "en": "Lusaka",
+      "ru": "Лусака",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 752614.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "ZM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Equatorial Guinea",
+      "ru": "Экваториальная Гвинея",
+      "ru_genetive": "Экваториальной Гвинеи"
+    },
+    "capital": {
+      "en": "Malabo",
+      "ru": "Малабо",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 28051.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "GQ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Mozambique",
+      "ru": "Мозамбик",
+      "ru_genetive": "Мозамбика"
+    },
+    "capital": {
+      "en": "Maputo",
+      "ru": "Мапуту",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 801590.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "MZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Lesotho",
+      "ru": "Лесото",
+      "ru_genetive": "Лесото"
+    },
+    "capital": {
+      "en": "Maseru",
+      "ru": "Масеру",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 30355.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "LS",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Swaziland",
+      "ru": "Свазиленд",
+      "ru_genetive": "Свазиленда"
+    },
+    "capital": {
+      "en": "Mbabane",
+      "ru": "Мбабане",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 17363.0,
+    "polity": 2,
+    "complexity": 4,
+    "iso": "SZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Somalia",
+      "ru": "Сомали",
+      "ru_genetive": "Сомали"
+    },
+    "capital": {
+      "en": "Mogadishu",
+      "ru": "Могадишо",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 637657.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Liberia",
+      "ru": "Либерия",
+      "ru_genetive": "Либерии"
+    },
+    "capital": {
+      "en": "Monrovia",
+      "ru": "Монровия",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 111370.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "LR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Comoros",
+      "ru": "Коморы",
+      "ru_genetive": "Комор"
+    },
+    "capital": {
+      "en": "Moroney",
+      "ru": "Морони",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1862.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "KM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Kenya",
+      "ru": "Кения",
+      "ru_genetive": "Кении"
+    },
+    "capital": {
+      "en": "Nairobi",
+      "ru": "Найроби",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 582650.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "KE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Chad",
+      "ru": "Чад",
+      "ru_genetive": "Чада"
+    },
+    "capital": {
+      "en": "N'Djamena",
+      "ru": "Нджамена",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1284000.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "TD",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Niger",
+      "ru": "Нигер",
+      "ru_genetive": "Нигера"
+    },
+    "capital": {
+      "en": "Niamey",
+      "ru": "Ниамей",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1267000.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "NE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Mauritania",
+      "ru": "Мавритания",
+      "ru_genetive": "Мавритании"
+    },
+    "capital": {
+      "en": "Nouakchott",
+      "ru": "Нуакшот",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1030700.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "MR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Mauritius",
+      "ru": "Маврикий",
+      "ru_genetive": "Маврикия"
+    },
+    "capital": {
+      "en": "Port Louis",
+      "ru": "Порт-Луи",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 2040.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "MU",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Benin",
+      "ru": "Бенин",
+      "ru_genetive": "Бенина"
+    },
+    "capital": {
+      "en": "Porto-Novo",
+      "ru": "Порто-Ново",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 112620.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "BJ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Cape Verde",
+      "ru": "Кабо-Верде",
+      "ru_genetive": "Кабо-Верде"
+    },
+    "capital": {
+      "en": "Pry",
+      "ru": "Прая",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 4033.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "CV",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "South Africa",
+      "ru": "Южно-Африканская Республика",
+      "ru_genetive": "Южно-Африканской Республики"
+    },
+    "capital": {
+      "en": "Pretoria",
+      "ru": "Претория",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1219912.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "ZA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Morocco",
+      "ru": "Марокко",
+      "ru_genetive": "Марокко"
+    },
+    "capital": {
+      "en": "Rabat",
+      "ru": "Рабат",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 446550.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "MA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Sao Tome and Principe",
+      "ru": "Сан-Томе и Принсипи",
+      "ru_genetive": "Сан-Томе и Принсипи"
+    },
+    "capital": {
+      "en": "Sao Tome",
+      "ru": "Сан-Томе",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1001.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "ST",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Burkina Faso",
+      "ru": "Буркина-Фасо",
+      "ru_genetive": "Буркина-Фасо"
+    },
+    "capital": {
+      "en": "Ouagadougou",
+      "ru": "Уагадугу",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 274200.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "BF",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Sierra Leone",
+      "ru": "Сьерра-Леоне",
+      "ru_genetive": "Сьерра-Леоне"
+    },
+    "capital": {
+      "en": "Freetown",
+      "ru": "Фритаун",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 71740.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SL",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Zimbabwe",
+      "ru": "Зимбабве",
+      "ru_genetive": "Зимбабве"
+    },
+    "capital": {
+      "en": "Harare",
+      "ru": "Хараре",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 390580.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "ZW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Sudan",
+      "ru": "Судан",
+      "ru_genetive": "Судана"
+    },
+    "capital": {
+      "en": "Khartoum",
+      "ru": "Хартум",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 1886065.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SD",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Cameroon",
+      "ru": "Камерун",
+      "ru_genetive": "Камеруна"
+    },
+    "capital": {
+      "en": "Yaounde",
+      "ru": "Яунде",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 475440.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "CM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Somaliland",
+      "ru": "Сомалиленд",
+      "ru_genetive": "Сомалиленда"
+    },
+    "capital": {
+      "en": "Hargeisa",
+      "ru": "Харгейса",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 137600.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 2
+  },
+  {
+    "name": {
+      "en": "Sahrawi Republic",
+      "ru": "Сахарская Арабская Демократическая Республика",
+      "ru_genetive": "Сахарской Арабской Демократической Республики"
+    },
+    "capital": {
+      "en": "El-Aaiún",
+      "ru": "Эль-Аюн",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 266000.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "EH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Brunei",
+      "ru": "Бруней",
+      "ru_genetive": "Брунея"
+    },
+    "capital": {
+      "en": "Bandar Seri Begawan",
+      "ru": "Бандар-Сери-Бегаван",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 5770.0,
+    "polity": 2,
+    "complexity": 4,
+    "iso": "BN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Lebanon",
+      "ru": "Ливан",
+      "ru_genetive": "Ливана"
+    },
+    "capital": {
+      "en": "Beirut",
+      "ru": "Бейрут",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 10452.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "LB",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Kyrgyzstan",
+      "ru": "Киргизия",
+      "ru_genetive": "Киргизии"
+    },
+    "capital": {
+      "en": "Bishkek",
+      "ru": "Бишкек",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 198500.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "KG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Laos",
+      "ru": "Лаос",
+      "ru_genetive": "Лаоса"
+    },
+    "capital": {
+      "en": "Vientiane",
+      "ru": "Вьентьян",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 236800.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "LA",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bangladesh",
+      "ru": "Бангладеш",
+      "ru_genetive": "Бангладеша"
+    },
+    "capital": {
+      "en": "Dacca",
+      "ru": "Дакка",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 144000.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "BD",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "East Timor",
+      "ru": "Восточный Тимор",
+      "ru_genetive": "Восточного Тимора"
+    },
+    "capital": {
+      "en": "Dili",
+      "ru": "Дили",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 14874.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "TL",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Nepal",
+      "ru": "Непал",
+      "ru_genetive": "Непала"
+    },
+    "capital": {
+      "en": "Katmandu",
+      "ru": "Катманду",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 140800.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "NP",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Malaysia",
+      "ru": "Малайзия",
+      "ru_genetive": "Малайзии"
+    },
+    "capital": {
+      "en": "Kuala Lumpur",
+      "ru": "Куала-Лумпур",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 329750.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "MY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Maldives",
+      "ru": "Мальдивы",
+      "ru_genetive": "Мальдив"
+    },
+    "capital": {
+      "en": "Male",
+      "ru": "Мале",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 298.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "MV",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bahrain",
+      "ru": "Бахрейн",
+      "ru_genetive": "Бахрейна"
+    },
+    "capital": {
+      "en": "Manama",
+      "ru": "Манама",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 665.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "BH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Philippines",
+      "ru": "Филиппины",
+      "ru_genetive": "Филиппин"
+    },
+    "capital": {
+      "en": "Manila",
+      "ru": "Манила",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 299764.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "PH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Oman",
+      "ru": "Оман",
+      "ru_genetive": "Омана"
+    },
+    "capital": {
+      "en": "Muscat",
+      "ru": "Маскат",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 309500.0,
+    "polity": 2,
+    "complexity": 4,
+    "iso": "OM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Myanmar",
+      "ru": "Мьянма",
+      "ru_genetive": "Мьянмы"
+    },
+    "capital": {
+      "en": "Naypyidaw",
+      "ru": "Нейпьидо",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 678500.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "MM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Yemen",
+      "ru": "Йемен",
+      "ru_genetive": "Йемена"
+    },
+    "capital": {
+      "en": "Sana",
+      "ru": "Сана",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 527970.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "YE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bhutan",
+      "ru": "Бутан",
+      "ru_genetive": "Бутана"
+    },
+    "capital": {
+      "en": "Thimphu",
+      "ru": "Тхимпху",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 47000.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "BT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Sri Lanka",
+      "ru": "Шри-Ланка",
+      "ru_genetive": "Шри-Ланки"
+    },
+    "capital": {
+      "en": "Sri Jayawardenapura Kotte",
+      "ru": "Шри-Джаяварденепура-Котте",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 65610.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "LK",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Palestine",
+      "ru": "Государство Палестина",
+      "ru_genetive": "Государства Палестина"
+    },
+    "capital": {
+      "en": "Ramallah",
+      "ru": "Рамалла",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 6020.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Taiwan",
+      "ru": "Китайская Республика",
+      "ru_genetive": "Китайской Республики"
+    },
+    "capital": {
+      "en": "Taipei",
+      "ru": "Тайбэй",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 35980.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "TW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Azad Kashmir",
+      "ru": "Азад Кашмир",
+      "ru_genetive": "Азад Кашмира"
+    },
+    "capital": {
+      "en": "Muzaffarabad",
+      "ru": "Музаффарабад",
+      "ru_genetive": null
+    },
+    "continent": 2,
+    "area": 13297.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Kosovo",
+      "ru": "Косово",
+      "ru_genetive": "Косово"
+    },
+    "capital": {
+      "en": "Pristina",
+      "ru": "Приштина",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 10888.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 1
+  },
+  {
+    "name": {
+      "en": "Saint Kitts and Nevis",
+      "ru": "Сент-Китс и Невис",
+      "ru_genetive": "Сент-Китс и Невис"
+    },
+    "capital": {
+      "en": "Buster",
+      "ru": "Бастер",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 261.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "KN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Belize",
+      "ru": "Белиз",
+      "ru_genetive": "Белиза"
+    },
+    "capital": {
+      "en": "Belmopan",
+      "ru": "Бельмопан",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 22966.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "BZ",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Barbados",
+      "ru": "Барбадос",
+      "ru_genetive": "Барбадоса"
+    },
+    "capital": {
+      "en": "Bridgetown",
+      "ru": "Бриджтаун",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 430.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "BB",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Saint Lucia",
+      "ru": "Сент-Люсия",
+      "ru_genetive": "Сент-Люсии"
+    },
+    "capital": {
+      "en": "Castries",
+      "ru": "Кастри",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 620.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "LC",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Saint Vincent and the Grenadines",
+      "ru": "Сент-Винсент и Гренадины",
+      "ru_genetive": "Сент-Винсент и Гренадин"
+    },
+    "capital": {
+      "en": "Kingstown",
+      "ru": "Кингстаун",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 389.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "VC",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Nicaragua",
+      "ru": "Никарагуа",
+      "ru_genetive": "Никарагуа"
+    },
+    "capital": {
+      "en": "Managua",
+      "ru": "Манагуа",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 129494.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "NI",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bahamas",
+      "ru": "Багамские острова",
+      "ru_genetive": "Багамских островов"
+    },
+    "capital": {
+      "en": "Nassau",
+      "ru": "Нассау",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 13940.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "BS",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Haiti",
+      "ru": "Гаити",
+      "ru_genetive": "Гаити"
+    },
+    "capital": {
+      "en": "Port-au-Prince",
+      "ru": "Порт-о-Пренс",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 27750.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "HT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Trinidad and Tobago",
+      "ru": "Тринидад и Тобаго",
+      "ru_genetive": "Тринидада и Тобаго"
+    },
+    "capital": {
+      "en": "Port-of-Spain",
+      "ru": "Порт-оф-Спейн",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 5128.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "TT",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Dominica",
+      "ru": "Доминика",
+      "ru_genetive": "Доминики"
+    },
+    "capital": {
+      "en": "Roseau",
+      "ru": "Розо",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 754.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "DM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "El Salvador",
+      "ru": "Сальвадор",
+      "ru_genetive": "Сальвадора"
+    },
+    "capital": {
+      "en": "San Salvador",
+      "ru": "Сан-Сальвадор",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 21040.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SV",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Costa Rica",
+      "ru": "Коста-Рика",
+      "ru_genetive": "Коста-Рики"
+    },
+    "capital": {
+      "en": "San Jose",
+      "ru": "Сан-Хосе",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 51100.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "CR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Dominican Republic",
+      "ru": "Доминиканская Республика",
+      "ru_genetive": "Доминиканской Республики"
+    },
+    "capital": {
+      "en": "Santo Domingo",
+      "ru": "Санто-Доминго",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 48730.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "DO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Antigua and Barbuda",
+      "ru": "Антигуа и Барбуда",
+      "ru_genetive": "Антигуа и Барбуда"
+    },
+    "capital": {
+      "en": "St. John's",
+      "ru": "Сент-Джонс",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 442.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "AG",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Grenada",
+      "ru": "Гренада",
+      "ru_genetive": "Гренады"
+    },
+    "capital": {
+      "en": "St. George's",
+      "ru": "Сент-Джорджес",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 340.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "GD",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Honduras",
+      "ru": "Гондурас",
+      "ru_genetive": "Гондураса"
+    },
+    "capital": {
+      "en": "Tegucigalpa",
+      "ru": "Тегусигальпа",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 112090.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "HN",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Samoa",
+      "ru": "Самоа",
+      "ru_genetive": "Самоа"
+    },
+    "capital": {
+      "en": "Apia",
+      "ru": "Апиа",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 2860.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "WS",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Marshall Islands",
+      "ru": "Маршалловы Острова",
+      "ru_genetive": "Маршалловых Островов"
+    },
+    "capital": {
+      "en": "Majuro",
+      "ru": "Маджуро",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 181.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "MH",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Palau",
+      "ru": "Палау",
+      "ru_genetive": "Палау"
+    },
+    "capital": {
+      "en": "Ngerulmud",
+      "ru": "Нгерулмуд",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 458.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "PW",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Tonga",
+      "ru": "Тонга",
+      "ru_genetive": "Тонга"
+    },
+    "capital": {
+      "en": "Nuku'alofa",
+      "ru": "Нукуалофа",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 748.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "TO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Federated States of Micronesia",
+      "ru": "Штаты Микронезии",
+      "ru_genetive": "Штатов Микронезии"
+    },
+    "capital": {
+      "en": "Palikir",
+      "ru": "Паликир",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 702.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "FM",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Vanuatu",
+      "ru": "Вануату",
+      "ru_genetive": "Вануату"
+    },
+    "capital": {
+      "en": "Port Vila",
+      "ru": "Порт-Вила",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 12200.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "VU",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Tuvalu",
+      "ru": "Тувалу",
+      "ru_genetive": "Тувалу"
+    },
+    "capital": {
+      "en": "Funafuti",
+      "ru": "Фунафути",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 26.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "TV",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Solomon Islands",
+      "ru": "Соломоновы Острова",
+      "ru_genetive": "Соломоновых Островов"
+    },
+    "capital": {
+      "en": "Honiara",
+      "ru": "Хониара",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 28450.0,
+    "polity": 1,
+    "complexity": 4,
+    "iso": "SB",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Kiribati",
+      "ru": "Кирибати",
+      "ru_genetive": "Кирибати"
+    },
+    "capital": {
+      "en": "South Tarawa",
+      "ru": "Южная Тарава",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 717.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "KI",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Nauru",
+      "ru": "Науру",
+      "ru_genetive": "Науру"
+    },
+    "capital": {
+      "en": "Yaren (de facto)",
+      "ru": "Ярен (де факто)",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 21.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "NR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Paraguay",
+      "ru": "Парагвай",
+      "ru_genetive": "Парагвая"
+    },
+    "capital": {
+      "en": "Asuncion",
+      "ru": "Асунсьон",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 406750.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "PY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Colombia",
+      "ru": "Колумбия",
+      "ru_genetive": "Колумбии"
+    },
+    "capital": {
+      "en": "Bogota",
+      "ru": "Богота",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 1138910.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "CO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Guyana",
+      "ru": "Гайана",
+      "ru_genetive": "Гайаны"
+    },
+    "capital": {
+      "en": "Georgetown",
+      "ru": "Джорджтаун",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 214970.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "GY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Ecuador",
+      "ru": "Эквадор",
+      "ru_genetive": "Эквадора"
+    },
+    "capital": {
+      "en": "Quito",
+      "ru": "Кито",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 283560.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "EC",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Peru",
+      "ru": "Перу",
+      "ru_genetive": "Перу"
+    },
+    "capital": {
+      "en": "Lima",
+      "ru": "Лима",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 1285220.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "PE",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Uruguay",
+      "ru": "Уругвай",
+      "ru_genetive": "Уругвая"
+    },
+    "capital": {
+      "en": "Montevideo",
+      "ru": "Монтевидео",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 176220.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "UY",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Suriname",
+      "ru": "Суринам",
+      "ru_genetive": "Суринама"
+    },
+    "capital": {
+      "en": "Paramaribo",
+      "ru": "Парамарибо",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 163270.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "SR",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bolivia",
+      "ru": "Боливия",
+      "ru_genetive": "Боливии"
+    },
+    "capital": {
+      "en": "Sucre",
+      "ru": "Сукре",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 1098580.0,
+    "polity": 0,
+    "complexity": 4,
+    "iso": "BO",
+    "type": 0,
+    "is_dependent": false,
+    "parent": null,
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Mayotte",
+      "ru": "Майотта",
+      "ru_genetive": "Майотты"
+    },
+    "capital": {
+      "en": "Mamoudzou",
+      "ru": "Мамудзу",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 376.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "YT",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Reunion",
+      "ru": "Реюньон",
+      "ru_genetive": "Реюньона"
+    },
+    "capital": {
+      "en": "Saint-Denis",
+      "ru": "Сен-Дени",
+      "ru_genetive": null
+    },
+    "continent": 1,
+    "area": 2517.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "RE",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Kerguelen Islands",
+      "ru": "Архипелаг Кергелен",
+      "ru_genetive": "Архипелага Кергелен"
+    },
+    "capital": {
+      "en": "Port-aux-Français",
+      "ru": "Порт-о-Франсе",
+      "ru_genetive": null
+    },
+    "continent": 0,
+    "area": 7215.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Madeira",
+      "ru": "Мадейра",
+      "ru_genetive": "Мадейры"
+    },
+    "capital": {
+      "en": "Funchal",
+      "ru": "Фуншал",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 741.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Portugal",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Azores",
+      "ru": "Асориш",
+      "ru_genetive": "Асориш"
+    },
+    "capital": {
+      "en": "Ponta Delgada",
+      "ru": "Понта-Делгада",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 2333.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Portugal",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Faroe Islands",
+      "ru": "Фарерские острова",
+      "ru_genetive": "Фарерских островов"
+    },
+    "capital": {
+      "en": "Thorshavn",
+      "ru": "Торсхавн",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 1395.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "FO",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Denmark",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Guernsey",
+      "ru": "Гернси",
+      "ru_genetive": "Гернси"
+    },
+    "capital": {
+      "en": "St Peter Port",
+      "ru": "Сент-Питер-Порт",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 65.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "GG",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Jersey",
+      "ru": "Джерси",
+      "ru_genetive": "Джерси"
+    },
+    "capital": {
+      "en": "Saint Helier",
+      "ru": "Сент-Хельер",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 118.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "JE",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Svalbard",
+      "ru": "Шпицберген",
+      "ru_genetive": "Шпицбергена"
+    },
+    "capital": {
+      "en": "Longyearbyen",
+      "ru": "Лонгйир",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 61022.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "SJ",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Norway",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Montserrat",
+      "ru": "Монтсеррат",
+      "ru_genetive": "Монтсеррата"
+    },
+    "capital": {
+      "en": "Plymouth",
+      "ru": "Плимут",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 102.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "MS",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Guadeloupe",
+      "ru": "Гваделупа",
+      "ru_genetive": "Гваделупы"
+    },
+    "capital": {
+      "en": "Basse-Terre",
+      "ru": "Бас-Тер",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 1780.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "GP",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Martinique",
+      "ru": "Мартиника",
+      "ru_genetive": "Мартиники"
+    },
+    "capital": {
+      "en": "Fort-de-France",
+      "ru": "Фор-де-Франс",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 1100.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "MQ",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Puerto Rico",
+      "ru": "Пуэрто-Рико",
+      "ru_genetive": "Пуэрто-Рико"
+    },
+    "capital": {
+      "en": "San Juan",
+      "ru": "Сан-Хуан",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 9104.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "PR",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United States of America",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Anguilla",
+      "ru": "Ангилья",
+      "ru_genetive": "Ангильи"
+    },
+    "capital": {
+      "en": "The Valley",
+      "ru": "Валли",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 91.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "AI",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "British Virgin Islands",
+      "ru": "Британские Виргинские острова",
+      "ru_genetive": "Британских Виргинских островов"
+    },
+    "capital": {
+      "en": "Road Town",
+      "ru": "Род-Таун",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 153.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "VG",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Turks and Caicos Islands",
+      "ru": "Теркс и Кайкос",
+      "ru_genetive": "Теркса и Кайкоса"
+    },
+    "capital": {
+      "en": "Cockburn Town",
+      "ru": "Коберн-Таун",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 35980.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "TC",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Curacao",
+      "ru": "Кюрасао",
+      "ru_genetive": "Кюрасао"
+    },
+    "capital": {
+      "en": "Willemstad",
+      "ru": "Виллемстад",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 444.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "CW",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Netherlands",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "United States Virgin Islands",
+      "ru": "Американские Виргинские острова",
+      "ru_genetive": "Американских Виргинских островов"
+    },
+    "capital": {
+      "en": "Charlotte Amalie",
+      "ru": "Шарлотта-Амалия",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 346.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "VI",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United States of America",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Saint Martin",
+      "ru": "Сен-Мартен",
+      "ru_genetive": "Сен-Мартена"
+    },
+    "capital": {
+      "en": "Marigot",
+      "ru": "Мариго",
+      "ru_genetive": null
+    },
+    "continent": 4,
+    "area": 53.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "MF",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Guam",
+      "ru": "Гуам",
+      "ru_genetive": "Гуама"
+    },
+    "capital": {
+      "en": "Agana ",
+      "ru": "Хагатна",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 548.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "GU",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United States of America",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "New Caledonia",
+      "ru": "Новая Каледония",
+      "ru_genetive": "Новой Каледонии"
+    },
+    "capital": {
+      "en": "Nouméa",
+      "ru": "Нумеа",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 19060.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "NC",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Pitcairn Islands",
+      "ru": "Острова Питкэрн",
+      "ru_genetive": "Островов Питкэрн"
+    },
+    "capital": {
+      "en": "Adamstown",
+      "ru": "Адамстаун",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 47.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "PN",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Cook Islands",
+      "ru": "Острова Кука",
+      "ru_genetive": "Островов Кука"
+    },
+    "capital": {
+      "en": "Avarua",
+      "ru": "Аваруа",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 236.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "CK",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "New Zealand",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Niue",
+      "ru": "Ниуэ",
+      "ru_genetive": "Ниуэ"
+    },
+    "capital": {
+      "en": "Alofi",
+      "ru": "Алофи",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 261.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "NU",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "New Zealand",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Tokelau",
+      "ru": "Токелау",
+      "ru_genetive": "Токелау"
+    },
+    "capital": {
+      "en": "Atafu",
+      "ru": "Атафу",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 10.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "TK",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "New Zealand",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Northern Mariana Islands",
+      "ru": "Северные Марианские Острова",
+      "ru_genetive": "Северных Марианских Островов"
+    },
+    "capital": {
+      "en": "Saipan",
+      "ru": "Сайпан",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 464.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "MP",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United States of America",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "American Samoa",
+      "ru": "Американское Самоа",
+      "ru_genetive": "Американского Самоа"
+    },
+    "capital": {
+      "en": "Pago Pago",
+      "ru": "Паго-Паго",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 199.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "AS",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United States of America",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Wallis and Futuna",
+      "ru": "Уоллис и Футуна",
+      "ru_genetive": "Уоллиса и Футуны"
+    },
+    "capital": {
+      "en": "Mata-Utu",
+      "ru": "Мата-Уту",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 142.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "WF",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "French Polynesia",
+      "ru": "Французская Полинезия",
+      "ru_genetive": "Французской Полинезии"
+    },
+    "capital": {
+      "en": "Papeete",
+      "ru": "Папеэте",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 4167.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "PF",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "French Guiana",
+      "ru": "Французская Гвиана",
+      "ru_genetive": "Французской Гвианы"
+    },
+    "capital": {
+      "en": "Cayenne",
+      "ru": "Кайенна",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 83534.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "GF",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "France",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Aland Islands",
+      "ru": "Аландские острова",
+      "ru_genetive": "Аландских островов"
+    },
+    "capital": {
+      "en": "Mariehamn",
+      "ru": "Мариехамн",
+      "ru_genetive": null
+    },
+    "continent": 3,
+    "area": 1553.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "AX",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Finland",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Bougainville",
+      "ru": "Бугенвиль",
+      "ru_genetive": "Бугенвиля"
+    },
+    "capital": {
+      "en": "Buka",
+      "ru": "Бука",
+      "ru_genetive": null
+    },
+    "continent": 6,
+    "area": 9384.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "Papua New Guinea",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "Falkland Islands",
+      "ru": "Фолклендские острова",
+      "ru_genetive": "Фолклендских островов"
+    },
+    "capital": {
+      "en": "Stanley",
+      "ru": "Стэнли",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 12173.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "FK",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  },
+  {
+    "name": {
+      "en": "South Georgia and the South Sandwich Islands",
+      "ru": "Южная Георгия и Южные Сандвичевы острова",
+      "ru_genetive": "Южной Георгии и Южных Сандвичевых островов"
+    },
+    "capital": {
+      "en": "King Edward Point",
+      "ru": "Король Эдвард Поинт",
+      "ru_genetive": null
+    },
+    "continent": 5,
+    "area": 3903.0,
+    "polity": 3,
+    "complexity": 4,
+    "iso": "GS",
+    "type": 0,
+    "is_dependent": true,
+    "parent": "United Kingdom",
+    "recognition": 0
+  }
+]

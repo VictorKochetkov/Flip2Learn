@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:AppContentPage  xmlns:pages="clr-namespace:Flip2Learn.Forms.Pages"
+                       xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                       xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+                       xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+                       xmlns:controls="clr-namespace:Flip2Learn.Forms.Controls"
+                       xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
+                       xmlns:ui="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+                       BackgroundColor="#FF0082FE"
+                       NavigationPage.HasNavigationBar="False"
+                       x:Class="Flip2Learn.Forms.Pages.GamePage">
+
+    <RelativeLayout>
+
+        <RelativeLayout Opacity="0.08"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+
+            <ffimageloading:CachedImage x:Name="svg" Aspect="AspectFill"
+                                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"/>
+        </RelativeLayout>
+
+
+        <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="110" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout x:Name="appBar" Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+
+                <RelativeLayout Opacity="0" HeightRequest="25">
+                    <BoxView x:Name="progress" WidthRequest="200" HeightRequest="2" CornerRadius="1" BackgroundColor="White" Margin="12,12" HorizontalOptions="Start"/>
+                    <BoxView x:Name="progressBackground" HeightRequest="2" CornerRadius="1" BackgroundColor="White" Margin="12,12" Opacity="0.4" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+                </RelativeLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="16,2" HorizontalOptions="FillAndExpand">
+                    <views:RippleView Opacity="0" x:Name="close" IsCircled="True" VerticalOptions="Center">
+                        <ui:MaterialIcon WidthRequest="24" HeightRequest="24" Source="ic_close_24dp" />
+                    </views:RippleView>
+
+                    <Label HorizontalOptions="CenterAndExpand" Margin="-40,0,0,0" Text="Flip2Learn" TextColor="White" FontSize="17" Opacity="0.65" FontAttributes="Bold" FontFamily="sans-serif-medium" VerticalOptions="Center"/>
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <RelativeLayout Grid.Row="1" x:Name="container" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+            </RelativeLayout>
+
+            <StackLayout Grid.Row="2" IsVisible="False"  VerticalOptions="EndAndExpand" Orientation="Vertical">
+
+                <!--<views:RippleView x:Name="disableTime" Margin="-19,-4,0,3" Padding="16,4" IsCircled="True" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <ui:MaterialIcon WidthRequest="19" HeightRequest="19" Source="ic_all_inclusive_24dp" VerticalOptions="Center"/>
+                        <Label Text="Turn off time" TextColor="White" FontSize="17" VerticalOptions="Center" FontFamily="sans-serif-medium"/>
+                    </StackLayout>
+                </views:RippleView>
+                
+                <views:RippleView x:Name="skip" Margin="-19,-4,0,3" Padding="16,4" IsCircled="True" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <ui:MaterialIcon WidthRequest="19" HeightRequest="19" Source="ic_arrow_upward_24dp" VerticalOptions="Center"/>
+                        <Label Text="Skip" TextColor="White" FontSize="17" VerticalOptions="Center" FontFamily="sans-serif-medium"/>
+                    </StackLayout>
+                </views:RippleView>-->
+
+                <StackLayout Orientation="Vertical" Margin="0,0,0,-40">
+                    <ui:MaterialCard VerticalOptions="CenterAndExpand" Margin="76,0,76,0" Padding="32" CornerRadius="12" HasShadow="True" Elevation="30" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    </ui:MaterialCard>
+
+                    <ui:MaterialCard VerticalOptions="CenterAndExpand" Margin="42,-46,42,0" Padding="32" CornerRadius="12" HasShadow="True" Elevation="30" BorderColor="#FF0082FE" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    </ui:MaterialCard>
+                </StackLayout>
+
+
+            </StackLayout>
+
+        </Grid>
+
+
+    </RelativeLayout>
+
+</pages:AppContentPage>
