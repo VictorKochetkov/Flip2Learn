@@ -18,7 +18,7 @@
 
                 <StackLayout x:Name="cardBackContainer" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
-                    <ui:MaterialCard x:Name="cardBack" IsClickable="True" IsVisible="True" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False">
+                    <ui:MaterialCard x:Name="cardBack" IsClickable="True" IsVisible="True" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="White" >
 
 
                         <StackLayout Orientation="Vertical" Margin="0,32">
@@ -42,7 +42,7 @@
 
 
 
-                <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="White" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
                     <StackLayout VerticalOptions="Center">
 
