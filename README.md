@@ -20,4 +20,4 @@ Available on App Store. Coming soon on Google Play
 
 If you like this project you can support it by making a donation 🤗 Thank you!
 
-<a href="https://www.buymeacoffee.com/bananadev" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-green.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/bananadev" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
