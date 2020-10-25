@@ -1,5 +1,6 @@
 ﻿using System;
 using Flip2Learn.Forms.Pages;
+using Flip2Learn.Forms.Themes;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,6 +25,29 @@ namespace Flip2Learn.Forms
 
         protected override void OnResume()
         {
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static bool IsDark { get; private set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dark"></param>
+        public static void ChangeTheme(bool dark)
+        {
+            if (dark == IsDark)
+                return;
+
+            IsDark = dark;
+
+            if (dark)
+                Current.Resources = new DarkTheme();
+            else
+                Current.Resources = new LightTheme();
         }
     }
 }

@@ -11,26 +11,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Realm" Version="4.3.0" />
-    <PackageReference Include="XF.Material" Version="1.6.3" />
+    <PackageReference Include="Realm" Version="5.1.2" />
+    <PackageReference Include="XF.Material" Version="1.7.5" />
     <PackageReference Include="Plugin.SpeechRecognition" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Forms.CircularProgressBar" Version="1.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="Resources\" />
+    <Folder Include="Themes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Flip2Learn.Shared\Flip2Learn.Shared.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Controls\CircleProgressView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

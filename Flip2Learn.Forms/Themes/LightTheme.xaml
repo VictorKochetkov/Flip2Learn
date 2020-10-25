@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Flip2Learn.Forms.Themes.LightTheme">
+
+    <Style x:Key="Title" TargetType="Label">
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="TextColor" Value="#FFFFFF" />
+    </Style>
+    <Style x:Key="TitleBold" TargetType="Label">
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontAttributes" Value="{OnPlatform iOS=Bold}"/>
+        <Setter Property="FontFamily" Value="{OnPlatform Android='sans-serif-medium'}"/>
+    </Style>
+    <Style x:Key="Subitle" TargetType="Label">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="TextColor" Value="#B8B8B8" />
+    </Style>
+
+    <Color x:Key="GreenAccent">#69f0ae</Color>
+
+    <Color x:Key="bg">#FFFFFF</Color>
+    <Color x:Key="second_bg">#FBFBFB</Color>
+
+    <Color x:Key="fg">#000000</Color>
+    <Color x:Key="second_fg">#888888</Color>
+
+    <Color x:Key="main_bg">#FF0082FE</Color>
+
+</ResourceDictionary>

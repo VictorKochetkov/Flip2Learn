@@ -3,7 +3,7 @@ using Realms;
 
 namespace Flip2Learn.Shared.Database
 {
-    public class CountryData : RealmObject
+    public class CountrySnapshot : RealmObject
     {
         [PrimaryKey, Indexed]
         public string Id { get; set; }

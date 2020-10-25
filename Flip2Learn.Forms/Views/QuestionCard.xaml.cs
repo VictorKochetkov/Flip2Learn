@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Flip2Learn.Shared.Models;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Flip2Learn.Forms.Views
@@ -49,12 +50,22 @@ namespace Flip2Learn.Forms.Views
 
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         public async void Show()
         {
+            TextToSpeech.SpeakAsync(_question.CountryName);
+
             progress.IsVisible = false;
             await this.TranslateTo(0, 0, 400, Easing.CubicOut);
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="callback"></param>
         public async void Hide(Action callback)
         {
             const int _delay = 3000;
@@ -122,12 +133,25 @@ namespace Flip2Learn.Forms.Views
             cardFront.IsVisible = false;
             cardBackContainer.IsVisible = true;
 
+
             resultTitle.SetText(_question.Capital);
             resultSubtitle.SetText(_question.CountryName);
             flagBack.SetText(_question.Flag);
 
-            await cardBackContainer.RotateYTo(-360, 300, Easing.SpringOut);
-            cardBackContainer.RotationY = 0;
+            resultTitle.IsVisible = false;
+            resultSubtitle.IsVisible = false;
+            flagBack.IsVisible = false;
+
+            cardBackContainer.RotationY = 90;
+            cardBackContainer.RotateYTo(0, 300, Easing.SpringOut);
+
+            TextToSpeech.SpeakAsync(_question.Capital.ToString());
+
+            await Task.Delay(10);
+
+            resultTitle.IsVisible = true;
+            resultSubtitle.IsVisible = true;
+            flagBack.IsVisible = true;
         }
     }
 }

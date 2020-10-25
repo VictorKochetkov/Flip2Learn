@@ -54,7 +54,17 @@ namespace Flip2Learn.Shared.Models
         /// <summary>
         /// 
         /// </summary>
-        string GetFlag(string code)
+        /// <param name="country"></param>
+        /// <returns></returns>
+        public static string GetFlag(Country country)
+        {
+            return GetFlag(country.Iso);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string GetFlag(string code)
         {
             code = code.ToUpper();
             if (code == "AD") return "🇦🇩";

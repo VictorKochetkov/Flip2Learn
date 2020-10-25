@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseRowCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Flip2Learn.Forms.Views"
+             xmlns:models="clr-namespace:Flip2Learn.Shared.Models;assembly=Flip2Learn.Shared"
+             x:Class="Flip2Learn.Forms.Views.SelectCountryCell"
+             x:TypeArguments="models:ISelectCountryDisplay">
+    <ViewCell.View>
+        <StackLayout Orientation="Horizontal" Padding="21,6,4,6">
+            <Label FontSize="32" VerticalOptions="Center" x:Name="flag"/>
+            <StackLayout Spacing="0" VerticalOptions="Center" Padding="12,4" HorizontalOptions="StartAndExpand">
+                <Label x:Name="title" Style="{StaticResource Title}" LineBreakMode="TailTruncation"/>
+                <Label x:Name="subtitle" Style="{StaticResource Subitle}"/>
+            </StackLayout>
+            <CheckBox x:Name="selected" IsChecked="True" Scale="{OnPlatform Android=1, iOS=1.2}" Margin="2" Color="{StaticResource GreenAccent}"/>
+        </StackLayout>
+
+    </ViewCell.View>
+</local:BaseRowCell>

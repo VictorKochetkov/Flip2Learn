@@ -2,28 +2,55 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using Flip2Learn.Shared.Core;
+using Flip2Learn.Shared.Database;
 using Flip2Learn.Shared.Helpers;
+using Flip2Learn.Shared.Models;
 using Flip2Learn.Shared.Resources;
 using Newtonsoft.Json;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
+using Realms;
 using Xamarin.Essentials;
 
 namespace Flip2Learn.Shared.Application
 {
     /// <summary>
+    /// 
+    /// </summary>
+    public enum AppChangedType : int
+    {
+        KnownCountries = 0
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class AppChangedEventArgs : EventArgs
+    {
+        public AppChangedType ChangedType { get; set; }
+    }
+
+
+    /// <summary>
     /// Crossplatform application
     /// </summary>
     public interface ICrossApplication
     {
+        event EventHandler<AppChangedEventArgs> AppChanged;
         Environment Environment { get; }
 
         string GetString(string key);
         string GetLocale();
 
 
-        List<Country> GetAllCountries();
+        IReadOnlyList<Country> GetAllCountries();
+        IEnumerable<ISelectCountryDisplay> GetSelectCountryList();
+        void MarkAsKnown(string countryId, bool known);
+        [Obsolete]
+        CountrySnapshot FindSnapshotOrCreate(string countryId);
+        int GetKnownCountriesCount();
     }
 
     public struct Size
@@ -81,6 +108,8 @@ namespace Flip2Learn.Shared.Application
 
     public abstract partial class CrossApplication : ICrossApplication
     {
+        public event EventHandler<AppChangedEventArgs> AppChanged = delegate { };
+
         public abstract ICrossApplication App { get; }
         public static ICrossApplication instance { get; protected set; }
 
@@ -112,7 +141,7 @@ namespace Flip2Learn.Shared.Application
             }
         }
 
-      
+
         public virtual ISettings SettingsImplementation => CrossSettings.Current;
 
 
@@ -150,9 +179,9 @@ namespace Flip2Learn.Shared.Application
 
         public string GetLocale() => this.Environment.Locale;
 
-        private List<Country> countries;
+        private IReadOnlyList<Country> countries;
 
-        public List<Country> GetAllCountries()
+        public IReadOnlyList<Country> GetAllCountries()
         {
             lock (typeof(Country))
             {
@@ -161,6 +190,133 @@ namespace Flip2Learn.Shared.Application
 
                 return countries;
             }
+        }
+
+
+        private static Realm realm;
+        private static object realmLock = new object();
+        private static Realm UIRealm
+        {
+            get
+            {
+                lock (realmLock)
+                {
+                    if (realm == null)
+                        realm = RealmHelper.GetRealmInstance();
+
+                    return realm;
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="realm"></param>
+        /// <param name="countryId"></param>
+        /// <returns></returns>
+        private static CountrySnapshot FindSnapshotOrCreate(Realm realm, string countryId)
+        {
+            var snapshot = realm.Find<CountrySnapshot>(countryId);
+
+            if (snapshot == null)
+            {
+                snapshot = new CountrySnapshot()
+                {
+                    Id = countryId
+                };
+
+                realm.Write(() =>
+                {
+                    realm.Add(snapshot);
+                });
+            }
+
+            return snapshot;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="countryId"></param>
+        /// <returns></returns>
+
+        public CountrySnapshot FindSnapshotOrCreate(string countryId)
+        {
+            return FindSnapshotOrCreate(UIRealm, countryId);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public int GetKnownCountriesCount()
+        {
+            int count = 0;
+
+            using (var realm = RealmHelper.GetRealmInstance())
+            {
+                foreach (var country in GetAllCountries())
+                {
+                    var snapshot = FindSnapshotOrCreate(country.NameAsId());
+
+                    if (snapshot.IsMarkedAsKnown)
+                        count++;
+                }
+            }
+
+            return count;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="action"></param>
+        private void PostEvent(Action action)
+        {
+            //TODO thread queue
+            action();
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="countryId"></param>
+        public void MarkAsKnown(string countryId, bool known)
+        {
+            using (var realm = RealmHelper.GetRealmInstance())
+            {
+                var snapshot = FindSnapshotOrCreate(realm, countryId);
+
+                realm.Write(() =>
+                {
+                    snapshot.IsMarkedAsKnown = known;
+                });
+            }
+
+            PostEvent(() =>
+            {
+                AppChanged(this, new AppChangedEventArgs()
+                {
+                    ChangedType = AppChangedType.KnownCountries
+                });
+            });
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<ISelectCountryDisplay> GetSelectCountryList()
+        {
+            return GetAllCountries()
+                .OrderBy(x => x.Name.GetLocalized())
+                .Select(x => new SelectCountryDisplay(x));
         }
     }
 }

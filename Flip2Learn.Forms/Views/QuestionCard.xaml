@@ -3,28 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:ui="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
-             xmlns:controls="clr-namespace:Flip2Learn.Forms.Controls"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Controls;assembly=CircularProgressBar"
              x:Class="Flip2Learn.Forms.Views.QuestionCard">
 
     <ContentView.Content>
 
         <StackLayout Orientation="Vertical">
 
-            <controls:CircleProgressView x:Name="progress" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Stroke="6" />
+            <controls:CircularProgressBar x:Name="progress" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Stroke="7" Color="White"/>
 
             <RelativeLayout>
 
                 <StackLayout x:Name="cardBackContainer" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
-                    <ui:MaterialCard x:Name="cardBack" IsClickable="True" IsVisible="True" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="White" >
+                    <ui:MaterialCard x:Name="cardBack" IsClickable="True" IsVisible="True" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" >
 
 
                         <StackLayout Orientation="Vertical" Margin="0,32">
 
-                            <Label x:Name="resultSubtitle" Text="Capital of" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
-                            <Label x:Name="resultTitle" Text="Australia" FontAttributes="Bold" LineHeight="1" TextColor="Black" HorizontalTextAlignment="Center"  FontSize="32" HorizontalOptions="Center" />
+                            <Label x:Name="resultSubtitle" TextColor="{DynamicResource second_fg}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="resultTitle" FontAttributes="Bold" LineHeight="1" TextColor="{DynamicResource fg}" HorizontalTextAlignment="Center" FontSize="32" HorizontalOptions="CenterAndExpand" />
 
                             <Label x:Name="flagBack" HorizontalTextAlignment="Center" TextColor="Black" FontSize="52" HorizontalOptions="Center" />
 
@@ -32,9 +32,9 @@
 
                     </ui:MaterialCard>
 
-                    <views:RippleView x:Name="know" HorizontalOptions="Center" Padding="22,8" HasShadow="False" Elevation="0" BackgroundColor="#69f0ae">
+                    <views:RippleView x:Name="know" HorizontalOptions="Center" Padding="22,8" HasShadow="False" Elevation="0" BackgroundColor="{StaticResource GreenAccent}">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Don't show again" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Text="✔️ Mark as known" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"/>
                         </StackLayout>
                     </views:RippleView>
 
@@ -42,14 +42,14 @@
 
 
 
-                <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="White" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
                     <StackLayout VerticalOptions="Center">
 
                         <StackLayout Orientation="Vertical" Margin="12,24">
 
-                            <Label x:Name="subtitle" Text="Capital of" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
-                            <Label x:Name="title" Text="Australia" FontAttributes="Bold" LineHeight="1" TextColor="Black" HorizontalTextAlignment="Center"  FontSize="32" HorizontalOptions="Center" />
+                            <Label x:Name="subtitle" TextColor="{DynamicResource second_fg}" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+                            <Label x:Name="title" FontAttributes="Bold" LineHeight="1" TextColor="{DynamicResource fg}" HorizontalTextAlignment="Center"  FontSize="32" HorizontalOptions="Center" />
 
                             <Label x:Name="flag" HorizontalTextAlignment="Center" TextColor="Black" FontSize="52" HorizontalOptions="Center" />
 

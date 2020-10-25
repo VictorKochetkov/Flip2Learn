@@ -3,7 +3,7 @@ using Flip2Learn.Shared.Application;
 
 namespace Flip2Learn.Shared.Models
 {
-    public class BaseDisplay<T>
+    public abstract class BaseDisplay<T>
     {
         protected ICrossApplication app => CrossApplication.instance;
         public readonly T Source;

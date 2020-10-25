@@ -45,10 +45,9 @@ namespace Flip2Learn.Shared.Database
         {
             var config = new RealmConfiguration(DEFAULT_REALM_NAME)
             {
-                SchemaVersion = 1,
+                SchemaVersion = 2,
                 MigrationCallback = (a, b) =>
                 {
-
                 },
             };
 

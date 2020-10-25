@@ -12,6 +12,7 @@ using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using System.Linq;
 using Flip2Learn.Shared.Database;
+using Realms;
 
 namespace Flip2Learn.Forms.Pages
 {
@@ -21,15 +22,21 @@ namespace Flip2Learn.Forms.Pages
     }
 
 
-    public interface IGameNEW
+    public interface ISprint
     {
         event EventHandler NewQuestion;
         QuestionDisplay Question { get; }
+        int QuestionNumber { get; }
+        int TotalQuestions { get; }
         void NextQuestion();
         void MarkAsKnown();
     }
 
-    public class GameNEW : IGameNEW
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class Sprint : ISprint
     {
         public event EventHandler NewQuestion = delegate { };
 
@@ -42,12 +49,18 @@ namespace Flip2Learn.Forms.Pages
         public QuestionDisplay Question { get; private set; }
         private Country Country => Question.Source;
 
-        public GameNEW()
+        private ICrossApplication app => CrossApplication.instance;
+
+        private int known = 0;
+        public int QuestionNumber => known;
+        public int TotalQuestions => 10;
+
+        public Sprint()
         {
             using (var realm = RealmHelper.GetRealmInstance())
             {
                 Known = realm
-                    .All<CountryData>()
+                    .All<CountrySnapshot>()
                     .Where(x => x.IsMarkedAsKnown)
                     .ToList()
                     .Select(x => x.Id)
@@ -56,34 +69,31 @@ namespace Flip2Learn.Forms.Pages
                 countries = CrossApplication.instance.GetAllCountries().ToList();
             }
 
+
+
+
+
+
         }
 
 
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         public void MarkAsKnown()
         {
-            using (var realm = RealmHelper.GetRealmInstance())
-            {
-                var _country = realm.Find<CountryData>(Country.NameAsId());
-
-                if (_country == null)
-                {
-                    _country = new CountryData()
-                    {
-                        Id = Country.NameAsId(),
-                    };
-                }
-
-                realm.Write(() =>
-                {
-                    _country.IsMarkedAsKnown = true;
-                    realm.Add(_country, update: true);
-                });
-
-                Known.Add(Country.NameAsId());
-            }
+            known++;
+            app.MarkAsKnown(Country.NameAsId(), true);
+            Known.Add(Country.NameAsId());
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void NextQuestion()
         {
             currentQuestion++;
@@ -95,8 +105,8 @@ namespace Flip2Learn.Forms.Pages
                     index++;
 
                     currentPart = countries
-                        .Skip(index * 10)
-                        .Take(10)
+                        .Skip(index * TotalQuestions)
+                        .Take(TotalQuestions)
                         .ToList();
                 }
 
@@ -105,6 +115,7 @@ namespace Flip2Learn.Forms.Pages
                     .ToList();
 
                 currentQuestion = 0;
+                known = 0;
                 currentPart.Shuffle();
             }
 
@@ -114,9 +125,12 @@ namespace Flip2Learn.Forms.Pages
     }
 
 
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class GamePage : AppContentPage
     {
-        IGameNEW game;
+        ISprint game;
 
         public GamePage()
         {
@@ -124,6 +138,11 @@ namespace Flip2Learn.Forms.Pages
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height);
@@ -136,8 +155,12 @@ namespace Flip2Learn.Forms.Pages
             }
         }
 
-        int count = 0;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Game_NewQuestion(object sender, EventArgs e)
         {
             UpdateProgress();
@@ -145,11 +168,15 @@ namespace Flip2Learn.Forms.Pages
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         void UpdateProgress()
         {
-            double value = count / 10d;
+            subtitle.SetText($"{game.QuestionNumber} of {game.TotalQuestions}");
+
+            double value = game.QuestionNumber / (double)game.TotalQuestions;
             progress.Animate("aa", new Animation((a) => { progress.WidthRequest = a; }, progress.Width, progressBackground.Width * value, Easing.CubicOut));
-            count++;
         }
 
 
@@ -161,26 +188,77 @@ namespace Flip2Learn.Forms.Pages
             base.OnAppearing();
             container.WidthRequest = Math.Min(400, this.Width);
 
-            close.Clicked += Close_Clicked;
+            app.AppChanged += App_AppChanged;
+            //close.Clicked += Close_Clicked;
+            settings.Clicked += Settings_Clicked;
+            settings.SizeChanged += Settings_SizeChanged;
 
-            game = new GameNEW();
-            game.NewQuestion += Game_NewQuestion;
-            game.NextQuestion();
+            if (game == null)
+            {
+                game = new Sprint();
+                game.NewQuestion += Game_NewQuestion;
+                game.NextQuestion();
+            }
 
-            UpdateViews();
+            UpdateTitle();
+            UpdateKnownCountriesCount();
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void App_AppChanged(object sender, AppChangedEventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                switch (e.ChangedType)
+                {
+                    case AppChangedType.KnownCountries:
+                        UpdateKnownCountriesCount();
+                        break;
+                }
+            });
         }
 
         /// <summary>
         /// 
         /// </summary>
-        void UpdateViews()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Settings_SizeChanged(object sender, EventArgs e)
+        {
+            UpdateTitle();
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        void UpdateTitle()
         {
             var safeInsets = On<iOS>().SafeAreaInsets();
 
             var m = appBar.Margin;
             m.Top = safeInsets.Top;
             appBar.Margin = m;
+
+            var p = titleContainer.Padding;
+            p.Left = settings.Width;
+            titleContainer.Padding = p;
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        void UpdateKnownCountriesCount()
+        {
+            knownCountries.SetText($"✔️ {app.GetKnownCountriesCount()}");
+        }
+
 
         /// <summary>
         /// 
@@ -188,14 +266,38 @@ namespace Flip2Learn.Forms.Pages
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            close.Clicked -= Close_Clicked;
+
+            app.AppChanged -= App_AppChanged;
+            //close.Clicked -= Close_Clicked;
+            settings.Clicked -= Settings_Clicked;
+            settings.SizeChanged -= Settings_SizeChanged;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Settings_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new SettingsPage());
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Close_Clicked(object sender, EventArgs e)
         {
             OnBackButtonPressed();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="question"></param>
         void Show(QuestionDisplay question)
         {
             var card = new QuestionCard(question);
