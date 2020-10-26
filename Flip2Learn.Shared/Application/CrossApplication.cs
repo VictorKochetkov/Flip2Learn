@@ -169,18 +169,36 @@ namespace Flip2Learn.Shared.Application
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         protected CrossApplication()
         {
+            RestoreSnapshots();
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public string GetString(string key) => Translator.GetString(key);
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public string GetLocale() => this.Environment.Locale;
+
 
         private IReadOnlyList<Country> countries;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IReadOnlyList<Country> GetAllCountries()
         {
             lock (typeof(Country))
@@ -189,6 +207,32 @@ namespace Flip2Learn.Shared.Application
                     countries = GetFromJsonAsset<List<Country>>("countries.json");
 
                 return countries;
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void RestoreSnapshots()
+        {
+            using (var realm = RealmHelper.GetRealmInstance())
+            {
+                realm.Write(() =>
+                {
+                    foreach (var country in GetAllCountries())
+                    {
+                        var snapshot = realm.Find<CountrySnapshot>(country.NameAsId());
+
+                        if (snapshot == null)
+                        {
+                            realm.Add(new CountrySnapshot()
+                            {
+                                Id = country.NameAsId()
+                            });
+                        }
+                    }
+                });
             }
         }
 
@@ -213,38 +257,12 @@ namespace Flip2Learn.Shared.Application
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="realm"></param>
         /// <param name="countryId"></param>
         /// <returns></returns>
-        private static CountrySnapshot FindSnapshotOrCreate(Realm realm, string countryId)
-        {
-            var snapshot = realm.Find<CountrySnapshot>(countryId);
-
-            if (snapshot == null)
-            {
-                snapshot = new CountrySnapshot()
-                {
-                    Id = countryId
-                };
-
-                realm.Write(() =>
-                {
-                    realm.Add(snapshot);
-                });
-            }
-
-            return snapshot;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="countryId"></param>
-        /// <returns></returns>
-
+        [Obsolete]
         public CountrySnapshot FindSnapshotOrCreate(string countryId)
         {
-            return FindSnapshotOrCreate(UIRealm, countryId);
+            return UIRealm.Find<CountrySnapshot>(countryId);
         }
 
 
@@ -260,7 +278,7 @@ namespace Flip2Learn.Shared.Application
             {
                 foreach (var country in GetAllCountries())
                 {
-                    var snapshot = FindSnapshotOrCreate(country.NameAsId());
+                    var snapshot = realm.Find<CountrySnapshot>(country.NameAsId());
 
                     if (snapshot.IsMarkedAsKnown)
                         count++;
@@ -291,7 +309,7 @@ namespace Flip2Learn.Shared.Application
         {
             using (var realm = RealmHelper.GetRealmInstance())
             {
-                var snapshot = FindSnapshotOrCreate(realm, countryId);
+                var snapshot = realm.Find<CountrySnapshot>(countryId);
 
                 realm.Write(() =>
                 {

@@ -6,13 +6,13 @@
              x:Class="Flip2Learn.Forms.Views.SelectCountryCell"
              x:TypeArguments="models:ISelectCountryDisplay">
     <ViewCell.View>
-        <StackLayout Orientation="Horizontal" Padding="21,6,4,6">
-            <Label FontSize="32" VerticalOptions="Center" x:Name="flag"/>
+        <StackLayout Orientation="Horizontal" Padding="21,5,4,5">
+            <Label FontSize="{OnPlatform iOS=32, Android=21}" VerticalOptions="Center" x:Name="flag"/>
             <StackLayout Spacing="0" VerticalOptions="Center" Padding="12,4" HorizontalOptions="StartAndExpand">
                 <Label x:Name="title" Style="{StaticResource Title}" LineBreakMode="TailTruncation"/>
-                <Label x:Name="subtitle" Style="{StaticResource Subitle}"/>
+                <Label x:Name="subtitle" Style="{StaticResource Subitle}" Margin="0,-3,0,0"/>
             </StackLayout>
-            <CheckBox x:Name="selected" IsChecked="True" Scale="{OnPlatform Android=1, iOS=1.2}" Margin="2" Color="{StaticResource GreenAccent}"/>
+            <CheckBox x:Name="selected" IsChecked="True" Scale="{OnPlatform Android=1, iOS=1.2}" Margin="2" Color="{StaticResource GreenAccent}" VerticalOptions="Center"/>
         </StackLayout>
 
     </ViewCell.View>

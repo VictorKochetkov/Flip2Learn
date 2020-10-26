@@ -3,18 +3,15 @@
                        xmlns="http://xamarin.com/schemas/2014/forms"
                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                        xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-                       xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-                       xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-                       xmlns:controls="clr-namespace:Flip2Learn.Forms.Controls"
                        xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
-                       xmlns:ui="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+                       xmlns:ui="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material" xmlns:controls1="clr-namespace:Xamarin.Forms.Controls;assembly=CircularProgressBar"
                        BackgroundColor="{DynamicResource main_bg}"
                        NavigationPage.HasNavigationBar="False"
                        x:Class="Flip2Learn.Forms.Pages.GamePage">
 
     <RelativeLayout>
 
-        <RelativeLayout Opacity="0.1"
+        <RelativeLayout Opacity="0.08"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
 
@@ -38,11 +35,6 @@
 
             <StackLayout x:Name="appBar" Grid.Row="0" Grid.Column="0" Orientation="Vertical">
 
-                <RelativeLayout Opacity="1" HeightRequest="25">
-                    <BoxView x:Name="progress" WidthRequest="200" HeightRequest="2" CornerRadius="1" BackgroundColor="{DynamicResource GreenAccent}" Margin="12,12" HorizontalOptions="Start"/>
-                    <BoxView x:Name="progressBackground" HeightRequest="2" CornerRadius="1" BackgroundColor="{DynamicResource GreenAccent}" Margin="12,12" Opacity="0.4" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
-                </RelativeLayout>
-
                 <StackLayout Orientation="Horizontal" Padding="16,2" HorizontalOptions="FillAndExpand">
                     <!--<views:RippleView Opacity="0" x:Name="close" IsCircled="True" VerticalOptions="Center">
                         <ui:MaterialIcon WidthRequest="24" HeightRequest="24" Source="ic_close_24dp" />
@@ -52,21 +44,22 @@
                         x:Name="titleContainer"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="Center"
+                        Padding="0,12"
                         Spacing="0">
 
                         <Label 
                            HorizontalOptions="Center"
                            Text="Sprint"
                            TextColor="{DynamicResource fg}"
-                           FontSize="17"
+                           FontSize="{OnPlatform iOS=17, Android=19}"
                            Opacity="0.65"
-                           FontAttributes="Bold"
-                           FontFamily="sans-serif-medium"/>
+                           VerticalOptions="Center"
+                           Style="{DynamicResource TitleBold}"/>
 
                         <Label
                             x:Name="subtitle"
                             HorizontalOptions="Center"
-                            FontSize="12"
+                            FontSize="{OnPlatform iOS=12, Android=14}"
                             Text="3 of 10"
                             TextColor="{DynamicResource second_fg}"
                             Opacity="0.65"/>
@@ -87,6 +80,11 @@
                     </views:RippleView>
 
                 </StackLayout>
+
+                <RelativeLayout Opacity="0" HeightRequest="25">
+                    <BoxView x:Name="progress" WidthRequest="200" HeightRequest="2" CornerRadius="1" BackgroundColor="{DynamicResource GreenAccent}" Margin="12,12" HorizontalOptions="Start"/>
+                    <BoxView x:Name="progressBackground" HeightRequest="2" CornerRadius="1" BackgroundColor="{DynamicResource GreenAccent}" Margin="12,12" Opacity="0.4" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+                </RelativeLayout>
 
             </StackLayout>
 

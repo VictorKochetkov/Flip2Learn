@@ -25,8 +25,9 @@ namespace Flip2Learn.Forms.Pages
     public interface ISprint
     {
         event EventHandler NewQuestion;
+        event EventHandler Finished;
         QuestionDisplay Question { get; }
-        int QuestionNumber { get; }
+        int QuestionIndex { get; }
         int TotalQuestions { get; }
         void NextQuestion();
         void MarkAsKnown();
@@ -39,44 +40,50 @@ namespace Flip2Learn.Forms.Pages
     public class Sprint : ISprint
     {
         public event EventHandler NewQuestion = delegate { };
+        public event EventHandler Finished = delegate { };
 
-        int index = 0;
-        int currentQuestion = 0;
-        private List<Country> currentPart = new List<Country>();
-        private List<string> Known = new List<string>();
-        private List<Country> countries;
-
+        /// <summary>
+        /// 
+        /// </summary>
         public QuestionDisplay Question { get; private set; }
-        private Country Country => Question.Source;
 
+        /// <summary>
+        /// 
+        /// </summary>
         private ICrossApplication app => CrossApplication.instance;
 
-        private int known = 0;
-        public int QuestionNumber => known;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int QuestionIndex { get; private set; } = -1;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public int TotalQuestions => 10;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly IReadOnlyList<Country> countries;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public Sprint()
         {
             using (var realm = RealmHelper.GetRealmInstance())
             {
-                Known = realm
-                    .All<CountrySnapshot>()
-                    .Where(x => x.IsMarkedAsKnown)
-                    .ToList()
-                    .Select(x => x.Id)
+                countries = CrossApplication.instance
+                    .GetAllCountries()
+                    .OrderBy(x => x.Complexity)
+                    .Where(x => realm.Find<CountrySnapshot>(x.NameAsId()).IsMarkedAsKnown != true)
+                    .Take(20)
+                    .Shuffle()
+                    .Take(TotalQuestions)
                     .ToList();
-
-                countries = CrossApplication.instance.GetAllCountries().ToList();
             }
-
-
-
-
-
-
         }
-
-
 
 
 
@@ -85,9 +92,7 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         public void MarkAsKnown()
         {
-            known++;
-            app.MarkAsKnown(Country.NameAsId(), true);
-            Known.Add(Country.NameAsId());
+            app.MarkAsKnown(countries[QuestionIndex].NameAsId(), true);
         }
 
 
@@ -96,33 +101,20 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         public void NextQuestion()
         {
-            currentQuestion++;
-
-            if (currentQuestion >= currentPart.Count)
+            if (QuestionIndex + 1 == countries.Count)
             {
-                if (currentPart.All(x => Known.Contains(x.NameAsId())))
-                {
-                    index++;
-
-                    currentPart = countries
-                        .Skip(index * TotalQuestions)
-                        .Take(TotalQuestions)
-                        .ToList();
-                }
-
-                currentPart = currentPart
-                    .Where(x => !Known.Contains(x.NameAsId()))
-                    .ToList();
-
-                currentQuestion = 0;
-                known = 0;
-                currentPart.Shuffle();
+                Finished(this, new EventArgs());
             }
-
-            Question = new QuestionDisplay(currentPart[currentQuestion]);
-            NewQuestion(this, new EventArgs());
+            else
+            {
+                QuestionIndex++;
+                Question = new QuestionDisplay(countries[QuestionIndex]);
+                NewQuestion(this, new EventArgs());
+            }
         }
     }
+
+
 
 
     /// <summary>
@@ -167,15 +159,49 @@ namespace Flip2Learn.Forms.Pages
             Show(game.Question);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Game_Finished(object sender, EventArgs e)
+        {
+            var card = new SprintCompletedCard();
+            container.Children.Add(card, xConstraint: null);
+            card.Show();
+
+            card.NewSprint += (s, e2) =>
+            {
+                container.Children.Remove(card);
+                game = null;
+                NewSprint();
+            };
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        void NewSprint()
+        {
+            if (game == null)
+            {
+                game = new Sprint();
+                game.NewQuestion += Game_NewQuestion;
+                game.Finished += Game_Finished;
+                game.NextQuestion();
+            }
+        }
+
 
         /// <summary>
         /// 
         /// </summary>
         void UpdateProgress()
         {
-            subtitle.SetText($"{game.QuestionNumber} of {game.TotalQuestions}");
+            subtitle.SetText($"{game.QuestionIndex + 1} of {game.TotalQuestions}");
 
-            double value = game.QuestionNumber / (double)game.TotalQuestions;
+            double value = game.QuestionIndex / (double)game.TotalQuestions;
             progress.Animate("aa", new Animation((a) => { progress.WidthRequest = a; }, progress.Width, progressBackground.Width * value, Easing.CubicOut));
         }
 
@@ -193,16 +219,13 @@ namespace Flip2Learn.Forms.Pages
             settings.Clicked += Settings_Clicked;
             settings.SizeChanged += Settings_SizeChanged;
 
-            if (game == null)
-            {
-                game = new Sprint();
-                game.NewQuestion += Game_NewQuestion;
-                game.NextQuestion();
-            }
+            NewSprint();
 
             UpdateTitle();
             UpdateKnownCountriesCount();
         }
+
+
 
 
         /// <summary>
@@ -281,7 +304,8 @@ namespace Flip2Learn.Forms.Pages
         /// <param name="e"></param>
         private void Settings_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new SettingsPage());
+            //Navigation.PushModalAsync(new SettingsPage());
+            Navigation.PushAsync(new SettingsPage());
         }
 
         /// <summary>

@@ -5,13 +5,33 @@ using Flip2Learn.Shared.Helpers;
 
 namespace Flip2Learn.Shared.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface ISelectCountryDisplay : IRow
     {
+        /// <summary>
+        /// 
+        /// </summary>
         bool IsKnown { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         string Flag { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        bool IsMatch(string text);
     }
 
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class SelectCountryDisplay : BaseDisplay<Country>, ISelectCountryDisplay
     {
         /// <summary>
@@ -38,6 +58,13 @@ namespace Flip2Learn.Shared.Models
         /// 
         /// </summary>
         public bool IsKnown => snapshot.IsMarkedAsKnown;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public bool IsMatch(string text) => Source.Name.GetLocalized().ToLower().Contains(text) || Source.Capital.GetLocalized().ToLower().Contains(text);
 
 
         private CountrySnapshot snapshot;

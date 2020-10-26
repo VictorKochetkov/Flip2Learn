@@ -5,12 +5,13 @@
                        x:Class="Flip2Learn.Forms.Pages.SettingsPage"
                        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
                        xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
-                       ios:Page.ModalPresentationStyle="PageSheet">
+                       ios:Page.ModalPresentationStyle="PageSheet"
+                       BackgroundColor="{DynamicResource bg}">
 
     <ListView x:Name="listView"
                       HasUnevenRows="False" 
                       IsVisible="True"
-                      RowHeight="50"
+                      RowHeight="{OnPlatform iOS=50, Android=61}"
                       Margin="0"
                       CachingStrategy="RecycleElement" 
                       SelectionMode="None" 

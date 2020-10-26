@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ui="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material" 
+             xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
+             x:Class="Flip2Learn.Forms.Views.SprintCompletedCard">
+    
+  <ContentView.Content>
+        <StackLayout Orientation="Vertical">
+
+            <RelativeLayout>
+
+                <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                    <StackLayout VerticalOptions="Center">
+
+                        <StackLayout Orientation="Vertical" Margin="12,24">
+
+                            <Label Text="✔️" HorizontalTextAlignment="Center" TextColor="Black" FontSize="24" HorizontalOptions="Center" />
+                            <Label Text="Spint is completed" Style="{DynamicResource TitleBold}" Margin="0,12,0,16" LineHeight="1" HorizontalTextAlignment="Center" FontSize="18" HorizontalOptions="Center" />
+
+                            <views:RippleView x:Name="newSprint" HorizontalOptions="Center" Padding="22,8" HasShadow="False" Elevation="0" BackgroundColor="{StaticResource GreenAccent}">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="New sprint" TextColor="Black" FontSize="15" HorizontalOptions="Center" Style="{DynamicResource Bold}"/>
+                                </StackLayout>
+                            </views:RippleView>
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </ui:MaterialCard>
+
+            </RelativeLayout>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

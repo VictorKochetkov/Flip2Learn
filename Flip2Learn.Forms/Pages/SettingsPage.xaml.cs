@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Flip2Learn.Forms.Views;
 using Flip2Learn.Shared.Application;
@@ -8,17 +9,24 @@ using Xamarin.Forms;
 
 namespace Flip2Learn.Forms.Pages
 {
-    public partial class SettingsPage : AppContentPage
+    public partial class SettingsPage : AppContentPage, ISearchPage
     {
+        public event EventHandler<string> SearchBarTextChanged;
+        public string SearchPlaceholder => "Search";
+
+        private string SearchText = string.Empty;
+
         public SettingsPage()
         {
             InitializeComponent();
 
             listView.ItemTemplate = new DataTemplate(typeof(SelectCountryCell));
-            listView.ItemsSource = app.GetSelectCountryList();
+            listView.ItemsSource = app.GetSelectCountryList().Where(x => x.IsMatch(SearchText));
 
             UpdateKnownCountries();
         }
+
+
 
         /// <summary>
         /// 
@@ -66,6 +74,20 @@ namespace Flip2Learn.Forms.Pages
                         break;
                 }
             });
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="text"></param>
+        public void OnSearchBarTextChanged(string text)
+        {
+            this.SearchText = text;
+
+            var items = listView.ItemsSource;
+            listView.ItemsSource = null;
+            listView.ItemsSource = items;
         }
     }
 }

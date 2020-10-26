@@ -5,18 +5,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Flip2Learn.Forms.Themes.LightTheme">
 
+    <Style x:Key="Bold" TargetType="Label">
+        <Setter Property="FontAttributes" Value="{OnPlatform iOS=Bold}"/>
+        <Setter Property="FontFamily" Value="{OnPlatform Android='sans-serif-medium'}"/>
+    </Style>
     <Style x:Key="Title" TargetType="Label">
         <Setter Property="FontSize" Value="17" />
         <Setter Property="TextColor" Value="#FFFFFF" />
     </Style>
-    <Style x:Key="TitleBold" TargetType="Label">
+    <Style x:Key="TitleBold" BasedOn="{StaticResource Bold}" TargetType="Label">
         <Setter Property="FontSize" Value="17" />
         <Setter Property="TextColor" Value="Black" />
         <Setter Property="FontAttributes" Value="{OnPlatform iOS=Bold}"/>
         <Setter Property="FontFamily" Value="{OnPlatform Android='sans-serif-medium'}"/>
     </Style>
     <Style x:Key="Subitle" TargetType="Label">
-        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontSize" Value="{OnPlatform iOS=13, Android=15}" />
         <Setter Property="TextColor" Value="#B8B8B8" />
     </Style>
 
