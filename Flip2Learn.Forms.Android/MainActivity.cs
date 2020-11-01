@@ -75,8 +75,16 @@ namespace Flip2Learn.Forms.Droid
                     loader = new AdLoader.Builder(MainActivity.Instance, AD_ID)
                         .ForUnifiedNativeAd(MainActivity.Instance)
                         .WithAdListener(new __AdListener())
-                        .WithNativeAdOptions(new NativeAdOptions.Builder().Build())
+                        .WithNativeAdOptions(new NativeAdOptions.Builder()
+                            .SetMediaAspectRatio(NativeAdOptions.NativeMediaAspectRatioLandscape)
+                            .SetReturnUrlsForImageAssets(true)
+                            .SetAdChoicesPlacement(NativeAdOptions.AdchoicesTopRight)
+                            .SetVideoOptions(new VideoOptions.Builder()
+                                .SetStartMuted(false)
+                                .Build())
+                            .Build())
                         .Build();
+
                 }
 
                 if (!loader.IsLoading)
@@ -99,7 +107,7 @@ namespace Flip2Learn.Forms.Droid
         /// 
         /// </summary>
         /// <param name="ad"></param>
-        public void OnUnifiedNativeAdLoaded(UnifiedNativeAd ad)
+        internal void OnUnifiedNativeAdLoaded(UnifiedNativeAd ad)
         {
             LoadedAd = new AndroidNativeAd(ad);
             AdsReady(this, EventArgs.Empty);
@@ -169,7 +177,7 @@ namespace Flip2Learn.Forms.Droid
 
             FormsApp = new App();
             LoadApplication(FormsApp);
-            
+
 
             SetAppTheme();
         }
