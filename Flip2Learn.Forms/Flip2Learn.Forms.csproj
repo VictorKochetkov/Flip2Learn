@@ -18,23 +18,34 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
     <PackageReference Include="Realm" Version="5.1.2" />
-    <PackageReference Include="XF.Material" Version="1.7.5" />
     <PackageReference Include="Plugin.SpeechRecognition" Version="1.0.0" />
     <PackageReference Include="Xamarin.Forms.CircularProgressBar" Version="1.0.2" />
+    <PackageReference Include="XF.Material" Version="1.7.5" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
     <Folder Include="Themes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Flip2Learn.Shared\Flip2Learn.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
     <Compile Update="Views\SprintCompletedCard.xaml.cs">
       <DependentUpon>SprintCompletedCard.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppResources.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\SprintCompletedCard.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

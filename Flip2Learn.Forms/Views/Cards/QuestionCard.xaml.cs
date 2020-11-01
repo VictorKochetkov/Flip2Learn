@@ -100,7 +100,6 @@ namespace Flip2Learn.Forms.Views
             know.Clicked += handler2;
 
 
-
             Device.StartTimer(TimeSpan.FromMilliseconds(delay), () =>
             {
                 progress.Progress += 100d * (1d / (_delay / (double)delay));

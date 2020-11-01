@@ -9,8 +9,8 @@ using Flip2Learn.Forms.Droid.Renderers;
 using Flip2Learn.Forms.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using SearchView = Android.Support.V7.Widget.SearchView;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
+using SearchView = AndroidX.AppCompat.Widget.SearchView;
+using Toolbar = AndroidX.AppCompat.Widget.Toolbar;
 
 ///
 ///https://codetraveler.io/2019/10/05/adding-a-search-bar-to-xamarin-forms-navigationpage/

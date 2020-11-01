@@ -10,6 +10,8 @@ namespace Flip2Learn.Forms.iOS
 {
     public class iOS_CrossApplication : CrossApplication
     {
+        public override event EventHandler AdsReady = delegate { };
+
         private iOS_CrossApplication()
             : base()
         {
@@ -27,8 +29,17 @@ namespace Flip2Learn.Forms.iOS
             }
         }
 
-
         public override ICrossApplication App => this;
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void LoadAd(bool force = false)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
 

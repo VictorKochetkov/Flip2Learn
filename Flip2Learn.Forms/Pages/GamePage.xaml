@@ -50,9 +50,9 @@
                         <Label 
                            HorizontalOptions="Center"
                            Text="Sprint"
-                           TextColor="{DynamicResource fg}"
+                           TextColor="White"
                            FontSize="{OnPlatform iOS=17, Android=19}"
-                           Opacity="0.65"
+                           Opacity="0.8"
                            VerticalOptions="Center"
                            Style="{DynamicResource TitleBold}"/>
 
@@ -61,8 +61,8 @@
                             HorizontalOptions="Center"
                             FontSize="{OnPlatform iOS=12, Android=14}"
                             Text="3 of 10"
-                            TextColor="{DynamicResource second_fg}"
-                            Opacity="0.65"/>
+                            TextColor="White"
+                            Opacity="0.5"/>
 
                     </StackLayout>
 
@@ -88,35 +88,8 @@
 
             </StackLayout>
 
-            <RelativeLayout Grid.Row="1" x:Name="container" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+            <RelativeLayout Grid.Row="1" x:Name="container" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="12,0">
             </RelativeLayout>
-
-            <StackLayout Grid.Row="2" IsVisible="False"  VerticalOptions="EndAndExpand" Orientation="Vertical">
-
-                <!--<views:RippleView x:Name="disableTime" Margin="-19,-4,0,3" Padding="16,4" IsCircled="True" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                    <StackLayout Orientation="Horizontal">
-                        <ui:MaterialIcon WidthRequest="19" HeightRequest="19" Source="ic_all_inclusive_24dp" VerticalOptions="Center"/>
-                        <Label Text="Turn off time" TextColor="White" FontSize="17" VerticalOptions="Center" FontFamily="sans-serif-medium"/>
-                    </StackLayout>
-                </views:RippleView>
-                
-                <views:RippleView x:Name="skip" Margin="-19,-4,0,3" Padding="16,4" IsCircled="True" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                    <StackLayout Orientation="Horizontal">
-                        <ui:MaterialIcon WidthRequest="19" HeightRequest="19" Source="ic_arrow_upward_24dp" VerticalOptions="Center"/>
-                        <Label Text="Skip" TextColor="White" FontSize="17" VerticalOptions="Center" FontFamily="sans-serif-medium"/>
-                    </StackLayout>
-                </views:RippleView>-->
-
-                <StackLayout Orientation="Vertical" Margin="0,0,0,-40">
-                    <ui:MaterialCard VerticalOptions="CenterAndExpand" Margin="76,0,76,0" Padding="32" CornerRadius="12" HasShadow="True" Elevation="30" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
-                    </ui:MaterialCard>
-
-                    <ui:MaterialCard VerticalOptions="CenterAndExpand" Margin="42,-46,42,0" Padding="32" CornerRadius="12" HasShadow="True" Elevation="30" BorderColor="#FF0082FE" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
-                    </ui:MaterialCard>
-                </StackLayout>
-
-
-            </StackLayout>
 
         </Grid>
 

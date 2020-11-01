@@ -27,5 +27,16 @@ public static class UIHelper
         label.Text = text;
         label.IsVisible = !string.IsNullOrEmpty(text);
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="button"></param>
+    /// <param name="text"></param>
+    public static void SetText(this Button button, string text)
+    {
+        button.Text = text;
+        button.IsVisible = !string.IsNullOrEmpty(text);
+    }
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using Flip2Learn.Forms.Pages;
 using Flip2Learn.Forms.Themes;
+using Flip2Learn.Forms.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

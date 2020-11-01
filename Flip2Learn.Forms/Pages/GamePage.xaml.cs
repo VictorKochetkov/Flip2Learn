@@ -13,6 +13,8 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using System.Linq;
 using Flip2Learn.Shared.Database;
 using Realms;
+using Flip2Learn.Forms.Views.Cards;
+using System.Threading;
 
 namespace Flip2Learn.Forms.Pages
 {
@@ -127,6 +129,7 @@ namespace Flip2Learn.Forms.Pages
         public GamePage()
         {
             InitializeComponent();
+            app.LoadAd();
         }
 
 
@@ -153,11 +156,82 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Game_NewQuestion(object sender, EventArgs e)
+        private async void Game_NewQuestion(object sender, EventArgs e)
         {
+            if (ShouldShowAd())
+                await ShowAd();
+
             UpdateProgress();
             Show(game.Question);
         }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private bool ShouldShowAd()
+        {
+            if (app.LoadedAd == null)
+                return false;
+
+            if (game.QuestionIndex != 6)
+                return false;
+
+            return true;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public class Waiter
+        {
+            private readonly AutoResetEvent r;
+
+            public Waiter()
+            {
+                r = new AutoResetEvent(false);
+            }
+
+            public void Done()
+            {
+                r.Set();
+            }
+
+            public async Task WaitAsync()
+            {
+                await Task.Run(() =>
+                {
+                    r.WaitOne();
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private async Task ShowAd()
+        {
+            var waiter = new Waiter();
+
+            var card = new NativeAdCard(app.LoadedAd);
+            container.Children.Add(card, xConstraint: null);
+            card.Show();
+
+            card.Finished += (s, e) =>
+            {
+                container.Children.Remove(card);
+
+                app.LoadAd(force: true);
+                waiter.Done();
+            };
+
+            await waiter.WaitAsync();
+        }
+
 
         /// <summary>
         /// 

@@ -16,6 +16,23 @@ using Xamarin.Essentials;
 
 namespace Flip2Learn.Shared.Application
 {
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface INativeAd
+    {
+        string Id { get; }
+        string Headline { get; }
+        string Body { get; }
+        string AdvetiserIconUrl { get; }
+        string AdvetiserName { get; }
+        string ImageUrl { get; }
+        string Button { get; }
+        object NativeAdSource { get; }
+    }
+
+
     /// <summary>
     /// 
     /// </summary>
@@ -33,12 +50,15 @@ namespace Flip2Learn.Shared.Application
     }
 
 
+
     /// <summary>
     /// Crossplatform application
     /// </summary>
     public interface ICrossApplication
     {
         event EventHandler<AppChangedEventArgs> AppChanged;
+        event EventHandler AdsReady;
+
         Environment Environment { get; }
 
         string GetString(string key);
@@ -51,6 +71,10 @@ namespace Flip2Learn.Shared.Application
         [Obsolete]
         CountrySnapshot FindSnapshotOrCreate(string countryId);
         int GetKnownCountriesCount();
+
+
+        INativeAd LoadedAd { get; }
+        void LoadAd(bool force = false);
     }
 
     public struct Size
@@ -109,6 +133,8 @@ namespace Flip2Learn.Shared.Application
     public abstract partial class CrossApplication : ICrossApplication
     {
         public event EventHandler<AppChangedEventArgs> AppChanged = delegate { };
+        public abstract event EventHandler AdsReady;
+
 
         public abstract ICrossApplication App { get; }
         public static ICrossApplication instance { get; protected set; }
@@ -176,6 +202,20 @@ namespace Flip2Learn.Shared.Application
         {
             RestoreSnapshots();
         }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public INativeAd LoadedAd { get; protected set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public abstract void LoadAd(bool force = false);
 
 
         /// <summary>

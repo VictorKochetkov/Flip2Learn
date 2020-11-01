@@ -43,6 +43,7 @@ namespace Flip2Learn.Forms.Pages
         {
             base.OnAppearing();
 
+
             app.AppChanged += App_AppChanged;
 
             UpdateKnownCountries();

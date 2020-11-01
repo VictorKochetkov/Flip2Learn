@@ -11,7 +11,7 @@
     </Style>
     <Style x:Key="Title" TargetType="Label">
         <Setter Property="FontSize" Value="17" />
-        <Setter Property="TextColor" Value="#FFFFFF" />
+        <Setter Property="TextColor" Value="Black" />
     </Style>
     <Style x:Key="TitleBold" BasedOn="{StaticResource Bold}" TargetType="Label">
         <Setter Property="FontSize" Value="17" />
@@ -21,7 +21,7 @@
     </Style>
     <Style x:Key="Subitle" TargetType="Label">
         <Setter Property="FontSize" Value="{OnPlatform iOS=13, Android=15}" />
-        <Setter Property="TextColor" Value="#B8B8B8" />
+        <Setter Property="TextColor" Value="#B0B0B0" />
     </Style>
 
     <Color x:Key="GreenAccent">#69f0ae</Color>

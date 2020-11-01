@@ -8,7 +8,7 @@
     android:title="Filter"
     android:icon="@drawable/ic_search_24dp"
     app:showAsAction="always|collapseActionView"
-    app:iconTint="@color/colorPrimary"
+    app:iconTint="@color/searchColor"
     app:actionViewClass="android.support.v7.widget.SearchView"/>
 
 </menu>
