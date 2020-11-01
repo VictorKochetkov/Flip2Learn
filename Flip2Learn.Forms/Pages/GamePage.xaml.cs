@@ -129,7 +129,6 @@ namespace Flip2Learn.Forms.Pages
         public GamePage()
         {
             InitializeComponent();
-            app.LoadAd();
         }
 
 
@@ -286,6 +285,8 @@ namespace Flip2Learn.Forms.Pages
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
+            app.LoadAd();
             container.WidthRequest = Math.Min(400, this.Width);
 
             app.AppChanged += App_AppChanged;
