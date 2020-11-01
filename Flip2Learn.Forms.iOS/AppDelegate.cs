@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Flip2Learn.Shared.Application;
 using Foundation;
+using Google.MobileAds;
 using UIKit;
 
 namespace Flip2Learn.Forms.iOS
@@ -61,6 +62,7 @@ namespace Flip2Learn.Forms.iOS
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
+            MobileAds.SharedInstance.Start((a) => { });
 
             iOS_CrossApplication.Instance();
 
