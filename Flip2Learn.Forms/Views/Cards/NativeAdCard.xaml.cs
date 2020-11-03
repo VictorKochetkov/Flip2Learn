@@ -14,6 +14,7 @@ namespace Flip2Learn.Forms.Views.Cards
     public partial class NativeAdCard : ContentView
     {
         public event EventHandler Finished = delegate { };
+        public event EventHandler DisableAds = delegate { };
 
         public NativeAdCard(INativeAd ad)
         {
@@ -23,7 +24,8 @@ namespace Flip2Learn.Forms.Views.Cards
 
             headline.SetText(ad.Headline);
             body.SetText(ad.Body);
-            image.SetSource(ad.ImageUrl);
+            media.MediaContent = ad.MediaContent;
+            //image.SetSource(ad.ImageUrl);
             button.SetText(ad.Button);
             advertiser.SetText(ad.AdvetiserName);
 
@@ -31,7 +33,8 @@ namespace Flip2Learn.Forms.Views.Cards
             adView.Headline = headline;
             adView.Body = body;
             adView.Button = button;
-            adView.Image = image;
+            //adView.Image = image;
+            adView.MediaContent = media;
             adView.Advertiser = advertiser;
             adView.NativeAd = ad;
         }
@@ -132,6 +135,17 @@ namespace Flip2Learn.Forms.Views.Cards
                     return !finished;
                 });
             }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void DisableAds_Tapped(object sender, EventArgs e)
+        {
+            DisableAds(this, EventArgs.Empty);
         }
     }
 }

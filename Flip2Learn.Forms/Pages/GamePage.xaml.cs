@@ -228,6 +228,11 @@ namespace Flip2Learn.Forms.Pages
                 waiter.Done();
             };
 
+            card.DisableAds += async (s, e) =>
+            {
+                await app.Purchase();
+            };
+
             await waiter.WaitAsync();
         }
 

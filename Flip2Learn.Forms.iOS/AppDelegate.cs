@@ -53,7 +53,7 @@ namespace Flip2Learn.Forms.iOS
 
                     var option1 = new NativeAdImageAdLoaderOptions()
                     {
-                        DisableImageLoading = true,
+                        //DisableImageLoading = true,
                         ShouldRequestMultipleImages = false
                     };
 
@@ -101,7 +101,7 @@ namespace Flip2Learn.Forms.iOS
         /// <summary>
         /// 
         /// </summary>
-        public class iOSNativeAd : INativeAd
+        internal class iOSNativeAd : INativeAd
         {
             public string Id => null;
 
@@ -117,11 +117,32 @@ namespace Flip2Learn.Forms.iOS
 
             public string Button => source.CallToAction;
 
+            public IMediaContent MediaContent => mediaContent;
+
             public object NativeAdSource => source;
 
+
             private readonly UnifiedNativeAd source;
+            private readonly IMediaContent mediaContent;
 
             public iOSNativeAd(UnifiedNativeAd source)
+            {
+                this.source = source;
+                this.mediaContent = new iOSMediaContent(source.MediaContent);
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        internal class iOSMediaContent : IMediaContent
+        {
+            public object NativeContentSource => source;
+
+            private readonly MediaContent source;
+
+            public iOSMediaContent(MediaContent source)
             {
                 this.source = source;
             }
@@ -152,6 +173,7 @@ namespace Flip2Learn.Forms.iOS
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
+            MobileAds.SharedInstance.RequestConfiguration.TestDeviceIdentifiers = new string[] { Request.SimulatorId };
             MobileAds.SharedInstance.Start((a) => { });
 
             iOS_CrossApplication.Instance();

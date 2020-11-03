@@ -75,6 +75,7 @@
     <None Include="FodyWeavers.xml" />
     <Compile Include="Renderers\PageRenderer.cs" />
     <Compile Include="Renderers\NativeAdViewRenderer.cs" />
+    <Compile Include="Renderers\NativeMediaViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

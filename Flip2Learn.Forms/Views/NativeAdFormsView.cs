@@ -44,6 +44,12 @@ namespace Flip2Learn.Forms.Views
                typeof(NativeAdFormsView),
                null);
 
+        public static readonly BindableProperty MediaContentProperty = BindableProperty.Create(
+               nameof(MediaContent),
+               typeof(NativeMediaView),
+               typeof(NativeAdFormsView),
+               null);
+
         public INativeAd NativeAd
         {
             get
@@ -113,6 +119,18 @@ namespace Flip2Learn.Forms.Views
             set
             {
                 SetValue(AdvertiserProperty, value);
+            }
+        }
+
+        public NativeMediaView MediaContent
+        {
+            get
+            {
+                return (NativeMediaView)GetValue(MediaContentProperty);
+            }
+            set
+            {
+                SetValue(MediaContentProperty, value);
             }
         }
 

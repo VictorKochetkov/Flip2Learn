@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Flip2Learn.Shared.Core;
 using Flip2Learn.Shared.Database;
 using Flip2Learn.Shared.Helpers;
 using Flip2Learn.Shared.Models;
 using Flip2Learn.Shared.Resources;
 using Newtonsoft.Json;
+using Plugin.InAppBilling;
+using Plugin.InAppBilling.Abstractions;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 using Realms;
@@ -29,7 +33,17 @@ namespace Flip2Learn.Shared.Application
         string AdvetiserName { get; }
         string ImageUrl { get; }
         string Button { get; }
+        IMediaContent MediaContent { get; }
         object NativeAdSource { get; }
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IMediaContent
+    {
+        object NativeContentSource { get; }
     }
 
 
@@ -75,6 +89,11 @@ namespace Flip2Learn.Shared.Application
 
         INativeAd LoadedAd { get; }
         void LoadAd(bool force = false);
+
+
+        Task<SimpleTaskResult> RestorePurchase();
+        Task<SimpleTaskResult> Purchase();
+        bool? IsPurchased { get; }
     }
 
     public struct Size
@@ -168,7 +187,7 @@ namespace Flip2Learn.Shared.Application
         }
 
 
-        public virtual ISettings SettingsImplementation => CrossSettings.Current;
+        public virtual ISettings Settings => CrossSettings.Current;
 
 
         /// <summary>
@@ -376,5 +395,148 @@ namespace Flip2Learn.Shared.Application
                 .OrderBy(x => x.Name.GetLocalized())
                 .Select(x => new SelectCountryDisplay(x));
         }
+
+
+        private const string PURCHASE_ID = "flip2learn_premium";
+        private const string PURCHASE_PAYLOAD = "Tim4KGGd1EuMUqFuyw9IyQQpMzn0FAQEusgs3fcVPiKQ";
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<SimpleTaskResult> RestorePurchase()
+        {
+            try
+            {
+                bool purchased = await __RestorePurchase();
+                Settings.AddOrUpdateValue("in-app-purchase-premium", purchased);
+
+                return SimpleTaskResult.Ok();
+            }
+            catch (Exception e)
+            {
+                return SimpleTaskResult.Error(e);
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<SimpleTaskResult> Purchase()
+        {
+            try
+            {
+                await __Purchase();
+                Settings.AddOrUpdateValue("in-app-purchase-premium", true);
+
+                return SimpleTaskResult.Ok();
+            }
+            catch (Exception e)
+            {
+                return SimpleTaskResult.Error(e);
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private static async Task<bool> __RestorePurchase(bool throwOnNotPurchased = false)
+        {
+            try
+            {
+                if (!CrossInAppBilling.IsSupported)
+                    throw new NotSupportedException("Plugin not supported");
+
+                var connected = await CrossInAppBilling.Current.ConnectAsync(ItemType.InAppPurchase);
+
+                if (!connected)
+                    throw new Exception("Unable to connect to store");
+
+                var purchases = await CrossInAppBilling.Current.GetPurchasesAsync(ItemType.InAppPurchase);
+
+                //check for null just incase
+                if (purchases?.Any(p => p.ProductId == PURCHASE_ID) ?? false)
+                {
+                    //Purchase restored
+                    return true;
+                }
+                else
+                {
+                    if (throwOnNotPurchased)
+                        throw new Exception("No purchases found");
+
+                    //no purchases found
+                    return false;
+                }
+
+            }
+            catch (Exception e)
+            {
+                Debugger.Break();
+                throw e;
+            }
+            finally
+            {
+                await CrossInAppBilling.Current.DisconnectAsync();
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private static async Task __Purchase()
+        {
+            try
+            {
+                if (!CrossInAppBilling.IsSupported)
+                    throw new NotSupportedException("Plugin not supported");
+
+                var connected = await CrossInAppBilling.Current.ConnectAsync(ItemType.InAppPurchase);
+
+                if (!connected)
+                    throw new Exception("Unable to connect to store");
+
+                var purchase = await CrossInAppBilling.Current.PurchaseAsync(PURCHASE_ID, ItemType.InAppPurchase, PURCHASE_PAYLOAD);
+
+                if (purchase == null)
+                    throw new Exception("Purchase result is null");
+
+                switch (purchase.State)
+                {
+                    case PurchaseState.Purchased:
+                    case PurchaseState.Restored:
+                        return;
+
+                    default:
+                        throw new Exception($"Purchase result = `{purchase.State}`");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Debugger.Break();
+                throw e;
+            }
+            finally
+            {
+                await CrossInAppBilling.Current.DisconnectAsync();
+            }
+        }
+
+
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool? IsPurchased { get; }
     }
 }

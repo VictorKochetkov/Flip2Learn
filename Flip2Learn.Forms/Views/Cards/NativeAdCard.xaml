@@ -6,11 +6,11 @@
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
              x:Class="Flip2Learn.Forms.Views.Cards.NativeAdCard">
-  <ContentView.Content>
+    <ContentView.Content>
         <RelativeLayout>
             <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
-                <controls:CircularProgressBar x:Name="progress" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Stroke="7" Opacity="0.3" Color="White"/>
+                <controls:CircularProgressBar x:Name="progress" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Stroke="7" Opacity="0.5" Color="White"/>
 
                 <ui:MaterialCard Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" VerticalOptions="CenterAndExpand">
 
@@ -22,14 +22,15 @@
                                 <Label Text="Ad" TextColor="Black" FontSize="11" Style="{DynamicResource Bold}"/>
                             </Frame>
 
-                            <Label x:Name="advertiser" Style="{DynamicResource Subitle}" FontSize="11.5" Opacity="0.6"/>
-                            <Label x:Name="headline" Style="{DynamicResource TitleBold}" />
-                            <Label x:Name="body" Style="{DynamicResource Subitle}"/>
+                            <Label x:Name="advertiser" Style="{DynamicResource Subitle}" FontSize="11.5" Opacity="0.6" InputTransparent="True"/>
+                            <Label x:Name="headline" Style="{DynamicResource TitleBold}" InputTransparent="True"/>
+                            <Label x:Name="body" Style="{DynamicResource Subitle}" InputTransparent="True"/>
 
+                            <views:NativeMediaView x:Name="media" HorizontalOptions="FillAndExpand" HeightRequest="180" InputTransparent="True"/>
 
-                            <ffimageloading:CachedImage x:Name="image" RetryDelay="1000" RetryCount="3" Aspect="AspectFill" Margin="0,8" HorizontalOptions="FillAndExpand" HeightRequest="180"/>
+                            <!--<ffimageloading:CachedImage x:Name="image" RetryDelay="1000" RetryCount="3" Aspect="AspectFill" Margin="0,8" HorizontalOptions="FillAndExpand" HeightRequest="180" InputTransparent="True"/>-->
 
-                            <Button x:Name="button" TextColor="Black" FontSize="15" Margin="0,6,0,-16" Style="{DynamicResource Bold}" BackgroundColor="{DynamicResource GreenAccent}"/>
+                            <Button x:Name="button" TextColor="Black" FontSize="15" Margin="0,0,0,0" Style="{DynamicResource Bold}" BackgroundColor="{DynamicResource GreenAccent}" InputTransparent="True"/>
 
                         </StackLayout>
 
@@ -38,6 +39,12 @@
 
 
                 </ui:MaterialCard>
+
+                <Label x:Name="disableAds" Text="Disable ads" HorizontalOptions="Center" Style="{DynamicResource Bold}" FontSize="13">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="DisableAds_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
 
             </StackLayout>
         </RelativeLayout>
