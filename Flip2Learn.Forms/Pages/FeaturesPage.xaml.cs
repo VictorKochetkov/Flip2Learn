@@ -40,9 +40,35 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Purchase_Clicked(object sender, EventArgs e)
         {
-            await app.Purchase();
+            var result = await app.Purchase();
+
+            if (result.IsSuccess)
+                await this.Navigation.PopAsync();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void Restore_Clicked(object sender, EventArgs e)
+        {
+            var result = await app.RestorePurchase();
+
+            if (result.IsSuccess)
+                await this.Navigation.PopAsync();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void close_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await this.Navigation.PopAsync();
         }
     }
 }

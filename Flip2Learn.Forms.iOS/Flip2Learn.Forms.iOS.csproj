@@ -190,6 +190,9 @@
     <BundleResource Include="Assets.xcassets\AppIcon.appiconset\Icon-512.png">
       <Link>Resources\Icon-512.png</Link>
     </BundleResource>
+    <BundleResource Include="..\Flip2Learn.Forms.Android\Resources\drawable-anydpi\nerd_emoji.png">
+      <Link>Resources\nerd_emoji.png</Link>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

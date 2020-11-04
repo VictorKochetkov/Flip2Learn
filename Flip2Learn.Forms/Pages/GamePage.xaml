@@ -10,6 +10,7 @@
                        x:Class="Flip2Learn.Forms.Pages.GamePage">
 
     <RelativeLayout>
+        
 
         <RelativeLayout Opacity="0.08"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
