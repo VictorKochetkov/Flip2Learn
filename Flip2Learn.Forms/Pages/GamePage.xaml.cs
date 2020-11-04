@@ -29,6 +29,7 @@ namespace Flip2Learn.Forms.Pages
         event EventHandler NewQuestion;
         event EventHandler Finished;
         QuestionDisplay Question { get; }
+        bool IsCompleted { get; }
         int QuestionIndex { get; }
         int TotalQuestions { get; }
         void NextQuestion();
@@ -53,6 +54,11 @@ namespace Flip2Learn.Forms.Pages
         /// 
         /// </summary>
         private ICrossApplication app => CrossApplication.instance;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool IsCompleted => QuestionIndex + 1 >= countries.Count;
 
         /// <summary>
         /// 
@@ -103,7 +109,7 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         public void NextQuestion()
         {
-            if (QuestionIndex + 1 == countries.Count)
+            if (IsCompleted)
             {
                 Finished(this, new EventArgs());
             }
@@ -175,10 +181,10 @@ namespace Flip2Learn.Forms.Pages
             if (app.LoadedAd == null)
                 return false;
 
-            if (game.QuestionIndex != 6)
-                return false;
+            if (game.QuestionIndex % 2 == 0)
+                return true;
 
-            return true;
+            return false;
         }
 
 
@@ -228,11 +234,6 @@ namespace Flip2Learn.Forms.Pages
                 waiter.Done();
             };
 
-            card.DisableAds += async (s, e) =>
-            {
-                await app.Purchase();
-            };
-
             await waiter.WaitAsync();
         }
 
@@ -277,10 +278,13 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         void UpdateProgress()
         {
-            subtitle.SetText($"{game.QuestionIndex + 1} of {game.TotalQuestions}");
+            if (game.IsCompleted)
+                subtitle.SetText("Sprint completed");
+            else
+                subtitle.SetText($"{game.QuestionIndex + 1} of {game.TotalQuestions}");
 
-            double value = game.QuestionIndex / (double)game.TotalQuestions;
-            progress.Animate("aa", new Animation((a) => { progress.WidthRequest = a; }, progress.Width, progressBackground.Width * value, Easing.CubicOut));
+            //double value = game.QuestionIndex / (double)game.TotalQuestions;
+            //progress.Animate("aa", new Animation((a) => { progress.WidthRequest = a; }, progress.Width, progressBackground.Width * value, Easing.CubicOut));
         }
 
 
@@ -297,6 +301,7 @@ namespace Flip2Learn.Forms.Pages
             app.AppChanged += App_AppChanged;
             //close.Clicked += Close_Clicked;
             settings.Clicked += Settings_Clicked;
+            features.Clicked += Features_Clicked;
             settings.SizeChanged += Settings_SizeChanged;
 
             NewSprint();
@@ -347,10 +352,6 @@ namespace Flip2Learn.Forms.Pages
             var m = appBar.Margin;
             m.Top = safeInsets.Top;
             appBar.Margin = m;
-
-            var p = titleContainer.Padding;
-            p.Left = settings.Width;
-            titleContainer.Padding = p;
         }
 
 
@@ -373,7 +374,19 @@ namespace Flip2Learn.Forms.Pages
             app.AppChanged -= App_AppChanged;
             //close.Clicked -= Close_Clicked;
             settings.Clicked -= Settings_Clicked;
+            features.Clicked -= Features_Clicked;
             settings.SizeChanged -= Settings_SizeChanged;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Features_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FeaturesPage());
         }
 
 
@@ -384,7 +397,6 @@ namespace Flip2Learn.Forms.Pages
         /// <param name="e"></param>
         private void Settings_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushModalAsync(new SettingsPage());
             Navigation.PushAsync(new SettingsPage());
         }
 

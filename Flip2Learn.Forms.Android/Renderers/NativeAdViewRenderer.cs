@@ -62,6 +62,10 @@ namespace Flip2Learn.Forms.Droid.Renderers
                 case nameof(Element.Advertiser):
                     Control.AdvertiserView = Element.Advertiser.GetRenderer().View;
                     break;
+
+                case nameof(Element.MediaContent):
+                    Control.MediaView = (MediaView)Element.MediaContent.GetRenderer().View;
+                    break;
             }
         }
 
@@ -75,6 +79,7 @@ namespace Flip2Learn.Forms.Droid.Renderers
             Control.BodyView = Element.Body?.GetRenderer()?.View;
             Control.ImageView = Element.Image?.GetRenderer()?.View;
             Control.AdvertiserView = Element.Advertiser?.GetRenderer()?.View;
+            Control.MediaView = (Element.MediaContent?.GetRenderer() as NativeMediaViewRenderer)?.Control;
             Control.SetNativeAd((UnifiedNativeAd)Element.NativeAd?.NativeAdSource);
         }
 

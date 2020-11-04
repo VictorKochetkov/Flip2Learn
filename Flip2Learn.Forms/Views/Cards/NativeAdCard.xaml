@@ -26,25 +26,17 @@
                             <Label x:Name="headline" Style="{DynamicResource TitleBold}" InputTransparent="True"/>
                             <Label x:Name="body" Style="{DynamicResource Subitle}" InputTransparent="True"/>
 
-                            <views:NativeMediaView x:Name="media" HorizontalOptions="FillAndExpand" HeightRequest="180" InputTransparent="True"/>
+                            <views:NativeMediaView x:Name="media" HorizontalOptions="FillAndExpand" HeightRequest="180" Margin="0,4"/>
 
                             <!--<ffimageloading:CachedImage x:Name="image" RetryDelay="1000" RetryCount="3" Aspect="AspectFill" Margin="0,8" HorizontalOptions="FillAndExpand" HeightRequest="180" InputTransparent="True"/>-->
 
-                            <Button x:Name="button" TextColor="Black" FontSize="15" Margin="0,0,0,0" Style="{DynamicResource Bold}" BackgroundColor="{DynamicResource GreenAccent}" InputTransparent="True"/>
+                            <Button x:Name="button" TextColor="Black" FontSize="16" CornerRadius="12" Margin="0,0,0,0" Style="{DynamicResource Bold}" BackgroundColor="{DynamicResource GreenAccent}"/>
 
                         </StackLayout>
 
                     </views:NativeAdFormsView>
 
-
-
                 </ui:MaterialCard>
-
-                <Label x:Name="disableAds" Text="Disable ads" HorizontalOptions="Center" Style="{DynamicResource Bold}" FontSize="13">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="DisableAds_Tapped"/>
-                    </Label.GestureRecognizers>
-                </Label>
 
             </StackLayout>
         </RelativeLayout>

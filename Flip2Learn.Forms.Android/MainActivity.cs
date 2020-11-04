@@ -19,6 +19,7 @@ using Android.Gms.Ads.Formats;
 using static Android.Gms.Ads.Formats.UnifiedNativeAd;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Android.Content;
 
 namespace Flip2Learn.Forms.Droid
 {
@@ -77,7 +78,7 @@ namespace Flip2Learn.Forms.Droid
                         .WithAdListener(new __AdListener())
                         .WithNativeAdOptions(new NativeAdOptions.Builder()
                             .SetMediaAspectRatio(NativeAdOptions.NativeMediaAspectRatioLandscape)
-                            .SetReturnUrlsForImageAssets(true)
+                            .SetReturnUrlsForImageAssets(false)
                             .SetAdChoicesPlacement(NativeAdOptions.AdchoicesTopRight)
                             .SetVideoOptions(new VideoOptions.Builder()
                                 .SetStartMuted(false)
@@ -92,7 +93,9 @@ namespace Flip2Learn.Forms.Droid
                     if (LoadedAd == null || force)
                     {
                         (LoadedAd?.NativeAdSource as UnifiedNativeAd)?.Destroy();
-                        loader.LoadAd(new AdRequest.Builder().Build());
+                        loader.LoadAd(new AdRequest.Builder()
+                            .AddTestDevice("65CED65A56972B8941F0BC2A28EB6207")///Nokia 6.1
+                            .Build());
                     }
                 }
 
@@ -127,12 +130,30 @@ namespace Flip2Learn.Forms.Droid
             public string AdvetiserName => source.Advertiser;
             public string ImageUrl => source.Images?.FirstOrDefault()?.Uri?.ToString();
             public string Button => source.CallToAction;
+            public Shared.Application.IMediaContent MediaContent => mediaContent;
             public object NativeAdSource => source;
 
 
             private readonly UnifiedNativeAd source;
+            private readonly AndroidMediaContent mediaContent;
 
             public AndroidNativeAd(UnifiedNativeAd source)
+            {
+                this.source = source;
+                this.mediaContent = new AndroidMediaContent(source.MediaContent);
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public class AndroidMediaContent : Shared.Application.IMediaContent
+        {
+            public object NativeContentSource => source;
+
+            public Android.Gms.Ads.IMediaContent source;
+            public AndroidMediaContent(Android.Gms.Ads.IMediaContent source)
             {
                 this.source = source;
             }
@@ -204,8 +225,20 @@ namespace Flip2Learn.Forms.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestCode"></param>
+        /// <param name="resultCode"></param>
+        /// <param name="data"></param>
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            Plugin.InAppBilling.InAppBillingImplementation.HandleActivityResult(requestCode, resultCode, data);
+            base.OnActivityResult(requestCode, resultCode, data);
         }
 
 

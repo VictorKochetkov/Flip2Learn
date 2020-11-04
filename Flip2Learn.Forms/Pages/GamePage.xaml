@@ -36,9 +36,23 @@
             <StackLayout x:Name="appBar" Grid.Row="0" Grid.Column="0" Orientation="Vertical">
 
                 <StackLayout Orientation="Horizontal" Padding="16,2" HorizontalOptions="FillAndExpand">
-                    <!--<views:RippleView Opacity="0" x:Name="close" IsCircled="True" VerticalOptions="Center">
-                        <ui:MaterialIcon WidthRequest="24" HeightRequest="24" Source="ic_close_24dp" />
-                    </views:RippleView>-->
+
+
+                    <views:RippleView
+                                      x:Name="features"
+                                      Padding="12,4"
+                                      HasShadow="False"
+                                      Elevation="0"
+                                      VerticalOptions="Center"
+                                      BorderColor="Transparent"
+                                      BackgroundColor="#5569f0ae">
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="featuresLabel" Text="💡 0/3" TextColor="#69f0ae" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                    </views:RippleView>
+                    
 
                     <StackLayout
                         x:Name="titleContainer"
@@ -49,9 +63,9 @@
 
                         <Label 
                            HorizontalOptions="Center"
-                           Text="Sprint"
+                           Text="Flip2Learn"
                            TextColor="White"
-                           FontSize="{OnPlatform iOS=17, Android=19}"
+                           FontSize="{OnPlatform iOS=16, Android=18}"
                            Opacity="0.8"
                            VerticalOptions="Center"
                            Style="{DynamicResource TitleBold}"/>
@@ -81,12 +95,9 @@
 
                 </StackLayout>
 
-                <RelativeLayout Opacity="0" HeightRequest="25">
-                    <BoxView x:Name="progress" WidthRequest="200" HeightRequest="2" CornerRadius="1" BackgroundColor="{DynamicResource GreenAccent}" Margin="12,12" HorizontalOptions="Start"/>
-                    <BoxView x:Name="progressBackground" HeightRequest="2" CornerRadius="1" BackgroundColor="{DynamicResource GreenAccent}" Margin="12,12" Opacity="0.4" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
-                </RelativeLayout>
-
             </StackLayout>
+            
+            
 
             <RelativeLayout Grid.Row="1" x:Name="container" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="12,0">
             </RelativeLayout>

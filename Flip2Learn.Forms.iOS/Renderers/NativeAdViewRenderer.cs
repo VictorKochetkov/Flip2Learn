@@ -51,7 +51,7 @@ namespace Flip2Learn.Forms.iOS.Renderers
                     break;
 
                 case nameof(Element.MediaContent):
-                    Control.MediaView = (MediaView)Element.MediaContent.GetRenderer().NativeView;
+                    Control.MediaView = (Element.MediaContent?.GetRenderer() as NativeMediaViewRenderer)?.Control;
                     break;
             }
         }
@@ -76,8 +76,7 @@ namespace Flip2Learn.Forms.iOS.Renderers
                     view.BodyView = Element.Body?.GetRenderer()?.NativeView;
                     view.ImageView = Element.Image?.GetRenderer()?.NativeView;
                     view.AdvertiserView = Element.Advertiser?.GetRenderer()?.NativeView;
-                    var v = Element.MediaContent.GetRenderer()?.NativeView;
-                    view.MediaView = (MediaView)Element.MediaContent.GetRenderer()?.NativeView;
+                    view.MediaView = (Element.MediaContent?.GetRenderer() as NativeMediaViewRenderer)?.Control;
                     view.NativeAd = (UnifiedNativeAd)Element.NativeAd?.NativeAdSource;
                     SetNativeControl(view);
                 }

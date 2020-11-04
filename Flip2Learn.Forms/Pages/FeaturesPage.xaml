@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:AppContentPage  xmlns:pages="clr-namespace:Flip2Learn.Forms.Pages"
+                       xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                       x:Class="Flip2Learn.Forms.Pages.FeaturesPage"
+                       BackgroundColor="Black"
+                       NavigationPage.HasNavigationBar="False"
+                       Title="Flip2Learn premium">
+
+    <ContentPage.Content>
+
+        <RelativeLayout>
+
+
+            <RelativeLayout Opacity="0.05"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+
+                <ffimageloading:CachedImage x:Name="svg" Aspect="AspectFill"
+                                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout Margin="-20,0,0,0">
+            <BoxView WidthRequest="150" HeightRequest="150" CornerRadius="100" Color="{DynamicResource GreenAccent}" Opacity="0.8"  Margin="25,25,0,0"/>
+            <BoxView WidthRequest="400" HeightRequest="400" CornerRadius="200" Color="{DynamicResource GreenAccent}" Opacity="0.3" Margin="-100,-100,0,0"/>
+            <BoxView WidthRequest="750" HeightRequest="750" CornerRadius="375" Color="{DynamicResource GreenAccent}" Opacity="0.15" Margin="-275,-275,0,0"/>
+                <Label Text="🤓" FontSize="70" Margin="55,50,0,0" TextColor="Black"/>
+            </RelativeLayout>
+
+            
+
+
+            <StackLayout Margin="12,300,12,12" Spacing="0">
+                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="1" FontSize="21" Style="{DynamicResource Bold}" Text="Flip2Learn. Premium."/>
+                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,16,0,0"  FontSize="16" Text="– No ads"/>
+                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="– All countries available (and dependent territories)"/>
+                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="– Share progress across your devices"/>
+                </StackLayout>
+
+                <Button Text="🔥 Purchase" BackgroundColor="{DynamicResource GreenAccent}" FontSize="{OnPlatform Android=16, iOS=16}" Style="{DynamicResource Bold}" TextColor="Black" Margin="12,24"
+                        Clicked="Button_Clicked"
+                        CornerRadius="12"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-100}"/>
+
+        </RelativeLayout>
+
+
+
+    </ContentPage.Content>
+
+</pages:AppContentPage>
