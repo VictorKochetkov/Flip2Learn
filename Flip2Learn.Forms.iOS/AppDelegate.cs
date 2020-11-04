@@ -34,6 +34,27 @@ namespace Flip2Learn.Forms.iOS
 
         public override ICrossApplication App => this;
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override async Task<SimpleTaskResult> RateApp()
+        {
+            try
+            {
+                UIApplication.SharedApplication.OpenUrl(new NSUrl("itms-apps://itunes.apple.com/app/id1527944047"));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Unable to launch app store: " + ex.Message);
+            }
+
+            return SimpleTaskResult.Ok();
+        }
+
+
+
         private static AdLoader loader;
 
         /// <summary>

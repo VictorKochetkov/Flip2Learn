@@ -94,6 +94,8 @@ namespace Flip2Learn.Shared.Application
         Task<SimpleTaskResult> RestorePurchase();
         Task<SimpleTaskResult> Purchase();
         bool? IsPurchased { get; }
+
+        Task<SimpleTaskResult> RateApp();
     }
 
     public struct Size
@@ -538,5 +540,23 @@ namespace Flip2Learn.Shared.Application
         /// 
         /// </summary>
         public bool? IsPurchased { get; }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<SimpleTaskResult> SendFeedback()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public abstract Task<SimpleTaskResult> RateApp();
     }
 }

@@ -105,6 +105,12 @@
 
         </Grid>
 
+        <Button Text="Help" BackgroundColor="Transparent" FontSize="{OnPlatform Android=14, iOS=14}" TextColor="White" Margin="12,24" Opacity="0.5"
+                        Clicked="Help_Clicked"
+                        CornerRadius="12"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-70}"/>
+
     </RelativeLayout>
 
 </pages:AppContentPage>

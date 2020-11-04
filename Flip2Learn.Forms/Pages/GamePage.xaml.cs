@@ -21,6 +21,10 @@ namespace Flip2Learn.Forms.Pages
     public abstract class AppContentPage : ContentPage
     {
         protected ICrossApplication app => CrossApplication.instance;
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 
 
@@ -409,6 +413,32 @@ namespace Flip2Learn.Forms.Pages
         {
             OnBackButtonPressed();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void Help_Clicked(object sender, EventArgs e)
+        {
+            string restore = "Restore purchase";
+            string purchase = "🔥 Purchase premium";
+            string feedback = "Report a problem";
+            string rate = "⭐ Rate app in AppStore";
+
+            var options = new string[] { restore, purchase, feedback, rate };
+            var result = await this.DisplayActionSheet("Help", "Cancel", null, options);
+
+            if (result == restore)
+                await app.RestorePurchase();
+            if (result == purchase)
+                await Navigation.PushAsync(new FeaturesPage());
+            if (result == feedback)
+                await Navigation.PushAsync(new FeedbackPage());
+            if (result == rate)
+                await app.RateApp();
+        }
+
 
         /// <summary>
         /// 

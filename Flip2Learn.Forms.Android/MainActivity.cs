@@ -53,6 +53,17 @@ namespace Flip2Learn.Forms.Droid
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override Task<SimpleTaskResult> RateApp()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
         public override ICrossApplication App => this;
 
         private static AdLoader loader;
