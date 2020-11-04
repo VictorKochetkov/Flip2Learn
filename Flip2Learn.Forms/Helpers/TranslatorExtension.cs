@@ -18,7 +18,7 @@ namespace Flip2Learn.Forms.Helpers
             if (Text == null)
                 return null;
 
-            return Translator.GetString(Text);
+            return Translator.Translate(Text);
         }
     }
 }

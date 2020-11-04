@@ -20,6 +20,39 @@ namespace Flip2Learn.Forms.Pages
         /// <summary>
         /// 
         /// </summary>
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (app.IsPurchased == true)
+            {
+                purchased.IsVisible = true;
+                purchase.IsVisible = false;
+                restore.IsVisible = false;
+                feature1.IsVisible = false;
+                feature2.IsVisible = false;
+                feature3.IsVisible = false;
+                feature1_purchased.IsVisible = true;
+                feature2_purchased.IsVisible = true;
+                feature3_purchased.IsVisible = true;
+            }
+            else
+            {
+                purchased.IsVisible = false;
+                purchase.IsVisible = true;
+                restore.IsVisible = true;
+                feature1.IsVisible = true;
+                feature2.IsVisible = true;
+                feature3.IsVisible = true;
+                feature1_purchased.IsVisible = false;
+                feature2_purchased.IsVisible = false;
+                feature3_purchased.IsVisible = false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="width"></param>
         /// <param name="height"></param>
         protected override void OnSizeAllocated(double width, double height)

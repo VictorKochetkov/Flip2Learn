@@ -422,9 +422,9 @@ namespace Flip2Learn.Forms.Pages
         private async void Help_Clicked(object sender, EventArgs e)
         {
             string restore = "Restore purchase";
-            string purchase = "🔥 Purchase premium";
+            string purchase = "Purchase premium";
             string feedback = "Report a problem";
-            string rate = "⭐ Rate app in AppStore";
+            string rate = "Rate app in AppStore";
 
             var options = new string[] { restore, purchase, feedback, rate };
             var result = await this.DisplayActionSheet("Help", "Cancel", null, options);
@@ -436,7 +436,7 @@ namespace Flip2Learn.Forms.Pages
             if (result == feedback)
                 await Navigation.PushAsync(new FeedbackPage());
             if (result == rate)
-                await app.RateApp();
+                app.RateApp();
         }
 
 

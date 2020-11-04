@@ -15,6 +15,7 @@ using Plugin.InAppBilling;
 using Plugin.InAppBilling.Abstractions;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
+using Plugin.StoreReview;
 using Realms;
 using Xamarin.Essentials;
 
@@ -75,7 +76,7 @@ namespace Flip2Learn.Shared.Application
 
         Environment Environment { get; }
 
-        string GetString(string key);
+        string Translate(string key);
         string GetLocale();
 
 
@@ -95,7 +96,7 @@ namespace Flip2Learn.Shared.Application
         Task<SimpleTaskResult> Purchase();
         bool? IsPurchased { get; }
 
-        Task<SimpleTaskResult> RateApp();
+        void RateApp();
     }
 
     public struct Size
@@ -244,7 +245,7 @@ namespace Flip2Learn.Shared.Application
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public string GetString(string key) => Translator.GetString(key);
+        public string Translate(string key) => Translator.GetString(key);
 
 
         /// <summary>
@@ -557,6 +558,13 @@ namespace Flip2Learn.Shared.Application
         /// 
         /// </summary>
         /// <returns></returns>
-        public abstract Task<SimpleTaskResult> RateApp();
+        public void RateApp()
+        {
+#if DEBUG
+            CrossStoreReview.Current.RequestReview(true);
+#else
+            CrossStoreReview.Current.RequestReview(false);
+#endif
+        }
     }
 }
