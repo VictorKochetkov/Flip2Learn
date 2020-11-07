@@ -31,7 +31,7 @@ namespace Flip2Learn.Shared.Resources
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string Translate(string text)
+        public static string Translate(this string text)
         {
             if (string.IsNullOrEmpty(text))
                 return text;
