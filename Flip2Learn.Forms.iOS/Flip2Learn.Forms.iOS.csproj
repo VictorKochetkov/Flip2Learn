@@ -197,6 +197,10 @@
       <Link>Resources\nerd_emoji.png</Link>
     </BundleResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="..\Flip2Learn.Forms.Android\Resources\drawable-anydpi\flip2learn_splash.png">
+      <Link>Resources\flip2learn_splash.png</Link>
+    </BundleResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
