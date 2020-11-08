@@ -36,7 +36,7 @@
 
 
             <StackLayout Margin="16,300,16,12" Spacing="0">
-                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="1" FontSize="21" Style="{DynamicResource Bold}" Text="Flip2Learn. Premium"/>
+                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="1" FontSize="21" Style="{DynamicResource Bold}" Text="Flip2Learn. Premium 🔑"/>
                 <Label x:Name="feature1" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,16,0,0"  FontSize="16" Text="– No ads"/>
                 <Label x:Name="feature2" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="– All countries available (and dependent territories)"/>
                 <Label x:Name="feature3" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="– Share progress across your devices"/>
