@@ -8,8 +8,11 @@
     <ViewCell.View>
         <StackLayout Orientation="Horizontal" Padding="21,5,4,5">
             <Label FontSize="{OnPlatform iOS=32, Android=21}" TextColor="Black" VerticalOptions="Center" x:Name="flag"/>
-            <StackLayout Spacing="0" VerticalOptions="Center" Padding="12,4" HorizontalOptions="StartAndExpand">
-                <Label x:Name="title" Style="{StaticResource Title}" LineBreakMode="TailTruncation"/>
+            <StackLayout Spacing="0" VerticalOptions="Center" Padding="12,4" HorizontalOptions="StartAndExpand" CompressedLayout.IsHeadless="True">
+                <StackLayout Orientation="Horizontal" Spacing="0" CompressedLayout.IsHeadless="True">
+                    <Label x:Name="title" Style="{StaticResource Title}" LineBreakMode="TailTruncation"/>
+                    <Label x:Name="parent" Style="{StaticResource Subitle}" LineBreakMode="TailTruncation" Margin="4,2,0,0" VerticalOptions="Center"/>
+                </StackLayout>
                 <Label x:Name="subtitle" Style="{StaticResource Subitle}" Margin="0,-1,0,0"/>
             </StackLayout>
             <CheckBox x:Name="selected" IsChecked="True" Scale="{OnPlatform Android=1, iOS=1.2}" Margin="2" Color="{StaticResource GreenAccent}" VerticalOptions="Center"/>

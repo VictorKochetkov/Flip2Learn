@@ -47,6 +47,8 @@ namespace Flip2Learn.Forms.Views
         {
             base.UpdateViews();
 
+            parent.Text = Model.ParentCountry;
+
             selected.CheckedChanged -= Selected_CheckedChanged;
 
             flag.Text = Model.Flag;

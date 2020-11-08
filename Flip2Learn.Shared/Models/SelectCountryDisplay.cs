@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Flip2Learn.Shared.Core;
 using Flip2Learn.Shared.Database;
 using Flip2Learn.Shared.Helpers;
@@ -10,6 +11,11 @@ namespace Flip2Learn.Shared.Models
     /// </summary>
     public interface ISelectCountryDisplay : IRow
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        string ParentCountry { get; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -48,6 +54,26 @@ namespace Flip2Learn.Shared.Models
         /// 
         /// </summary>
         public string Subtitle => Source.Capital.GetLocalized();
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ParentCountry
+        {
+            get
+            {
+                if (Source.IsDependent)
+                {
+                    string name = app.GetAllCountries().FirstOrDefault(x => x.Name.en == Source.ParentCountry).Name.GetLocalized();
+                    return $"• {name}";
+
+                }
+
+                return null;
+            }
+        }
+
 
         /// <summary>
         /// 
