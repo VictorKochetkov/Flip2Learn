@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 using System.Reflection;
 using System.Resources;
 using System.Text.RegularExpressions;
@@ -31,14 +32,22 @@ namespace Flip2Learn.Shared.Resources
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string Translate(this string text)
+        public static string Translate(this string text, params string[] format)
         {
             if (string.IsNullOrEmpty(text))
                 return text;
 
             try
             {
-                return Regex.Unescape(regex.Replace(text, (Match match) => GetString(match.Groups["code"].Value)));
+                string localized = Regex.Unescape(regex.Replace(text, (Match match) => GetString(match.Groups["code"].Value)));
+
+                if (localized == text)
+                    localized = GetString(localized);
+
+                if (format?.Any() == true)
+                    localized = string.Format(localized, format);
+
+                return localized;
             }
             catch (Exception ex)
             {

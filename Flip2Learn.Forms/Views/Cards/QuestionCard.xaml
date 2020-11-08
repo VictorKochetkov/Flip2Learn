@@ -6,6 +6,7 @@
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
              xmlns:controls="clr-namespace:Xamarin.Forms.Controls;assembly=CircularProgressBar"
+             xmlns:t="clr-namespace:Flip2Learn.Forms.Helpers"
              x:Class="Flip2Learn.Forms.Views.QuestionCard">
 
     <ContentView.Content>
@@ -34,7 +35,7 @@
 
                     <views:RippleView x:Name="know" HorizontalOptions="Center" Padding="22,8" HasShadow="False" Elevation="0" BackgroundColor="{StaticResource GreenAccent}">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="✔️ Mark as known" TextColor="Black" HorizontalOptions="Center" Style="{DynamicResource Bold}" FontSize="{OnPlatform iOS=16, Android=16}"/>
+                            <Label Text="{t:Translate button_mark_as_known}" TextColor="Black" HorizontalOptions="Center" Style="{DynamicResource Bold}" FontSize="{OnPlatform iOS=16, Android=16}"/>
                         </StackLayout>
                     </views:RippleView>
 

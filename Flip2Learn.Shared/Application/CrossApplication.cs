@@ -271,7 +271,7 @@ namespace Flip2Learn.Shared.Application
                         {
                             AppVersion = $"{VersionTracking.CurrentVersion} ({VersionTracking.CurrentBuild})",
                             DeviceModel = DeviceInfo.Model,
-                            Locale = "en",//CultureInfo.CurrentCulture.ToString(),
+                            Locale = CultureInfo.CurrentCulture.ToString(),
                             OsVersion = DeviceInfo.VersionString,
                             DeviceScreen = new Size()
                             {

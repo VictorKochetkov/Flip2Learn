@@ -15,6 +15,7 @@ using Flip2Learn.Shared.Database;
 using Realms;
 using Flip2Learn.Forms.Views.Cards;
 using System.Threading;
+using Flip2Learn.Shared.Resources;
 
 namespace Flip2Learn.Forms.Pages
 {
@@ -275,7 +276,7 @@ namespace Flip2Learn.Forms.Pages
             if (game.IsCompleted)
                 subtitle.SetText("Sprint completed");
             else
-                subtitle.SetText($"{game.QuestionIndex + 1} of {game.TotalQuestions}");
+                subtitle.SetText("$=sprint_subtitle$$".Translate($"{game.QuestionIndex + 1}", $"{game.TotalQuestions}"));
 
             //double value = game.QuestionIndex / (double)game.TotalQuestions;
             //progress.Animate("aa", new Animation((a) => { progress.WidthRequest = a; }, progress.Width, progressBackground.Width * value, Easing.CubicOut));
@@ -358,9 +359,9 @@ namespace Flip2Learn.Forms.Pages
             appBar.Margin = m;
 
             if (app.IsPurchased == true)
-                title.SetText("Flip2Learn. Premium");
+                title.SetText("$=flip2learn_premium$$".Translate());
             else
-                title.SetText("Flip2Learn");
+                title.SetText("$=flip2learn$$".Translate());
         }
 
 
@@ -437,11 +438,11 @@ namespace Flip2Learn.Forms.Pages
         /// <param name="e"></param>
         private async void Help_Clicked(object sender, EventArgs e)
         {
-            string ads = "Disable ads";
-            string restore = "Restore purchase";
-            string purchase = "Purchase premium";
-            string feedback = "Report a problem";
-            string rate = "Rate app in AppStore";
+            string ads = "$=help_disable_ads$$".Translate();
+            string restore = "$=help_restore_purchase$$".Translate();
+            string purchase = "$=help_purchase_premium$$".Translate();
+            string feedback = "$=help_report_a_problem$$".Translate();
+            string rate = "$=help_rate_app$$".Translate(Device.RuntimePlatform == Device.iOS ? "$=store_app_store$$".Translate() : "$=store_google_play$$".Translate());
 
             var options = new List<string>();
 
@@ -451,10 +452,10 @@ namespace Flip2Learn.Forms.Pages
                 options.Add(restore);
                 options.Add(purchase);
             }
-            options.Add(feedback);
+            //options.Add(feedback);
             options.Add(rate);
 
-            var result = await this.DisplayActionSheet("Help", "Cancel", null, options.ToArray());
+            var result = await this.DisplayActionSheet("$=common_help$$".Translate(), "$=common_cancel$$".Translate(), null, options.ToArray());
 
             if (result == restore)
                 await RestorePurchase();

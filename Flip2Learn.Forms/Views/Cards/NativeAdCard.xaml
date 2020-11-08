@@ -4,6 +4,7 @@
              xmlns:ui="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
              xmlns:controls="clr-namespace:Xamarin.Forms.Controls;assembly=CircularProgressBar"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:t="clr-namespace:Flip2Learn.Forms.Helpers"
              xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
              x:Class="Flip2Learn.Forms.Views.Cards.NativeAdCard">
     <ContentView.Content>
@@ -19,7 +20,7 @@
                         <StackLayout Spacing="0">
 
                             <Frame BackgroundColor="Orange" HorizontalOptions="Start" Padding="6,0" Margin="0,0,0,4" HasShadow="False">
-                                <Label Text="Ad" TextColor="Black" FontSize="11" Style="{DynamicResource Bold}"/>
+                                <Label Text="{t:Translate ads_badge}" TextColor="Black" FontSize="11" Style="{DynamicResource Bold}"/>
                             </Frame>
 
                             <Label x:Name="advertiser" Style="{DynamicResource Subitle}" FontSize="11.5" Opacity="0.6" InputTransparent="True"/>

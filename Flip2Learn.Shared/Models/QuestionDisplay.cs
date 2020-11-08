@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using Flip2Learn.Shared.Core;
 using Flip2Learn.Shared.Helpers;
+using Flip2Learn.Shared.Resources;
 
 namespace Flip2Learn.Shared.Models
 {
@@ -327,7 +328,7 @@ namespace Flip2Learn.Shared.Models
         {
             get
             {
-                return "Capital of";
+                return "$=capital_of$$".Translate();
             }
         }
 

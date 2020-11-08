@@ -6,12 +6,13 @@
                        xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
                        xmlns:ui="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
                        xmlns:controls1="clr-namespace:Xamarin.Forms.Controls;assembly=CircularProgressBar"
+                       xmlns:t="clr-namespace:Flip2Learn.Forms.Helpers"
                        BackgroundColor="{DynamicResource main_bg}"
                        NavigationPage.HasNavigationBar="False"
                        x:Class="Flip2Learn.Forms.Pages.GamePage">
 
     <RelativeLayout>
-        
+
 
         <RelativeLayout Opacity="0.08"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
@@ -50,11 +51,11 @@
                                       BackgroundColor="#5569f0ae">
 
                         <StackLayout Orientation="Horizontal">
-                            <Label x:Name="featuresLabel" Text="💡 0/3" TextColor="#69f0ae" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label x:Name="featuresLabel" TextColor="#69f0ae" HorizontalOptions="Center" FontAttributes="Bold"/>
                         </StackLayout>
 
                     </views:RippleView>
-                    
+
 
                     <StackLayout
                         x:Name="titleContainer"
@@ -66,7 +67,6 @@
                         <Label
                            x:Name="title"
                            HorizontalOptions="Center"
-                           Text="Flip2Learn"
                            TextColor="White"
                            FontSize="{OnPlatform iOS=16, Android=18}"
                            Opacity="0.8"
@@ -77,7 +77,6 @@
                             x:Name="subtitle"
                             HorizontalOptions="Center"
                             FontSize="{OnPlatform iOS=12, Android=14}"
-                            Text="3 of 10"
                             TextColor="White"
                             Opacity="0.5"/>
 
@@ -91,7 +90,7 @@
                                       BackgroundColor="#69f0ae">
 
                         <StackLayout Orientation="Horizontal">
-                            <Label x:Name="knownCountries" Text="✔️ 12" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label x:Name="knownCountries" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"/>
                         </StackLayout>
 
                     </views:RippleView>
@@ -99,8 +98,8 @@
                 </StackLayout>
 
             </StackLayout>
-            
-            
+
+
 
             <RelativeLayout Grid.Row="1" x:Name="container" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Margin="12,0">
             </RelativeLayout>
@@ -110,7 +109,7 @@
         <views:RippleView BackgroundColor="Transparent" Margin="12,24" Opacity="0.5" Clicked="Help_Clicked" CornerRadius="12"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-75}">
-            <Label Text="Help" FontSize="{OnPlatform Android=14, iOS=14}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Padding="9"/>
+            <Label Text="{t:Translate common_help}" FontSize="{OnPlatform Android=14, iOS=14}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Padding="9"/>
         </views:RippleView>
 
     </RelativeLayout>

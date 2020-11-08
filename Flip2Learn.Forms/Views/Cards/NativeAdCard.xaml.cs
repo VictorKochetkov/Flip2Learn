@@ -46,7 +46,7 @@ namespace Flip2Learn.Forms.Views.Cards
         {
             await this.TranslateTo(0, 0, 400, Easing.CubicOut);
 
-            var timer = new Timer(TimeSpan.FromMilliseconds(80), TimeSpan.FromSeconds(10));
+            var timer = new Timer(TimeSpan.FromMilliseconds(70), TimeSpan.FromSeconds(10));
             timer.Start();
             timer.Tick += (s, e) =>
             {

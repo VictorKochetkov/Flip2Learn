@@ -36,23 +36,23 @@
 
 
             <StackLayout Margin="16,300,16,12" Spacing="0">
-                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="1" FontSize="21" Style="{DynamicResource Bold}" Text="Flip2Learn. Premium 🔑"/>
-                <Label x:Name="feature1" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,16,0,0"  FontSize="16" Text="– No ads"/>
-                <Label x:Name="feature2" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="– All countries available (and dependent territories)"/>
-                <Label x:Name="feature3" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="– Share progress across your devices"/>
+                <Label HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="1" FontSize="21" Style="{DynamicResource Bold}" Text="{t:Translate '$=flip2learn_premium$$ 🔑'}"/>
+                <Label x:Name="feature1" HorizontalOptions="Start" TextColor="White" LineHeight="1" Opacity="0.8" Margin="0,16,0,0" FontSize="16" Text="{t:Translate '– $=premium_feature1$$'}"/>
+                <Label x:Name="feature2" HorizontalOptions="Start" TextColor="White" LineHeight="1" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="{t:Translate '– $=premium_feature2$$'}"/>
+                <Label x:Name="feature3" HorizontalOptions="Start" TextColor="White" LineHeight="1" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="{t:Translate '– $=premium_feature3$$'}"/>
 
-                <Label x:Name="feature1_purchased" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,16,0,0"  FontSize="16" Text="✔️ No ads"/>
-                <Label x:Name="feature2_purchased" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="✔️ All countries available (and dependent territories)"/>
-                <Label x:Name="feature3_purchased" HorizontalOptions="Start" TextColor="White" LineHeight="0" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="✔️ Share progress across your devices"/>
+                <Label x:Name="feature1_purchased" HorizontalOptions="Start" TextColor="White" LineHeight="1" Opacity="0.8" Margin="0,16,0,0" FontSize="16" Text="{t:Translate '✔️ $=premium_feature1$$'}"/>
+                <Label x:Name="feature2_purchased" HorizontalOptions="Start" TextColor="White" LineHeight="1" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="{t:Translate '✔️ $=premium_feature2$$'}"/>
+                <Label x:Name="feature3_purchased" HorizontalOptions="Start" TextColor="White" LineHeight="1" Opacity="0.8" Margin="0,4,0,0"  FontSize="16" Text="{t:Translate '✔️ $=premium_feature3$$'}"/>
             </StackLayout>
 
-            <Button x:Name="purchase" Text="🔥 Purchase 🔥" BackgroundColor="{DynamicResource GreenAccent}" FontSize="{OnPlatform Android=16, iOS=16}" Style="{DynamicResource Bold}" TextColor="Black" Margin="12,24"
+            <Button x:Name="purchase" Text="{t:Translate premium_button_purchase}" BackgroundColor="{DynamicResource GreenAccent}" FontSize="{OnPlatform Android=16, iOS=16}" Style="{DynamicResource Bold}" TextColor="Black" Margin="12,24"
                         Clicked="Purchase_Clicked"
                         CornerRadius="12"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-130}"/>
 
-            <Button x:Name="purchased" Text="✔️ Purchased" BackgroundColor="Transparent" BorderWidth="1.5" BorderColor="{DynamicResource GreenAccent}" FontSize="{OnPlatform Android=16, iOS=16}" Style="{DynamicResource Bold}" TextColor="{DynamicResource GreenAccent}" Margin="12,24"
+            <Button x:Name="purchased" Text="{t:Translate premium_button_purchased}" BackgroundColor="Transparent" BorderWidth="1.5" BorderColor="{DynamicResource GreenAccent}" FontSize="{OnPlatform Android=16, iOS=16}" Style="{DynamicResource Bold}" TextColor="{DynamicResource GreenAccent}" Margin="12,24"
                         CornerRadius="12"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-130}"/>
@@ -60,7 +60,7 @@
             <views:RippleView x:Name="restore" BackgroundColor="Transparent" Margin="12,24" Opacity="0.5" Clicked="Restore_Clicked" CornerRadius="12"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-75}">
-                <Label Text="Restore purchase" FontSize="{OnPlatform Android=14, iOS=14}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Padding="9"/>
+                <Label Text="{t:Translate premium_button_restore}" FontSize="{OnPlatform Android=14, iOS=14}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Padding="9"/>
             </views:RippleView>
 
 
