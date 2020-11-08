@@ -76,6 +76,7 @@
     <Compile Include="Renderers\PageRenderer.cs" />
     <Compile Include="Renderers\NativeAdViewRenderer.cs" />
     <Compile Include="Renderers\NativeMediaViewRenderer.cs" />
+    <Compile Include="Renderers\AppContentPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -189,9 +190,6 @@
     </BundleResource>
     <BundleResource Include="..\Flip2Learn.Forms.Android\Resources\drawable-anydpi\countries_background_pattern.png">
       <Link>Resources\countries_background_pattern.png</Link>
-    </BundleResource>
-    <BundleResource Include="Assets.xcassets\AppIcon.appiconset\Icon-512.png">
-      <Link>Resources\Icon-512.png</Link>
     </BundleResource>
     <BundleResource Include="..\Flip2Learn.Forms.Android\Resources\drawable-anydpi\nerd_emoji.png">
       <Link>Resources\nerd_emoji.png</Link>

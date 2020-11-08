@@ -52,7 +52,7 @@
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-130}"/>
 
-            <Button x:Name="purchased" Text="✔️ Purchased" BackgroundColor="Transparent"  BorderColor="{DynamicResource GreenAccent}" FontSize="{OnPlatform Android=16, iOS=16}" Style="{DynamicResource Bold}" TextColor="Black" Margin="12,24"
+            <Button x:Name="purchased" Text="✔️ Purchased" BackgroundColor="Transparent" BorderWidth="1.5" BorderColor="{DynamicResource GreenAccent}" FontSize="{OnPlatform Android=16, iOS=16}" Style="{DynamicResource Bold}" TextColor="{DynamicResource GreenAccent}" Margin="12,24"
                         CornerRadius="12"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-130}"/>

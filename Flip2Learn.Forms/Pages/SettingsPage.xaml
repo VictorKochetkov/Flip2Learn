@@ -7,6 +7,7 @@
                        xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
                        ios:Page.ModalPresentationStyle="PageSheet"
                        BackgroundColor="{DynamicResource bg}">
+    
 
     <ListView x:Name="listView"
                       HasUnevenRows="False" 

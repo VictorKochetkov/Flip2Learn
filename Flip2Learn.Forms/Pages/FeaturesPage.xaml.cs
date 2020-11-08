@@ -75,7 +75,7 @@ namespace Flip2Learn.Forms.Pages
         /// <param name="e"></param>
         private async void Purchase_Clicked(object sender, EventArgs e)
         {
-            var result = await app.Purchase();
+            var result = await UIHelper.ProgressOverlay(() => app.Purchase());
 
             if (result.IsSuccess)
                 await this.Navigation.PopAsync();
@@ -88,7 +88,7 @@ namespace Flip2Learn.Forms.Pages
         /// <param name="e"></param>
         private async void Restore_Clicked(object sender, EventArgs e)
         {
-            var result = await app.RestorePurchase();
+            var result = await UIHelper.ProgressOverlay(() => app.RestorePurchase());
 
             if (result.IsSuccess)
                 await this.Navigation.PopAsync();

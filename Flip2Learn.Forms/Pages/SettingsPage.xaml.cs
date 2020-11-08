@@ -19,22 +19,8 @@ namespace Flip2Learn.Forms.Pages
         public SettingsPage()
         {
             InitializeComponent();
-
-            listView.ItemTemplate = new DataTemplate(typeof(SelectCountryCell));
-            listView.ItemsSource = app.GetSelectCountryList().Where(x => x.IsMatch(SearchText));
-
-            UpdateKnownCountries();
         }
 
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private void UpdateKnownCountries()
-        {
-            knownCountries.SetText($"✔️ {app.GetKnownCountriesCount()}");
-        }
 
         /// <summary>
         /// 
@@ -43,7 +29,13 @@ namespace Flip2Learn.Forms.Pages
         {
             base.OnAppearing();
 
+            if (listView.ItemTemplate == null)
+            {
+                listView.ItemTemplate = new DataTemplate(typeof(SelectCountryCell));
+                listView.ItemsSource = app.GetSelectCountryList().Where(x => x.IsMatch(SearchText));
+            }
 
+            app.AppChanged -= App_AppChanged;
             app.AppChanged += App_AppChanged;
 
             UpdateKnownCountries();
@@ -57,6 +49,16 @@ namespace Flip2Learn.Forms.Pages
             base.OnDisappearing();
 
             app.AppChanged -= App_AppChanged;
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void UpdateKnownCountries()
+        {
+            knownCountries.SetText($"✔️ {app.GetKnownCountriesCount()}");
         }
 
         /// <summary>

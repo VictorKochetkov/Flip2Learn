@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Flip2Learn.Forms.Pages;
 using Flip2Learn.Shared.Application;
 using Foundation;
 using Google.MobileAds;
@@ -15,18 +16,18 @@ namespace Flip2Learn.Forms.iOS
     {
         public override event EventHandler AdsReady = delegate { };
 
-        private iOS_CrossApplication()
-            : base()
+        private iOS_CrossApplication(INavigation navigation)
+            : base(navigation)
         {
 
         }
 
-        public static ICrossApplication Instance()
+        public static ICrossApplication Instance(INavigation navigation)
         {
             lock (typeof(CrossApplication))
             {
                 if (instance == null)
-                    instance = new iOS_CrossApplication();
+                    instance = new iOS_CrossApplication(navigation);
 
                 return instance;
             }
@@ -197,7 +198,8 @@ namespace Flip2Learn.Forms.iOS
             MobileAds.SharedInstance.RequestConfiguration.TestDeviceIdentifiers = new string[] { Request.SimulatorId };
             MobileAds.SharedInstance.Start((a) => { });
 
-            iOS_CrossApplication.Instance();
+
+            iOS_CrossApplication.Instance(new FormsNavigation());
 
 
             global::Xamarin.Forms.Forms.Init();

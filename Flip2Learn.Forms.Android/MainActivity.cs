@@ -20,6 +20,8 @@ using static Android.Gms.Ads.Formats.UnifiedNativeAd;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Android.Content;
+using Flip2Learn.Forms.Pages;
+using INavigation = Flip2Learn.Shared.Application.INavigation;
 
 namespace Flip2Learn.Forms.Droid
 {
@@ -36,17 +38,17 @@ namespace Flip2Learn.Forms.Droid
     {
         public override event EventHandler AdsReady = delegate { };
 
-        private Android_CrossApplication() : base()
+        private Android_CrossApplication(INavigation navigation) : base(navigation)
         {
 
         }
 
-        public static ICrossApplication Instance()
+        public static ICrossApplication Instance(INavigation navigation)
         {
             lock (typeof(CrossApplication))
             {
                 if (instance == null)
-                    instance = new Android_CrossApplication();
+                    instance = new Android_CrossApplication(navigation);
 
                 return instance;
             }
@@ -190,7 +192,7 @@ namespace Flip2Learn.Forms.Droid
             MobileAds.Initialize(this);
             CachedImageRenderer.Init(true);
 
-            Android_CrossApplication.Instance();
+            Android_CrossApplication.Instance(new FormsNavigation());
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -248,7 +250,7 @@ namespace Flip2Learn.Forms.Droid
         /// <param name="ad"></param>
         public void OnUnifiedNativeAdLoaded(UnifiedNativeAd ad)
         {
-            (Android_CrossApplication.Instance() as Android_CrossApplication).OnUnifiedNativeAdLoaded(ad);
+            (Android_CrossApplication.instance as Android_CrossApplication).OnUnifiedNativeAdLoaded(ad);
         }
     }
 }

@@ -18,16 +18,6 @@ using System.Threading;
 
 namespace Flip2Learn.Forms.Pages
 {
-    public abstract class AppContentPage : ContentPage
-    {
-        protected ICrossApplication app => CrossApplication.instance;
-
-        void Button_Clicked(System.Object sender, System.EventArgs e)
-        {
-        }
-    }
-
-
     public interface ISprint
     {
         event EventHandler NewQuestion;
@@ -302,15 +292,21 @@ namespace Flip2Learn.Forms.Pages
             app.LoadAd();
             container.WidthRequest = Math.Min(400, this.Width);
 
+            app.AppChanged -= App_AppChanged;
             app.AppChanged += App_AppChanged;
+            //close.Clicked -= Close_Clicked;
             //close.Clicked += Close_Clicked;
+            settings.Clicked -= Settings_Clicked;
             settings.Clicked += Settings_Clicked;
+            features.Clicked -= Features_Clicked;
             features.Clicked += Features_Clicked;
+            settings.SizeChanged -= Settings_SizeChanged;
             settings.SizeChanged += Settings_SizeChanged;
 
             NewSprint();
 
             UpdateTitle();
+            UpdateFeatures();
             UpdateKnownCountriesCount();
         }
 
@@ -330,6 +326,10 @@ namespace Flip2Learn.Forms.Pages
                 {
                     case AppChangedType.KnownCountries:
                         UpdateKnownCountriesCount();
+                        break;
+
+                    case AppChangedType.Purchased:
+                        UpdateFeatures();
                         break;
                 }
             });
@@ -356,6 +356,11 @@ namespace Flip2Learn.Forms.Pages
             var m = appBar.Margin;
             m.Top = safeInsets.Top;
             appBar.Margin = m;
+
+            if (app.IsPurchased == true)
+                title.SetText("Flip2Learn. Premium");
+            else
+                title.SetText("Flip2Learn");
         }
 
 
@@ -365,6 +370,17 @@ namespace Flip2Learn.Forms.Pages
         void UpdateKnownCountriesCount()
         {
             knownCountries.SetText($"✔️ {app.GetKnownCountriesCount()}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        void UpdateFeatures()
+        {
+            if (app.IsPurchased == true)
+                featuresLabel?.SetText($"🔑 3/3");
+            else
+                featuresLabel?.SetText($"🔑 0/3");
         }
 
 
@@ -421,22 +437,44 @@ namespace Flip2Learn.Forms.Pages
         /// <param name="e"></param>
         private async void Help_Clicked(object sender, EventArgs e)
         {
+            string ads = "Disable ads";
             string restore = "Restore purchase";
             string purchase = "Purchase premium";
             string feedback = "Report a problem";
             string rate = "Rate app in AppStore";
 
-            var options = new string[] { restore, purchase, feedback, rate };
-            var result = await this.DisplayActionSheet("Help", "Cancel", null, options);
+            var options = new List<string>();
+
+            if (app.IsPurchased != true)
+            {
+                options.Add(ads);
+                options.Add(restore);
+                options.Add(purchase);
+            }
+            options.Add(feedback);
+            options.Add(rate);
+
+            var result = await this.DisplayActionSheet("Help", "Cancel", null, options.ToArray());
 
             if (result == restore)
-                await app.RestorePurchase();
+                await RestorePurchase();
+            if (result == ads)
+                await Navigation.PushAsync(new FeaturesPage());
             if (result == purchase)
                 await Navigation.PushAsync(new FeaturesPage());
             if (result == feedback)
                 await Navigation.PushAsync(new FeedbackPage());
             if (result == rate)
                 app.RateApp();
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private async Task RestorePurchase()
+        {
+            await UIHelper.ProgressOverlay(() => app.RestorePurchase());
         }
 
 

@@ -4,7 +4,9 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
+using Flip2Learn.Shared.Application.Exceptions;
 using Flip2Learn.Shared.Core;
 using Flip2Learn.Shared.Database;
 using Flip2Learn.Shared.Helpers;
@@ -53,7 +55,8 @@ namespace Flip2Learn.Shared.Application
     /// </summary>
     public enum AppChangedType : int
     {
-        KnownCountries = 0
+        KnownCountries = 0,
+        Purchased = 1,
     }
 
     /// <summary>
@@ -64,7 +67,13 @@ namespace Flip2Learn.Shared.Application
         public AppChangedType ChangedType { get; set; }
     }
 
-
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface INavigation
+    {
+        void Purchase();
+    }
 
     /// <summary>
     /// Crossplatform application
@@ -125,28 +134,116 @@ namespace Flip2Learn.Shared.Application
     {
         public bool IsSuccess { get; set; }
         public Exception Exception { get; set; }
-        public string LocalizedMessage { get; set; }
 
-
-        public static SimpleTaskResult Ok() => Ok<SimpleTaskResult>();
-        public static SimpleTaskResult Error(Exception exception = null, string localizedMessage = null) => Error<SimpleTaskResult>(exception, localizedMessage);
-
-
-        public static T Ok<T>() where T : SimpleTaskResult, new()
+        public string LocalizeTitle
         {
-            return new T()
+            get
             {
-                IsSuccess = true
-            };
+                if (!string.IsNullOrEmpty(localizedTitle))
+                    return localizedTitle;
+
+                return $"$=common_success$".Translate();
+            }
         }
 
-        public static T Error<T>(Exception exception = null, string localizedMessage = null) where T : SimpleTaskResult, new()
+        public string LocalizedMessage
         {
-            return new T()
+            get
+            {
+                if (!string.IsNullOrEmpty(localizedMessage))
+                    return localizedMessage;
+
+                return $"$=common_error$$".Translate();
+            }
+        }
+
+        public string AcceptText
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(acceptText))
+                    return acceptText;
+
+                if (IsSuccess)
+                    return null;
+
+                return $"$=common_ok$$".Translate();
+            }
+        }
+
+        public string CancelText
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(cancelText))
+                    return cancelText;
+
+                return $"$=common_ok$$".Translate();
+            }
+        }
+
+        public bool ShouldShowAlert
+        {
+            get
+            {
+                if (showAlert)
+                    return !string.IsNullOrEmpty(LocalizeTitle) || !string.IsNullOrEmpty(LocalizedMessage);
+                else
+                    return false;
+            }
+        }
+
+        public bool TwoOptionsAlert
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(CancelText) && !string.IsNullOrEmpty(AcceptText);
+            }
+        }
+
+        private string localizedMessage;
+        private string localizedTitle;
+        private string acceptText;
+        private string cancelText;
+        private bool showAlert;
+
+        public static SimpleTaskResult Ok(
+            string localizedTitle = null,
+            string localizedMessage = null,
+            string acceptText = null,
+            Action accept = null,
+            bool showAlert = true)
+        {
+            return new SimpleTaskResult()
+            {
+                IsSuccess = true,
+                Exception = null,
+                localizedMessage = localizedMessage,
+                localizedTitle = localizedTitle,
+                acceptText = acceptText,
+                cancelText = null,
+                showAlert = showAlert
+            };
+        }
+        public static SimpleTaskResult Error(
+            Exception exception = null,
+            string localizedTitle = null,
+            string localizedMessage = null,
+            string acceptText = null,
+            Action accept = null,
+            string cancelText = null,
+            Action cancelAction = null,
+            bool showAlert = true)
+        {
+            return new SimpleTaskResult()
             {
                 IsSuccess = false,
                 Exception = exception,
-                LocalizedMessage = localizedMessage
+                localizedMessage = localizedMessage,
+                localizedTitle = localizedTitle,
+                acceptText = acceptText,
+                cancelText = cancelText,
+                showAlert = showAlert
             };
         }
     }
@@ -216,12 +313,14 @@ namespace Flip2Learn.Shared.Application
             }
         }
 
+        private readonly INavigation Navigation;
 
         /// <summary>
         /// 
         /// </summary>
-        protected CrossApplication()
+        protected CrossApplication(INavigation navigation)
         {
+            this.Navigation = navigation;
             RestoreSnapshots();
         }
 
@@ -404,6 +503,7 @@ namespace Flip2Learn.Shared.Application
         private const string PURCHASE_PAYLOAD = "Tim4KGGd1EuMUqFuyw9IyQQpMzn0FAQEusgs3fcVPiKQ";
 
 
+
         /// <summary>
         /// 
         /// </summary>
@@ -413,16 +513,32 @@ namespace Flip2Learn.Shared.Application
             try
             {
                 bool purchased = await __RestorePurchase();
-                Settings.AddOrUpdateValue("in-app-purchase-premium", purchased);
+                bool changed = Settings.AddOrUpdateValue("in-app-purchase-premium", purchased);
 
-                return SimpleTaskResult.Ok();
+                if (changed)
+                {
+                    PostEvent(() =>
+                    {
+                        AppChanged(this, new AppChangedEventArgs()
+                        {
+                            ChangedType = AppChangedType.Purchased
+                        });
+                    });
+                }
+
+                return SimpleTaskResult.Ok("Success", "Your purchase restored");
+            }
+            catch (PurchaseNotFoundException notFound)
+            {
+                return SimpleTaskResult.Error(notFound, "Error", "You haven't made a purchase yet",
+                    acceptText: "Purchase", accept: () => Navigation.Purchase(),
+                    cancelText: "Cancel");
             }
             catch (Exception e)
             {
                 return SimpleTaskResult.Error(e);
             }
         }
-
 
         /// <summary>
         /// 
@@ -433,9 +549,34 @@ namespace Flip2Learn.Shared.Application
             try
             {
                 await __Purchase();
-                Settings.AddOrUpdateValue("in-app-purchase-premium", true);
+                bool changed = Settings.AddOrUpdateValue("in-app-purchase-premium", true);
 
-                return SimpleTaskResult.Ok();
+                if (changed)
+                {
+                    PostEvent(() =>
+                    {
+                        AppChanged(this, new AppChangedEventArgs()
+                        {
+                            ChangedType = AppChangedType.Purchased
+                        });
+                    });
+                }
+
+                return SimpleTaskResult.Ok("Success", "Premium version purchased");
+            }
+            catch (InAppBillingPurchaseException purchaseException)
+            {
+                switch (purchaseException.PurchaseError)
+                {
+                    case PurchaseError.UserCancelled:
+                        Console.WriteLine("[PURCHASE] User cancelled");
+                        Debugger.Break();
+                        return SimpleTaskResult.Error(purchaseException, showAlert: false);
+
+                    default:
+                        return SimpleTaskResult.Error(purchaseException);
+                }
+
             }
             catch (Exception e)
             {
@@ -466,20 +607,21 @@ namespace Flip2Learn.Shared.Application
                 if (purchases?.Any(p => p.ProductId == PURCHASE_ID) ?? false)
                 {
                     //Purchase restored
+                    Console.WriteLine($"[PURCHASE] Purchase restored");
                     return true;
                 }
                 else
                 {
                     if (throwOnNotPurchased)
-                        throw new Exception("No purchases found");
+                        throw new PurchaseNotFoundException("No purchases found");
 
                     //no purchases found
                     return false;
                 }
-
             }
             catch (Exception e)
             {
+                Console.WriteLine($"[PURCHASE] Restore error `{e.Message}`");
                 Debugger.Break();
                 throw e;
             }
@@ -515,15 +657,31 @@ namespace Flip2Learn.Shared.Application
                 {
                     case PurchaseState.Purchased:
                     case PurchaseState.Restored:
+                        Console.WriteLine($"[PURCHASE] Success `{purchase.State}`");
                         return;
 
                     default:
+                        Console.WriteLine($"[PURCHASE] Error {purchase.State}");
                         throw new Exception($"Purchase result = `{purchase.State}`");
                 }
+            }
+            catch (InAppBillingPurchaseException purchaseException)
+            {
+                Console.WriteLine($"[PURCHASE] Error `{purchaseException.PurchaseError}`");
 
+                switch (purchaseException.PurchaseError)
+                {
+                    case PurchaseError.AlreadyOwned:
+                        Debugger.Break();
+                        return;
+                }
+
+                Debugger.Break();
+                throw purchaseException;
             }
             catch (Exception e)
             {
+                Console.WriteLine($"[PURCHASE] Error `{e.Message}`");
                 Debugger.Break();
                 throw e;
             }
@@ -540,7 +698,16 @@ namespace Flip2Learn.Shared.Application
         /// <summary>
         /// 
         /// </summary>
-        public bool? IsPurchased { get; }
+        public bool? IsPurchased
+        {
+            get
+            {
+                if (!Settings.Contains("in-app-purchase-premium"))
+                    return null;
+
+                return Settings.GetValueOrDefault("in-app-purchase-premium", false);
+            }
+        }
 
 
 
