@@ -176,7 +176,7 @@ namespace Flip2Learn.Forms.Pages
             if (app.LoadedAd == null)
                 return false;
 
-            if (game.QuestionIndex % 2 == 0)
+            if (game.QuestionIndex == 6)
                 return true;
 
             return false;
