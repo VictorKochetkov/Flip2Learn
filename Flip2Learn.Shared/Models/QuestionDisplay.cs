@@ -13,6 +13,17 @@ namespace Flip2Learn.Shared.Models
         /// <summary>
         /// 
         /// </summary>
+        public string SpeechLanguage
+        {
+            get
+            {
+                return app.Environment.Locale.ToLower().StartsWith("ru") ? "ru" : "en";
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string CountryName
         {
             get

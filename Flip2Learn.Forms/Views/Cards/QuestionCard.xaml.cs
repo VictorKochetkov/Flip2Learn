@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Flip2Learn.Shared.Core;
+using Flip2Learn.Shared.Helpers;
 using Flip2Learn.Shared.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -49,13 +51,22 @@ namespace Flip2Learn.Forms.Views
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private async Task<Locale> GetSpeechLocale()
+        {
+            var locales = await TextToSpeech.GetLocalesAsync();
+            return locales.FirstOrDefault(x => x.Language.StartsWith(_question.SpeechLanguage));
+        }
 
         /// <summary>
         /// 
         /// </summary>
         public async void Show()
         {
-            TextToSpeech.SpeakAsync(_question.CountryName);
+            TextToSpeech.SpeakAsync(_question.CountryName, new SpeechOptions() { Locale = await GetSpeechLocale() });
 
             progress.IsVisible = false;
             await this.TranslateTo(0, 0, 400, Easing.CubicOut);
@@ -144,7 +155,7 @@ namespace Flip2Learn.Forms.Views
             cardBackContainer.RotationY = 90;
             cardBackContainer.RotateYTo(0, 300, Easing.SpringOut);
 
-            TextToSpeech.SpeakAsync(_question.Capital.ToString());
+            TextToSpeech.SpeakAsync(_question.Capital.ToString(), new SpeechOptions() { Locale = await GetSpeechLocale() });
 
             await Task.Delay(10);
 
