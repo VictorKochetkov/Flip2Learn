@@ -24,7 +24,6 @@ namespace Flip2Learn.Forms.Pages
         event EventHandler NewQuestion;
         event EventHandler Finished;
         QuestionDisplay Question { get; }
-        bool IsCompleted { get; }
         int QuestionIndex { get; }
         int TotalQuestions { get; }
         void NextQuestion();
@@ -49,11 +48,6 @@ namespace Flip2Learn.Forms.Pages
         /// 
         /// </summary>
         private ICrossApplication app => CrossApplication.instance;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool IsCompleted => QuestionIndex + 1 >= countries.Count;
 
         /// <summary>
         /// 
@@ -104,7 +98,7 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         public void NextQuestion()
         {
-            if (IsCompleted)
+            if (QuestionIndex + 1 >= countries.Count)
             {
                 Finished(this, new EventArgs());
             }
@@ -273,7 +267,7 @@ namespace Flip2Learn.Forms.Pages
         /// </summary>
         void UpdateProgress()
         {
-            if (game.IsCompleted)
+            if (game.QuestionIndex + 1 > game.TotalQuestions)
                 subtitle.SetText("Sprint completed");
             else
                 subtitle.SetText("$=sprint_subtitle$$".Translate($"{game.QuestionIndex + 1}", $"{game.TotalQuestions}"));
