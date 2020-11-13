@@ -515,18 +515,25 @@ namespace Flip2Learn.Shared.Application
                 bool purchased = await __RestorePurchase();
                 bool changed = Settings.AddOrUpdateValue("in-app-purchase-premium", purchased);
 
-                if (changed)
+                if (purchased)
                 {
-                    PostEvent(() =>
+                    if (changed)
                     {
-                        AppChanged(this, new AppChangedEventArgs()
+                        PostEvent(() =>
                         {
-                            ChangedType = AppChangedType.Purchased
+                            AppChanged(this, new AppChangedEventArgs()
+                            {
+                                ChangedType = AppChangedType.Purchased
+                            });
                         });
-                    });
-                }
+                    }
 
-                return SimpleTaskResult.Ok("Success", "Your purchase restored");
+                    return SimpleTaskResult.Ok("Success", "Your purchase restored");
+                }
+                else
+                {
+                    throw new PurchaseNotFoundException();
+                }
             }
             catch (PurchaseNotFoundException notFound)
             {
