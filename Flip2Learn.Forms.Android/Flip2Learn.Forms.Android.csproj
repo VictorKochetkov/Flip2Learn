@@ -123,6 +123,10 @@
     <AndroidResource Include="Resources\drawable-xhdpi\*.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\*.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\*.png" />
+    <AndroidResource Include="Resources\drawable\background_splash.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Flip2Learn.Forms\Flip2Learn.Forms.csproj">
