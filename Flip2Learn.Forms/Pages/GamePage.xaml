@@ -109,7 +109,7 @@
         <views:RippleView BackgroundColor="Transparent" Margin="12,24" Opacity="0.5" Clicked="Help_Clicked" CornerRadius="12"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-75}">
-            <Label Text="{t:Translate common_help}" FontSize="{OnPlatform Android=14, iOS=14}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Padding="9"/>
+            <Label Text="{t:Translate common_help}" FontSize="{OnPlatform Android=14, iOS=14}" TextColor="{DynamicResource second_fg}" HorizontalOptions="Center" VerticalOptions="Center" Padding="9"/>
         </views:RippleView>
 
     </RelativeLayout>
