@@ -27,11 +27,11 @@
     <Color x:Key="GreenAccent">#69f0ae</Color>
 
     <Color x:Key="bg">#FFFFFF</Color>
-    <Color x:Key="second_bg">#FBFBFB</Color>
+    <Color x:Key="second_bg">#ffffff</Color>
 
     <Color x:Key="fg">#000000</Color>
     <Color x:Key="second_fg">#888888</Color>
 
-    <Color x:Key="main_bg">#FF0082FE</Color>
+    <Color x:Key="main_bg">#f6f6f6</Color>
 
 </ResourceDictionary>

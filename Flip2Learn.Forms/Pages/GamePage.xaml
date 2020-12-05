@@ -48,10 +48,10 @@
                                       Elevation="0"
                                       VerticalOptions="Center"
                                       BorderColor="Transparent"
-                                      BackgroundColor="#5569f0ae">
+                                      BackgroundColor="#69f0ae">
 
                         <StackLayout Orientation="Horizontal">
-                            <Label x:Name="featuresLabel" TextColor="#69f0ae" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label x:Name="featuresLabel" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"/>
                         </StackLayout>
 
                     </views:RippleView>
@@ -67,7 +67,7 @@
                         <Label
                            x:Name="title"
                            HorizontalOptions="Center"
-                           TextColor="White"
+                           TextColor="{DynamicResource fg}"
                            FontSize="{OnPlatform iOS=16, Android=18}"
                            Opacity="0.8"
                            VerticalOptions="Center"
@@ -77,7 +77,7 @@
                             x:Name="subtitle"
                             HorizontalOptions="Center"
                             FontSize="{OnPlatform iOS=12, Android=14}"
-                            TextColor="White"
+                            TextColor="{DynamicResource fg}"
                             Opacity="0.5"/>
 
                     </StackLayout>
