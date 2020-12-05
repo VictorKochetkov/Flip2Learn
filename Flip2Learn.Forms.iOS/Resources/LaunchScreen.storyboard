@@ -14,25 +14,23 @@
                         <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flip2learn_splash" translatesAutoresizingMaskIntoConstraints="NO" id="245">
                                 <rect key="frame" x="120" y="270" width="174" height="216"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
-                                    <constraint id="547" firstAttribute="width" secondItem="23" secondAttribute="height" multiplier="29:36"/>
+                                    <constraint firstAttribute="width" secondItem="245" secondAttribute="height" multiplier="15:8" id="282"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0.50980392156862742" blue="0.996078431372549" alpha="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
-                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
-                            <constraint id="263" firstItem="23" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="topMargin" constant="250"/>
-                            <constraint id="265" firstItem="23" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" constant="100"/>
-                            <constraint id="266" firstAttribute="bottomMargin" secondItem="23" secondAttribute="bottom" constant="250"/>
-                            <constraint id="268" firstAttribute="trailingMargin" secondItem="23" secondAttribute="trailing" constant="100"/>
+                            <constraint firstItem="245" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" constant="100" id="289"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="245" secondAttribute="trailing" constant="100" id="292"/>
+                            <constraint firstItem="245" firstAttribute="top" secondItem="Y8P-hJ-Z43" secondAttribute="bottom" constant="250" id="516"/>
+                            <constraint firstItem="9ZL-r4-8FZ" firstAttribute="top" secondItem="245" secondAttribute="bottom" constant="250" id="518"/>
                         </constraints>
                     </view>
                 </viewController>
