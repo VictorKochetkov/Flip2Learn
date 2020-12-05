@@ -11,9 +11,9 @@
         <RelativeLayout>
             <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
-                <controls:CircularProgressBar x:Name="progress" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Stroke="7" Opacity="0.5" Color="White"/>
+                <controls:CircularProgressBar x:Name="progress" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Stroke="7" Opacity="0.5" Color="{DynamicResource second_fg}"/>
 
-                <ui:MaterialCard Margin="32" Padding="12" CornerRadius="12" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" VerticalOptions="CenterAndExpand">
+                <ui:MaterialCard Margin="32" Padding="12" CornerRadius="18" Elevation="30"  HasShadow="False" BackgroundColor="{DynamicResource second_bg}" VerticalOptions="CenterAndExpand">
 
                     <views:NativeAdFormsView x:Name="adView" WidthRequest="200">
 
