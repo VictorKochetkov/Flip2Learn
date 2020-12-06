@@ -7,6 +7,7 @@
              xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
              xmlns:controls="clr-namespace:Xamarin.Forms.Controls;assembly=CircularProgressBar"
              xmlns:t="clr-namespace:Flip2Learn.Forms.Helpers"
+             xmlns:effects="clr-namespace:Flip2Learn.Forms.Effects"
              x:Class="Flip2Learn.Forms.Views.QuestionCard">
 
     <ContentView.Content>
@@ -18,6 +19,9 @@
             <RelativeLayout>
 
                 <StackLayout x:Name="cardBackContainer" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    <StackLayout.Effects>
+                        <effects:RotateEffect/>
+                    </StackLayout.Effects>
 
                     <ui:MaterialCard x:Name="cardBack" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="18" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
@@ -44,6 +48,9 @@
 
 
                 <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="18" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    <ui:MaterialCard.Effects>
+                        <effects:RotateEffect/>
+                    </ui:MaterialCard.Effects>
 
                     <StackLayout VerticalOptions="Center">
 
