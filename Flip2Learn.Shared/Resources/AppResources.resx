@@ -192,4 +192,7 @@
   <data name="common_purchase" xml:space="preserve">
     <value>Purchase</value>
   </data>
+  <data name="common_back" xml:space="preserve">
+    <value>Back</value>
+  </data>
 </root>
