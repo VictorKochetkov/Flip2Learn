@@ -189,4 +189,7 @@
   <data name="capital_of" xml:space="preserve">
     <value>Capital of</value>
   </data>
+  <data name="common_purchase" xml:space="preserve">
+    <value>Purchase</value>
+  </data>
 </root>
