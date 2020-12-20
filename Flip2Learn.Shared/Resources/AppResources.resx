@@ -195,4 +195,7 @@
   <data name="common_back" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="purchase_premium_card" xml:space="preserve">
+    <value>Purchase premium to see all answers</value>
+  </data>
 </root>

@@ -195,4 +195,7 @@
   <data name="common_back" xml:space="preserve">
     <value>Назад</value>
   </data>
+  <data name="purchase_premium_card" xml:space="preserve">
+    <value>Купите премиум версию, чтобы видеть все ответы</value>
+  </data>
 </root>
