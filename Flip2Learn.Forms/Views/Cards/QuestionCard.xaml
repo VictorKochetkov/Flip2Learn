@@ -26,12 +26,18 @@
                     <ui:MaterialCard x:Name="cardBack" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="18" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
 
-                        <StackLayout Orientation="Vertical" Margin="0,32">
+                        <StackLayout Orientation="Vertical" Margin="12,24">
 
-                            <Label x:Name="resultSubtitle" Style="{DynamicResource Subitle}" FontSize="{OnPlatform iOS=13, Android=16}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="resultSubtitle" Style="{DynamicResource Subitle}" FontSize="{OnPlatform iOS=13, Android=16}" Margin="32,0" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
                             <Label x:Name="resultTitle" Style="{DynamicResource TitleBold}" LineHeight="1" HorizontalTextAlignment="Center" FontSize="{OnPlatform iOS=32, Android=26}" HorizontalOptions="CenterAndExpand" />
 
                             <Label x:Name="flagBack" HorizontalTextAlignment="Center" TextColor="Black" FontSize="{OnPlatform iOS=52, Android=38}" HorizontalOptions="Center" />
+
+                            <views:RippleView x:Name="purchase" IsVisible="False" HorizontalOptions="Center" Padding="22,8" HasShadow="False" Elevation="0" BackgroundColor="{StaticResource GreenAccent}">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{t:Translate common_purchase}" TextColor="Black" HorizontalOptions="Center" Style="{DynamicResource Bold}" FontSize="{OnPlatform iOS=16, Android=16}"/>
+                                </StackLayout>
+                            </views:RippleView>
 
                         </StackLayout>
 
@@ -56,7 +62,7 @@
 
                         <StackLayout Orientation="Vertical" Margin="12,24">
 
-                            <Label x:Name="subtitle" Style="{DynamicResource Subitle}" FontSize="{OnPlatform iOS=13, Android=16}" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+                            <Label x:Name="subtitle" Style="{DynamicResource Subitle}" FontSize="{OnPlatform iOS=13, Android=16}" Margin="32,0" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
                             <Label x:Name="title" Style="{DynamicResource TitleBold}" LineHeight="1" HorizontalTextAlignment="Center"  FontSize="{OnPlatform iOS=32, Android=26}" HorizontalOptions="Center" />
 
                             <Label x:Name="flag" HorizontalTextAlignment="Center" TextColor="Black" FontSize="{OnPlatform iOS=52, Android=38}" HorizontalOptions="Center" />

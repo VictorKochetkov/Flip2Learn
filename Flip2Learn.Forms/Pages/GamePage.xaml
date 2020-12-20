@@ -9,6 +9,7 @@
                        xmlns:t="clr-namespace:Flip2Learn.Forms.Helpers"
                        BackgroundColor="{DynamicResource main_bg}"
                        NavigationPage.HasNavigationBar="False"
+                       Title="{t:Translate common_back}"
                        x:Class="Flip2Learn.Forms.Pages.GamePage">
 
     <RelativeLayout>

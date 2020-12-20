@@ -44,6 +44,28 @@ namespace Flip2Learn.Shared.Models
             }
         }
 
+        public readonly int Index;
+
+        private static Random random = new Random();
+
+        private readonly bool shouldShowAnswer;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool ShouldShowAnswer
+        {
+            get
+            {
+                if (shouldShowAnswer && app.IsPurchased != true)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+
 
         private const string MAPS_PREFIX = "maps_";
         private const string FLAGS_PREFIX = "flags_big_";
@@ -348,8 +370,10 @@ namespace Flip2Learn.Shared.Models
         /// 
         /// </summary>
         /// <param name="source"></param>
-        public QuestionDisplay(Country country) : base(country)
+        public QuestionDisplay(Country country, int index) : base(country)
         {
+            this.Index = index;
+            this.shouldShowAnswer = Index >= 4 && random.Next(0, 2) == 0;
         }
     }
 }

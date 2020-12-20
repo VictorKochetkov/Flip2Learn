@@ -1,4 +1,5 @@
 ﻿using FFImageLoading.Forms;
+using Flip2Learn.Forms;
 using Flip2Learn.Shared.Application;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,28 @@ public static class UIHelper
     {
         image.Source = source;
         image.IsVisible = !string.IsNullOrEmpty(source);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="label"></param>
+    /// <param name="shimmer"></param>
+    public static void SetShimmer(this Label label, bool shimmer)
+    {
+        if (shimmer)
+        {
+            label.IsVisible = true;
+            label.BackgroundColor = (Color)App.Current.Resources["second_fg"];
+            label.WidthRequest = 150;
+            label.HeightRequest = 18;
+        }
+        else
+        {
+            label.BackgroundColor = Color.Transparent;
+            label.WidthRequest = -1;
+            label.HeightRequest = -1;
+        }
     }
 
     /// <summary>

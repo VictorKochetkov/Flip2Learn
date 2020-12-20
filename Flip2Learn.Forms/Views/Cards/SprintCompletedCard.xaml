@@ -5,13 +5,13 @@
              xmlns:t="clr-namespace:Flip2Learn.Forms.Helpers"
              xmlns:views="clr-namespace:Flip2Learn.Forms.Views"
              x:Class="Flip2Learn.Forms.Views.SprintCompletedCard">
-    
-  <ContentView.Content>
+
+    <ContentView.Content>
         <StackLayout Orientation="Vertical">
 
             <RelativeLayout>
 
-                <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32" Padding="12" CornerRadius="16" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                <ui:MaterialCard x:Name="cardFront" IsClickable="True" Elevation="30" VerticalOptions="CenterAndExpand" Margin="32,32,32,64" Padding="12" CornerRadius="16" HasShadow="False" BackgroundColor="{DynamicResource second_bg}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
                     <StackLayout VerticalOptions="Center">
 

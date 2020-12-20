@@ -105,7 +105,7 @@ namespace Flip2Learn.Forms.Pages
             else
             {
                 QuestionIndex++;
-                Question = new QuestionDisplay(countries[QuestionIndex]);
+                Question = new QuestionDisplay(countries[QuestionIndex], QuestionIndex);
                 NewQuestion(this, new EventArgs());
             }
         }
@@ -167,6 +167,9 @@ namespace Flip2Learn.Forms.Pages
         /// <returns></returns>
         private bool ShouldShowAd()
         {
+            return false;
+
+
             if (app.LoadedAd == null)
                 return false;
 
@@ -325,6 +328,7 @@ namespace Flip2Learn.Forms.Pages
 
                     case AppChangedType.Purchased:
                         UpdateFeatures();
+                        card?.UpdateResultViews();
                         break;
                 }
             });
@@ -442,7 +446,7 @@ namespace Flip2Learn.Forms.Pages
 
             if (app.IsPurchased != true)
             {
-                options.Add(ads);
+                //options.Add(ads);
                 options.Add(restore);
                 options.Add(purchase);
             }
@@ -473,13 +477,15 @@ namespace Flip2Learn.Forms.Pages
         }
 
 
+        QuestionCard card;
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="question"></param>
         void Show(QuestionDisplay question)
         {
-            var card = new QuestionCard(question);
+            card = new QuestionCard(question);
 
 
             //container.Children.Add(card,
@@ -492,6 +498,11 @@ namespace Flip2Learn.Forms.Pages
             card.MarkAsKnown += (s, e) =>
             {
                 game.MarkAsKnown();
+            };
+
+            card.Purchase += async (s, e) =>
+            {
+                await Navigation.PushAsync(new FeaturesPage());
             };
 
             card.Clicked += async (s, e) =>
